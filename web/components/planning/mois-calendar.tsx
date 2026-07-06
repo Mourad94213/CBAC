@@ -17,6 +17,8 @@ const typeTone: Record<
 /**
  * Calendrier du mois — liste stylée des événements (gala, stages, sorties…).
  * Par défaut, affiche tous les `eventsMois` ; passer `events` pour un teaser.
+ * Sans événement communiqué par l'association, affiche un état d'attente
+ * plutôt que des dates inventées.
  */
 export function CalendrierMois({
   events = eventsMois,
@@ -25,6 +27,27 @@ export function CalendrierMois({
   events?: EventMois[];
   className?: string;
 }) {
+  if (events.length === 0) {
+    return (
+      <div
+        className={cn(
+          "flex flex-col items-start gap-3 rounded-4xl border border-noir-line bg-noir-surface p-7 shadow-soft sm:p-8",
+          className,
+        )}
+      >
+        <span className="grid h-11 w-11 place-items-center rounded-2xl bg-or-tint text-or">
+          <MapPin className="h-5 w-5" strokeWidth={1.75} />
+        </span>
+        <h3 className="font-display text-lg text-craie">Le programme du mois est en préparation</h3>
+        <p className="max-w-lg text-sm leading-relaxed text-craie-soft">
+          Les prochains rendez-vous — initiations, stages, temps d&apos;échanges — sont annoncés ici
+          et sur nos réseaux dès qu&apos;ils sont calés avec les structures qui nous accueillent.
+          Une question ? Appelez-nous ou écrivez-nous.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <ol
       className={cn(

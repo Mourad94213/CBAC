@@ -6,7 +6,6 @@ import { association } from "@/lib/data/site";
 import { localBusinessLd } from "@/lib/seo";
 import { DevisProvider } from "@/components/devis/devis-store";
 import { DevisRoot } from "@/components/devis/devis-root";
-import { AnnouncementBar } from "@/components/layout/announcement-bar";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { MobileActionBar } from "@/components/layout/mobile-action-bar";
@@ -35,17 +34,17 @@ const barlowCondensed = Barlow_Condensed({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "CBAC · Boxe anglaise & éducation populaire à Nanterre",
+    default: "CBAC · Boxe anglaise & éducation populaire",
     template: "%s · CBAC",
   },
   description:
-    "CBAC, association loi 1901 à Nanterre : cours d'initiation, stages vacances, galas amicaux et interventions itinérantes dans les gymnases, foyers, centres sociaux, écoles et entreprises. La boxe anglaise comme école de vie.",
+    "CBAC, association d'éducation populaire : initiations et cours de boxe anglaise, stages, temps d'échanges et sorties boxe — directement dans les structures qui nous accueillent : foyers, centres sociaux, écoles, entreprises. La boxe anglaise comme école de vie.",
   applicationName: association.name,
   keywords: [
-    "boxe anglaise Nanterre",
-    "association boxe 92",
-    "boxe éducative enfant",
-    "cardio-boxe",
+    "boxe anglaise",
+    "association boxe",
+    "boxe éducative",
+    "initiation boxe",
     "team building boxe",
     "éducation populaire",
     "CBAC",
@@ -71,7 +70,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-dvh">
         <JsonLd data={localBusinessLd()} />
         <DevisProvider>
-          <AnnouncementBar />
           <Header />
           <main className="pb-20 lg:pb-0">{children}</main>
           <Footer />

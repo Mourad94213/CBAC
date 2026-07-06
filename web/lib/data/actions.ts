@@ -1,7 +1,7 @@
 /**
- * Les actions du CBAC — l'association n'a ni salle attitrée ni créneaux
- * hebdomadaires : elle se déplace là où on l'accueille (gymnases mis à
- * disposition, foyers, centres sociaux, écoles, locaux d'entreprise).
+ * Les actions du CBAC — reprises du dossier de présentation de l'association.
+ * L'association n'a pas de gymnase attitré : elle intervient dans les
+ * structures qui l'accueillent (foyers, centres sociaux, écoles, entreprises…).
  * Le slug sert d'ancre sur la page /actions.
  */
 export type Action = {
@@ -21,82 +21,82 @@ export type Action = {
 export const actions: Action[] = [
   {
     slug: "cours-initiation",
-    name: "Cours d'initiation",
-    short: "Une séance pour mettre les gants — on vient à vous, matériel compris.",
+    name: "Initiations & cours de boxe",
+    short: "Mettre les gants — et prendre le temps d'échanger.",
     description:
-      "C'est le cœur de notre activité : des séances d'initiation à la boxe anglaise, organisées là où on nous invite — un gymnase prêté par la ville, la salle d'activités d'un foyer, la cour d'une école, un local d'entreprise. En une heure, on enfile les gants, on apprend la garde et les déplacements, et on comprend pourquoi la boxe est d'abord une école de respect. Aucun coup porté en initiation : uniquement de la boxe éducative, des ateliers et du jeu.",
-    publics: "Tous publics dès 6 ans — particuliers, groupes et structures",
-    lieux: "Dans vos locaux ou dans un gymnase mis à disposition",
+      "C'est l'activité principale de l'association : des séances d'initiation et des cours de boxe anglaise, menés dans les structures qui nous accueillent. Au-delà du sport — qui est déjà un enjeu de santé publique —, chaque initiation est un temps d'interaction et de discussion : on échange avec les participants, on débat, on crée du lien. La séance est un outil de sociabilisation et de transmission de valeurs positives : respect, gestion des émotions, dépassement de soi.",
+    publics: "Tous publics, expérimentés en boxe comme débutants",
+    lieux: "Dans les structures qui nous accueillent",
     image: "/images/activite-initiation-decouverte.svg",
     points: [
-      "Séance découverte gratuite pour les particuliers",
-      "Aucun coup porté : boxe éducative, ateliers et jeux d'opposition",
-      "Matériel intégralement fourni et désinfecté",
-      "Encadrement diplômé d'État et fédéral",
+      "L'interaction et la discussion au cœur de chaque séance",
+      "Un outil de sociabilisation et de transmission de valeurs",
+      "Ouvert à tous les niveaux, débutants bienvenus",
+      "Plus de 30 actions déjà menées dans des structures",
     ],
     faq: [
       {
-        q: "Où ont lieu les initiations pour les particuliers ?",
-        a: "Le lieu change selon les périodes : gymnases mis à disposition par la ville, centres sociaux partenaires, événements de quartier. Consultez le calendrier du mois ou appelez-nous — on vous indique la prochaine séance près de chez vous.",
+        q: "Une initiation, c'est seulement du sport ?",
+        a: "Non, et c'est ce qui fait notre approche : pendant une initiation, on boxe, mais on prend aussi le temps de discuter et d'échanger avec les participants. C'est ce temps d'interaction qui crée le lien social et permet de transmettre les valeurs du sport.",
       },
       {
         q: "Faut-il déjà être sportif pour participer ?",
-        a: "Pas du tout. Les séances partent de jeux d'opposition très simples ; chacun progresse à son rythme, quel que soit son âge ou son gabarit.",
+        a: "Pas du tout. Les séances s'adressent à tous les publics, expérimentés comme débutants ; chacun participe à son rythme.",
       },
     ],
   },
   {
     slug: "stages-vacances",
-    name: "Stages vacances",
-    short: "Une semaine de boxe, de jeux et de sorties à chaque période de vacances.",
+    name: "Stages",
+    short: "Des stages montés avec nos structures partenaires, notamment pendant les vacances.",
     description:
-      "À chaque période de vacances scolaires, le CBAC monte un stage à la semaine pour les enfants et les ados, dans un gymnase mis à disposition par la ville : boxe éducative le matin, grands jeux sportifs et ateliers « vie de groupe » l'après-midi, avec une sortie ou un mini-gala en clôture. Les stages sont ouverts à tous, en lien avec les accueils de loisirs et structures jeunesse du territoire.",
-    publics: "Enfants & ados, 6-15 ans selon les stages",
-    lieux: "Gymnase mis à disposition par la Ville (précisé à l'inscription)",
+      "Les partenariats développés par l'association permettent d'organiser des stages dans les structures partenaires — notamment pendant les vacances scolaires. Ils élargissent l'action de l'association et offrent au public une expérience plus riche et diversifiée que la séance ponctuelle.",
+    publics: "Le public des structures partenaires et les adhérents",
+    lieux: "Dans les structures partenaires",
     image: "/images/activite-stage-vacances.svg",
     points: [
-      "Dates et tranches d'âge publiées à chaque période de vacances",
-      "Boxe éducative + grands jeux + sortie de fin de stage",
-      "Ouvert aux particuliers comme aux groupes de structures",
-      "Tarifs solidaires selon quotient familial, Pass'Sport accepté",
+      "Organisés avec et dans les structures partenaires",
+      "Notamment pendant les vacances scolaires",
+      "Une expérience plus riche et diversifiée",
+      "Dates annoncées au fil de l'année",
     ],
     faq: [
       {
-        q: "Mon enfant n'a jamais boxé, peut-il s'inscrire à un stage ?",
-        a: "Oui, les stages sont conçus pour les débutants comme pour les habitués : les groupes sont constitués par âge et par niveau dès le premier matin.",
+        q: "Quand ont lieu les prochains stages ?",
+        a: "Les stages sont montés avec les structures partenaires, principalement pendant les vacances scolaires. Les dates sont annoncées au fil de l'année : contactez-nous ou suivez nos réseaux pour connaître les prochaines sessions.",
       },
+    ],
+  },
+  {
+    slug: "temps-echanges",
+    name: "Temps d'échanges & sorties",
+    short: "Rencontres, sorties aux galas, soirées boxe : le lien social au-delà des gants.",
+    description:
+      "Des temps conviviaux, organisés avec ou sans partenariat, pour renforcer les liens sociaux et approfondir l'immersion du public dans le monde de la boxe : rencontre avec un boxeur professionnel autour d'un thème, sorties à des galas de boxe, retransmissions de combats en soirée boxe.",
+    publics: "Le public accompagné par l'association et ses partenaires",
+    lieux: "Dans les structures partenaires ou en sortie",
+    image: "/images/evenement-2.svg",
+    points: [
+      "Rencontres et échanges avec des boxeurs professionnels",
+      "Sorties à des galas de boxe",
+      "Retransmissions de combats (soirées boxe)",
+      "Des temps conviviaux qui renforcent le lien social",
     ],
   },
   {
     slug: "galas-amicaux",
     name: "Galas amicaux",
-    short: "La grande fête de l'association — assauts éducatifs, démos et remises de récompenses.",
+    short: "Notre ambition : organiser nos propres galas amicaux.",
     description:
-      "Deux fois par an, le CBAC organise un gala amical dans une salle municipale : assauts éducatifs des enfants, démonstrations des ados et des coachs, remise des récompenses de l'année — le tout devant les familles, les partenaires et le quartier. Entrée libre, buvette associative, et une règle d'or : ici, on s'affronte à la touche, jamais pour faire mal.",
-    publics: "Ouvert à tous — participants, familles, curieux",
-    lieux: "Salles municipales de Nanterre (annoncé au calendrier)",
+      "Le CBAC se donne l'ambition d'organiser ses propres galas amicaux : la consécration du travail fourni pendant l'année, et un temps fort où les volontaires peuvent se challenger — ou participer à l'organisation, et s'engager davantage dans les projets de l'association.",
+    publics: "Participants volontaires, familles et partenaires",
+    lieux: "Lieu annoncé pour chaque édition",
     image: "/images/gala-1.svg",
     points: [
-      "Entrée libre, ambiance familiale",
-      "Assauts éducatifs à la touche, encadrés et arbitrés",
-      "Le rendez-vous des jeunes accompagnés pendant l'année",
-      "Partenaires et bénévoles mis à l'honneur",
-    ],
-  },
-  {
-    slug: "sorties-evenements",
-    name: "Sorties & événements boxe",
-    short: "Galas professionnels, événements de quartier : la boxe au-delà des gants.",
-    description:
-      "Voir de vrais boxeurs monter sur le ring, ça change une trajectoire. Le CBAC emmène régulièrement les jeunes qu'il accompagne à des galas professionnels et amateurs de la région — places offertes grâce à nos partenaires — et participe aux événements de quartier : fêtes de la ville, forums des associations, animations d'été. C'est souvent là que tout commence.",
-    publics: "En priorité les jeunes accompagnés et leurs familles",
-    lieux: "Palais des sports, salles de gala, événements de quartier",
-    image: "/images/evenement-2.svg",
-    points: [
-      "Places de gala offertes grâce aux partenaires",
-      "Encadrement et transport organisés par l'association",
-      "Présence aux fêtes de quartier et forums associatifs",
-      "Des rencontres qui donnent envie de s'y mettre",
+      "La consécration du travail fourni pendant l'année",
+      "Se challenger pour les volontaires, jamais d'obligation",
+      "Participer à l'organisation, une façon de s'engager",
+      "Un projet que l'association construit pas à pas",
     ],
   },
 ];

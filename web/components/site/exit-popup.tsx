@@ -56,9 +56,9 @@ export function ExitPopup() {
           Repartez avec notre plaquette
         </DialogTitle>
         <DialogDescription className="text-[15px] leading-relaxed text-craie-soft">
-          Team building, cycles éducatifs, stages clé en main&nbsp;: retrouvez toutes nos
-          interventions, nos références et nos garanties d'encadrement dans la plaquette
-          entreprises &amp; structures du CBAC — en PDF, à partager avec votre équipe.
+          Initiations, cycles de séances, stages, temps d’échanges&nbsp;: retrouvez tous nos
+          formats d’intervention dans la plaquette entreprises &amp; structures du CBAC — en PDF,
+          à partager avec votre équipe.
         </DialogDescription>
         <div className="mt-2 flex flex-col items-center gap-3">
           <Button asChild onClick={() => setOpen(false)}>

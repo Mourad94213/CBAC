@@ -13,18 +13,18 @@ import { actions } from "@/lib/data/actions";
 export const metadata: Metadata = buildMetadata({
   title: "Nos actions — la boxe qui vient à vous",
   description:
-    "Les actions du CBAC à Nanterre : cours d'initiation à la boxe anglaise, stages vacances, galas amicaux et sorties boxe. Sans salle attitrée, l'association intervient dans les gymnases, foyers, centres sociaux, écoles et entreprises.",
+    "Les actions du CBAC : initiations et cours de boxe anglaise, stages avec les structures partenaires, temps d'échanges et sorties boxe, galas amicaux en projet. Sans gymnase attitré, l'association intervient dans les structures qui l'accueillent.",
   path: "/actions",
 });
 
-/** Où l'association intervient — c'est le principe : on se déplace. */
+/** Où l'association intervient — c'est le principe : on se déplace. Foyers en tête. */
 const terrains = [
-  { name: "Gymnases municipaux", detail: "mis à disposition par les villes pour nos initiations, stages et galas" },
-  { name: "Foyers & structures jeunesse", detail: "cycles réguliers dans les foyers de jeunes travailleurs et clubs de prévention" },
-  { name: "Centres sociaux", detail: "séances découverte et cycles co-construits avec les équipes" },
-  { name: "Écoles & accueils de loisirs", detail: "boxe éducative en cycle EPS ou en périscolaire" },
-  { name: "Entreprises", detail: "team building et ateliers bien-être, dans vos locaux" },
-  { name: "Événements de quartier", detail: "fêtes de la ville, forums des associations, animations d'été" },
+  { name: "Foyers", detail: "c'est là que l'association mène l'essentiel de ses actions : on boxe, puis on discute" },
+  { name: "Centres sociaux & structures jeunesse", detail: "séances découverte et cycles construits avec les équipes" },
+  { name: "Écoles & accueils de loisirs", detail: "la boxe comme support pédagogique, sur le temps scolaire ou périscolaire" },
+  { name: "Structures d'insertion & d'encadrement", detail: "un cadre accepté parce qu'il vient du sport" },
+  { name: "Entreprises", detail: "team building et ateliers cohésion, dans vos locaux" },
+  { name: "Associations & particuliers", detail: "l'association est destinée à tous les publics" },
 ];
 
 export default function ActionsPage() {
@@ -49,7 +49,7 @@ export default function ActionsPage() {
             as="h1"
             eyebrow="Nos actions"
             title="Pas de salle à nous — la boxe vient à vous"
-            intro="Le CBAC n'a ni salle attitrée ni créneaux hebdomadaires : on charge les gants dans le coffre et on vient là où on a besoin de nous — un gymnase prêté par la ville, un foyer, une école, une entreprise. Quatre façons de nous croiser sur votre route."
+            intro="Le CBAC n'a ni gymnase attitré ni créneaux hebdomadaires : on charge les gants dans le coffre et on vient là où on a besoin de nous — un foyer, un centre social, une école, une entreprise. Et à chaque séance, on prend le temps de discuter. Quatre façons de nous croiser sur votre route."
           />
 
           <Stagger className="mt-8 flex flex-wrap gap-3">
@@ -186,8 +186,8 @@ export default function ActionsPage() {
                 Envie que la boxe passe chez vous&nbsp;?
               </h2>
               <p className="max-w-md text-[15px] leading-relaxed text-craie-soft">
-                Structure, école, foyer, entreprise ou simple curieux : décrivez-nous votre
-                situation, on construit la suite ensemble — matériel fourni, encadrement diplômé.
+                Foyer, structure, école, entreprise ou simple curieux : décrivez-nous votre
+                situation, on construit la suite ensemble.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
                 <DevisButton size="lg">

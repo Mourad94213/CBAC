@@ -1,26 +1,38 @@
-# Contenu fictif à valider / remplacer (maquette CBAC)
+# Contenu à valider / à fournir (maquette CBAC)
 
-Tout ce qui suit a été **inventé pour les besoins de la maquette** (la doc de cadrage ne fournit pas ces informations) et doit être validé ou remplacé par les vraies données de l'association. Tout est centralisé dans `lib/data/`.
+**Règle actée (renforcée le 2026-07-06) : ne rien inventer. Si une information n'est pas connue, on ne met rien** (état « en préparation » plutôt que fausse donnée). Tout le contenu est centralisé dans `lib/data/`.
 
-## Issu de la doc (ne pas toucher)
-- Valeurs (respect, gestion des émotions, dépassement de soi), président M. Soungui Gomis, publics cibles, actions (initiations, stages vacances, galas, sorties), personas des témoignages (Sophie, Marc, Fatima, Thomas), toutes les fonctionnalités (devis, rappel 24h, configurateur, quiz, newsletter « Les news du ring », pop-up plaquette, espace partenaires…).
+## Informations réelles intégrées (fournies par l'association, 2026-07-06)
+- **Chiffres** : plus de 30 actions menées dans des structures · 5 structures partenaires · 2 ans d'existence (`lib/data/site.ts` → `impact`).
+- **Équipe** (`lib/data/coachs.ts`) : Soungui Gomis (président fondateur), Younes (jeune boxeur amateur et coach), Zinedine Meftah (jeune boxeur amateur, passif de coach). **Aucun diplôme ni parcours inventé.**
+- **Pas de gymnase attitré** : l'association intervient dans les structures qui l'accueillent.
+- **Positionnement** : l'action sociale, l'interaction et la discussion sont au cœur des initiations ; les actions en foyer sont mises en avant (première cible sur `/interventions`).
+- **Logo** : le vrai logo (`docs/logo cbac.jpeg` = `public/images/logo-cbac.jpg`) est utilisé dans le header (`components/site/brand-mark.tsx`) et le footer.
+- **Textes** : le « mot du président » et les descriptions d'actions reprennent le dossier de présentation (`docs/Dossier Soungui_merged (1) (1).pdf`). Les galas amicaux sont présentés comme une **ambition**, pas comme un acquis.
 
-## Inventé pour la maquette (à valider)
+## À fournir par l'association (rien n'est affiché en attendant)
+| Donnée | État actuel sur la maquette |
+|---|---|
+| Histoire de l'association | Document annoncé par l'association — section « en bref » factuelle en attendant (`/association`) |
+| Noms des 5 structures partenaires | Non affichés (seul le chiffre apparaît) |
+| Dates des stages et événements du mois | `eventsMois` vide → état « programme en préparation » (`lib/data/schedule.ts`) |
+| Témoignages réels | Section supprimée (les anciens étaient fictifs) |
+| Actualités | Page `/actualites` en état « premières actus arrivent » |
+| Montant de la cotisation | « précisé sur le bulletin » (`/adhesion`) |
+| Ville / siège social réel | Coordonnées de maquette (voir ci-dessous) — la ville n'apparaît plus dans les textes éditoriaux |
+
+## Encore fictif (placeholders de maquette, signalés comme tels)
 | Donnée | Valeur maquette | Fichier |
 |---|---|---|
-| Baseline | « La boxe anglaise comme école de vie » | `lib/data/site.ts` |
-| Siège social (adresse administrative — pas de salle) | Maison des associations, 12 rue du Ring, 92000 Nanterre | `lib/data/site.ts` |
-| Téléphone / email / réseaux / permanences | 06 12 34 56 78 · contact@cbac-boxe.fr · @cbacboxe · permanence lun→ven 9h30-18h | `lib/data/site.ts` |
+| Siège social | Maison des associations, 12 rue du Ring, 92000 Nanterre (+ coordonnées geo) | `lib/data/site.ts`, `lib/seo.ts` |
+| Téléphone / email / réseaux / permanences | 06 12 34 56 78 · contact@cbac-boxe.fr · @cbacboxe | `lib/data/site.ts` |
 | Domaine | www.cbac-boxe.fr | `lib/utils.ts` |
-| Chiffres d'impact | 450+ jeunes · 25 structures · 12 ans · 300 séances | `lib/data/site.ts` |
-| Descriptifs des 4 actions (les actions elles-mêmes viennent de la doc) | cours d'initiation / stages vacances / galas amicaux / sorties & événements | `lib/data/actions.ts` |
-| Coachs (sauf le président) | Awa Diallo, Karim Benali, Léa Fontaine + diplômes | `lib/data/coachs.ts` |
-| Événements du mois + lieux | dates et lieux fictifs (gymnases Anatole-France & Joliot-Curie, foyer Les Iris, centre social Les Acacias…) | `lib/data/schedule.ts` |
-| Cotisation d'adhésion | « montant libre dès 10 € » | `app/adhesion/page.tsx` |
-| Stages (noms, dates, places) + aides (Pass'Sport, QF) | « Premiers gants », « Ring d'été »… | `lib/data/content.ts` |
-| Témoignages (textes), partenaires (noms), actualités, FAQ (réponses) | fictifs mais calqués sur les personas de la doc | `lib/data/content.ts` |
-| Visuels | SVG placeholders + PDFs maquette (`public/images`, `public/docs`) | — |
+| PDFs (dossier de présentation, plaquette) | fichiers maquette | `public/docs/` |
+| Visuels | SVG placeholders (style conservé à la demande de l'association) | `public/images/` |
+| Flux Instagram | mock à légendes génériques | `lib/data/content.ts` |
+| Espace partenaires | démo statique, données marquées « (démo) » | `components/partenaires/partner-panel.tsx` |
+| Promesses de service (rappel 24h, réponse 48h) | issues des fonctionnalités demandées dans la doc de cadrage — à confirmer | formulaires |
 
-**Révision 2026-07-06 :** repositionnement « association itinérante » (pas de salle attitrée, pas de créneaux hebdo, pas de grille tarifaire) — suppression de `/tarifs`, `/activites(+slug)`, du planning hebdomadaire et de la licence de saison ; création de `/actions`.
+**Historique.** Révision 2026-07-06 (matin) : repositionnement « association itinérante ». Révision 2026-07-06 (après-midi) : purge complète du contenu inventé après retour de l'association (faux coachs Awa/Karim/Léa supprimés, faux stages « Premiers gants »/« Ring d'été » supprimés, fausse chronologie 2014-2026 supprimée, faux témoignages/partenaires/actus supprimés, chiffres corrigés 450→30+/25→5/12→2, actions réalignées sur la brochure : initiations & cours, stages, temps d'échanges & sorties, galas amicaux en ambition).
 
-**Règle de travail actée : aucune fonctionnalité ni contenu hors doc ne sera ajouté sans demande explicite.**
+**Règle de travail actée : aucune fonctionnalité ni contenu hors doc ne sera ajouté sans demande explicite. Ne jamais inventer de faits, d'événements, de personnes ou de diplômes.**

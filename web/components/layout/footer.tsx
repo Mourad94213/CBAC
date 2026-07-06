@@ -40,8 +40,8 @@ export function Footer() {
             />
           </Link>
           <p className="max-w-xs text-[15px] leading-relaxed text-craie-soft">
-            {association.tagline}. Boxe anglaise &amp; éducation populaire à Nanterre — pour les
-            enfants, les ados, les adultes et les structures.
+            {association.tagline}. Boxe anglaise &amp; éducation populaire — pour tous les publics
+            et les structures qui nous accueillent.
           </p>
           <SocialIcons />
 

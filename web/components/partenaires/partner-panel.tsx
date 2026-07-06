@@ -35,40 +35,40 @@ const interventions: {
   {
     date: "Mer. 8 juillet",
     heure: "14h — 16h",
-    titre: "Séance 5/8 · Cycle boxe éducative 11-14 ans",
-    lieu: "Centre social Les Acacias",
-    coach: "Awa Diallo",
+    titre: "Séance 5/8 · Cycle d'initiation (démo)",
+    lieu: "Votre structure",
+    coach: "Soungui Gomis",
     statut: "Confirmée",
   },
   {
     date: "Mer. 15 juillet",
     heure: "14h — 16h",
-    titre: "Séance 6/8 · Gestion des émotions et esquives",
-    lieu: "Centre social Les Acacias",
-    coach: "Awa Diallo",
+    titre: "Séance 6/8 · Gestion des émotions et esquives (démo)",
+    lieu: "Votre structure",
+    coach: "Younes",
     statut: "Confirmée",
   },
   {
     date: "Jeu. 23 juillet",
     heure: "10h — 12h",
-    titre: "Atelier découverte parents-enfants",
-    lieu: "Gymnase Anatole-France (mis à disposition par la Ville)",
+    titre: "Temps d'échange · rencontre avec un boxeur (démo)",
+    lieu: "Votre structure",
     coach: "Soungui Gomis",
     statut: "Confirmée",
   },
   {
     date: "Sept. 2026",
     heure: "À définir",
-    titre: "Restitution du cycle · bilan écrit et mini-assauts devant les familles",
-    lieu: "Centre social Les Acacias",
-    coach: "Awa Diallo",
+    titre: "Restitution du cycle · bilan devant les familles (démo)",
+    lieu: "Votre structure",
+    coach: "Soungui Gomis",
     statut: "À planifier",
   },
 ];
 
 const documents: { name: string; info: string; href?: string }[] = [
   {
-    name: "Projet pédagogique CBAC",
+    name: "Dossier de présentation CBAC",
     info: "PDF · référence éducation populaire",
     href: "/docs/projet-pedagogique-cbac.pdf",
   },
@@ -96,7 +96,7 @@ const factures: {
 }[] = [
   {
     ref: "FAC-2026-058",
-    objet: "Cycle boxe éducative · été 2026 (8 séances)",
+    objet: "Cycle d'initiation · été 2026 (8 séances, démo)",
     montant: "1 440 €",
     date: "1er juillet 2026",
     statut: "En attente",
@@ -110,7 +110,7 @@ const factures: {
   },
   {
     ref: "FAC-2026-019",
-    objet: "Cycle boxe éducative · hiver 2026 (8 séances)",
+    objet: "Cycle d'initiation · hiver 2026 (8 séances, démo)",
     montant: "1 440 €",
     date: "27 février 2026",
     statut: "Payée",
@@ -163,7 +163,7 @@ function AuthForm({ onSignIn }: { onSignIn: (structure: string) => void }) {
             id="pp-structure"
             value={form.structure}
             onChange={(e) => setForm((f) => ({ ...f, structure: e.target.value }))}
-            placeholder="Centre social Les Acacias"
+            placeholder="Nom de votre structure"
             autoComplete="organization"
             required
           />

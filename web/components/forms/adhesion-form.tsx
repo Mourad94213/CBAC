@@ -175,8 +175,8 @@ export function AdhesionForm() {
         Envoyer ma demande d&apos;adhésion
       </Button>
       <p className="text-xs text-craie-muted">
-        Maquette de démonstration : aucune donnée n&apos;est réellement envoyée. La première séance
-        d&apos;initiation reste gratuite et sans engagement.
+        Maquette de démonstration : aucune donnée n&apos;est réellement envoyée. La demande
+        d&apos;adhésion n&apos;engage à rien — on se rencontre d&apos;abord.
       </p>
     </form>
   );

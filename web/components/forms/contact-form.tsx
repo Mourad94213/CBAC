@@ -115,7 +115,7 @@ export function ContactForm() {
         </CheckLine>
         <CheckLine checked={rdv} onChange={() => setRdv((v) => !v)}>
           <CalendarClock className="h-4 w-4 shrink-0 text-or" strokeWidth={1.75} />
-          Je souhaite prendre un rendez-vous de présentation (au gymnase ou en visio)
+          Je souhaite prendre un rendez-vous de présentation (sur place ou en visio)
         </CheckLine>
       </div>
 

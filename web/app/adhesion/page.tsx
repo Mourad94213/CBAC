@@ -23,7 +23,7 @@ import { association, hours } from "@/lib/data/site";
 export const metadata: Metadata = buildMetadata({
   title: "Adhésion · Rejoindre l'association",
   description:
-    "Rejoindre le CBAC : une première initiation offerte, un bulletin d'adhésion de dix minutes, et vous participez à la vie de l'association — initiations, stages, sorties, bénévolat.",
+    "Rejoindre le CBAC : une rencontre sur l'un de nos lieux d'intervention, un bulletin d'adhésion, et vous participez à la vie de l'association — initiations, stages, sorties, bénévolat.",
   path: "/adhesion",
 });
 
@@ -41,25 +41,25 @@ const etapes = [
   {
     num: "03",
     title: "Vous faites partie de l'asso",
-    text: "Initiations, stages, sorties boxe, coups de main sur les galas : vous participez à la vie de l'association, à votre mesure. Bienvenue entre les cordes.",
+    text: "Initiations, stages, sorties boxe, coups de main sur les événements : vous participez à la vie de l'association, à votre mesure. Bienvenue entre les cordes.",
   },
 ];
 
 const documents = [
   {
     icon: HeartPulse,
-    title: "Questionnaire de santé",
-    text: "Suffisant pour participer aux initiations ; un certificat médical peut être demandé pour les stages adultes.",
+    title: "Questionnaire ou certificat de santé",
+    text: "Les documents de santé demandés sont précisés par l'équipe au moment de l'adhésion.",
   },
   {
     icon: Camera,
     title: "Une photo d'identité",
-    text: "Pour la carte d'adhérent. Une photo de téléphone bien cadrée fait parfaitement l'affaire.",
+    text: "Une photo de téléphone bien cadrée fait parfaitement l'affaire.",
   },
   {
     icon: Wallet,
     title: "La cotisation annuelle",
-    text: "Montant libre à partir de 10 € — personne n'est refusé pour une question d'argent, c'est un principe d'éducation populaire.",
+    text: "Le montant est précisé sur le bulletin d'adhésion — renseignez-vous auprès de l'équipe lors de votre première rencontre.",
   },
   {
     icon: PenLine,
@@ -71,18 +71,18 @@ const documents = [
 const reassurances = [
   {
     icon: Sparkles,
-    title: "Première initiation offerte",
-    text: "On ne s'engage pas sans avoir mis les gants au moins une fois.",
+    title: "On se rencontre d'abord",
+    text: "Venez nous voir sur une action : on discute, vous vous faites une idée avant de vous engager.",
   },
   {
     icon: HandCoins,
-    title: "Cotisation accessible",
-    text: "Montant libre dès 10 €, aides possibles pour les stages (Pass'Sport, tarif solidaire).",
+    title: "Ouvert à tous",
+    text: "Débutants comme boxeurs expérimentés : l'association est destinée à tous les publics.",
   },
   {
     icon: ShieldCheck,
-    title: "Tout est fourni",
-    text: "Gants, casques et matériel apportés à chaque séance — assurance de l'association incluse.",
+    title: "À votre mesure",
+    text: "Participant·e, bénévole, coup de main sur les événements : chacun s'engage comme il peut.",
   },
 ];
 
@@ -96,7 +96,7 @@ export default function AdhesionPage() {
         ])}
       />
 
-      {/* Hero — l'essai gratuit est l'accroche, le CTA mène droit au formulaire. */}
+      {/* Hero — le CTA mène droit au formulaire. */}
       <section className="spotlight container-wide py-14 lg:py-20">
         <SectionTitle
           as="h1"
@@ -112,8 +112,8 @@ export default function AdhesionPage() {
             </Link>
           </Button>
           <p className="max-w-sm text-sm leading-relaxed text-craie-muted">
-            Première initiation offerte, toujours — enfant, ado ou adulte, on ne s&apos;engage pas
-            sans avoir mis les gants au moins une fois.
+            Enfant, ado ou adulte, débutant ou expérimenté : l&apos;association est destinée à
+            tous les publics.
           </p>
         </Reveal>
       </section>

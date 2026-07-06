@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "./utils";
 import { association } from "./data/site";
-import type { Stage } from "./data/content";
 
 const DEFAULT_OG = "/images/hero-ring.svg";
 
@@ -48,7 +47,7 @@ export function localBusinessLd() {
     name: association.name,
     legalName: association.legalName,
     description:
-      "Association de boxe anglaise et d'éducation populaire à Nanterre : cours d'initiation, stages vacances, galas amicaux et interventions itinérantes dans les gymnases, foyers, centres sociaux, écoles et entreprises.",
+      "Association d'éducation populaire qui crée du lien social par la boxe anglaise : initiations et cours, stages, temps d'échanges et sorties boxe, directement dans les structures qui l'accueillent — foyers, centres sociaux, écoles, entreprises.",
     url: SITE_URL,
     telephone: `+33${association.phone.replace(/\D/g, "").slice(1)}`,
     email: association.email,
@@ -62,25 +61,8 @@ export function localBusinessLd() {
       addressCountry: "FR",
     },
     geo: { "@type": "GeoCoordinates", latitude: 48.8924, longitude: 2.2071 },
-    areaServed: "Nanterre et Hauts-de-Seine",
     image: `${SITE_URL}${DEFAULT_OG}`,
     sameAs: [association.socials.instagram.url, association.socials.facebook.url],
-  };
-}
-
-export function eventLd(stage: Stage) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    name: stage.title,
-    description: stage.description,
-    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-    location: {
-      "@type": "Place",
-      name: "Nanterre — gymnase communiqué à l'inscription",
-      address: `${association.address.zip} ${association.address.city}`,
-    },
-    organizer: { "@type": "Organization", name: association.name, url: SITE_URL },
   };
 }
 

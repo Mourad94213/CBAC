@@ -10,22 +10,18 @@ import { Button } from "@/components/ui/button";
 import { DevisButton } from "@/components/devis/devis-button";
 import { CalendrierMois } from "@/components/planning/mois-calendar";
 import { association } from "@/lib/data/site";
-import { eventsMois } from "@/lib/data/schedule";
 
 export const metadata: Metadata = buildMetadata({
   title: "Calendrier du mois — où nous trouver",
   description:
-    "Les lieux et événements du CBAC sur le mois à venir : galas amicaux, stages vacances, séances d'initiation et sorties boxe, dans les gymnases, foyers et centres sociaux de Nanterre et des Hauts-de-Seine.",
+    "Les lieux et événements du CBAC sur le mois à venir : initiations, stages, temps d'échanges et sorties boxe, dans les structures qui accueillent l'association. Les rendez-vous sont annoncés dès qu'ils sont calés.",
   path: "/calendrier",
 });
 
-const lieux = Array.from(new Set(eventsMois.map((e) => e.lieu)));
-
 const reperes = [
-  { valeur: `${eventsMois.length}`, label: "rendez-vous ce mois-ci" },
-  { valeur: `${lieux.length}`, label: "lieux différents — on se déplace" },
-  { valeur: "2", label: "stages vacances cet été" },
-  { valeur: "0 €", label: "la première initiation est offerte" },
+  { valeur: `${association.impact.actions}+`, label: "actions menées dans des structures" },
+  { valeur: `${association.impact.structures}`, label: "structures partenaires" },
+  { valeur: `${association.impact.annees}`, label: "ans d'existence" },
 ];
 
 export default function CalendrierPage() {
@@ -44,12 +40,12 @@ export default function CalendrierPage() {
           <SectionTitle
             as="h1"
             eyebrow="Le calendrier du mois"
-            title="Où nous trouver en juillet"
-            intro="Pas de salle attitrée, pas de planning hebdo : chaque mois, l'association publie ici les lieux et événements où la croiser — gymnases mis à disposition, foyers, centres sociaux, salles municipales."
+            title="Où nous trouver"
+            intro="Pas de gymnase attitré, pas de planning hebdo : l'association publie ici les lieux et événements où la croiser, dès qu'ils sont calés avec les structures qui l'accueillent — foyers, centres sociaux, écoles, entreprises."
           />
 
-          {/* Repères chiffrés du mois — nus, typo + espace */}
-          <Stagger className="mt-10 grid grid-cols-2 gap-x-8 gap-y-6 lg:grid-cols-4">
+          {/* Repères chiffrés — nus, typo + espace */}
+          <Stagger className="mt-10 grid grid-cols-2 gap-x-8 gap-y-6 lg:grid-cols-3">
             {reperes.map((r) => (
               <StaggerItem key={r.label}>
                 <p className="font-condensed text-3xl font-semibold leading-none text-or">
@@ -70,8 +66,8 @@ export default function CalendrierPage() {
             <p className="mt-4 flex items-start gap-2.5 text-sm text-craie-muted">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-or" strokeWidth={1.75} />
               <span>
-                Les lieux sont confirmés au fil du mois, selon les disponibilités des salles.
-                Les changements sont toujours annoncés sur{" "}
+                Les rendez-vous sont annoncés au fil du mois, dès qu&apos;ils sont calés avec les
+                structures. Les annonces passent aussi sur{" "}
                 <strong className="text-craie">{association.socials.instagram.handle}</strong>.
               </span>
             </p>
@@ -101,7 +97,7 @@ export default function CalendrierPage() {
                 </p>
                 <Button asChild variant="secondary" size="sm" className="mt-4">
                   <a href="webcal://www.cbac-boxe.fr/calendrier/cbac.ics">
-                    S'abonner au flux iCal
+                    S’abonner au flux iCal
                     <ArrowRight className="h-4 w-4" strokeWidth={2} />
                   </a>
                 </Button>
@@ -142,17 +138,17 @@ export default function CalendrierPage() {
             <div className="relative flex flex-col items-center gap-5">
               <span className="eyebrow">Dernier round</span>
               <h2 className="max-w-2xl text-balance text-2xl sm:text-3xl">
-                Un rendez-vous vous fait de l'œil ?
+                Envie de nous croiser ?
               </h2>
               <p className="max-w-md text-[15px] leading-relaxed text-craie-soft">
-                Venez comme vous êtes : on vous accueille, on vous équipe, on vous explique tout.
-                Et si vous voulez que le prochain lieu soit le vôtre — structure, école,
-                entreprise —, on organise ça ensemble.
+                Venez comme vous êtes : on vous accueille et on vous explique tout. Et si vous
+                voulez que le prochain lieu soit le vôtre — foyer, structure, école, entreprise —,
+                on organise ça ensemble.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Button asChild size="lg">
-                  <Link href="/adhesion">
-                    Participer à une initiation
+                  <Link href="/contact">
+                    Nous contacter
                     <ArrowRight className="h-4 w-4" strokeWidth={2} />
                   </Link>
                 </Button>

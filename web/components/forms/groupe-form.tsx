@@ -93,8 +93,8 @@ export function GroupeForm() {
         Réserver pour mon groupe
       </Button>
       <p className="text-xs text-craie-muted">
-        Tarifs associatifs pour les structures du territoire — matériel et encadrement diplômé
-        compris. Maquette : aucune donnée n&apos;est réellement envoyée.
+        Association à but non lucratif : on construit le projet avec vous, selon vos moyens.
+        Maquette : aucune donnée n&apos;est réellement envoyée.
       </p>
     </form>
   );

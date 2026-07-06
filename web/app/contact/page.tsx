@@ -20,7 +20,6 @@ import { SocialIcons } from "@/components/site/social-icons";
 import { Button } from "@/components/ui/button";
 import { DevisButton } from "@/components/devis/devis-button";
 import { association, hours } from "@/lib/data/site";
-import { eventsMois } from "@/lib/data/schedule";
 
 export const metadata: Metadata = buildMetadata({
   title: "Contact",
@@ -28,8 +27,6 @@ export const metadata: Metadata = buildMetadata({
     "Contactez le CBAC : téléphone, e-mail, permanences et formulaire adapté à votre profil — particulier, entreprise, école ou structure sociale. L'association n'a pas de local d'accueil : on se joint, puis on se retrouve sur un lieu d'intervention.",
   path: "/contact",
 });
-
-const lieuxDuMois = Array.from(new Set(eventsMois.map((e) => e.lieu)));
 
 export default function ContactPage() {
   return (
@@ -117,11 +114,11 @@ export default function ContactPage() {
                     Nous rencontrer
                   </span>
                   <span className="mt-0.5 block text-sm text-craie-soft">
-                    Le plus simple : venir à une initiation, un stage ou un gala. Le{" "}
+                    Le plus simple : venir sur l&apos;une de nos actions. Le{" "}
                     <Link href="/calendrier" className="link-underline font-semibold text-craie">
                       calendrier du mois
                     </Link>{" "}
-                    indique les lieux et les dates.
+                    indique les lieux et les dates dès qu&apos;ils sont calés.
                   </span>
                 </span>
               </div>
@@ -177,28 +174,18 @@ export default function ContactPage() {
           </Reveal>
         </div>
 
-        {/* Nos lieux du mois — l'association n'a pas d'adresse à visiter, elle a des rendez-vous */}
+        {/* Où nous croiser — l'association n'a pas d'adresse à visiter, elle a des rendez-vous */}
         <Reveal className="mt-16">
-          <h2 className="font-display text-xl text-craie sm:text-2xl">Où nous croiser ce mois-ci</h2>
+          <h2 className="font-display text-xl text-craie sm:text-2xl">Où nous croiser</h2>
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-craie-soft">
-            Pas de plan d&apos;accès à afficher : le CBAC n&apos;a pas de salle à visiter. En
-            revanche, chaque mois, on pose les gants ici :
+            Pas de plan d&apos;accès à afficher : le CBAC n&apos;a pas de gymnase attitré. On pose
+            les gants dans les structures qui nous accueillent — foyers, centres sociaux, écoles,
+            entreprises — et les rendez-vous sont annoncés au calendrier dès qu&apos;ils sont calés.
           </p>
-          <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {lieuxDuMois.map((lieu) => (
-              <li
-                key={lieu}
-                className="flex items-start gap-2.5 rounded-3xl border border-noir-line bg-noir-card px-4 py-3.5 text-sm text-craie-soft"
-              >
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-rouge-light" strokeWidth={1.75} />
-                {lieu}
-              </li>
-            ))}
-          </ul>
           <div className="mt-6">
             <Button asChild variant="outline" size="md">
               <Link href="/calendrier">
-                Voir les dates au calendrier
+                Voir le calendrier du mois
                 <ArrowRight className="h-4 w-4" strokeWidth={2} />
               </Link>
             </Button>

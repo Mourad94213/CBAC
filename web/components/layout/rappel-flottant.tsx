@@ -48,8 +48,8 @@ export function RappelFlottant() {
                 C&apos;est noté{prenom ? `, ${prenom}` : ""} !
               </DialogTitle>
               <DialogDescription className="max-w-sm text-[15px] text-craie-soft">
-                Un coach du CBAC vous rappelle sous 24h ouvrées sur le créneau choisi. À très vite au
-                gymnase !
+                Un membre du CBAC vous rappelle sous 24h ouvrées sur le créneau choisi. À très
+                vite entre les cordes !
               </DialogDescription>
               <Button variant="outline" size="md" onClick={() => handleOpenChange(false)}>
                 Fermer

@@ -11,6 +11,7 @@ import {
   Quote,
   ShieldCheck,
   Sparkles,
+  Users2,
 } from "lucide-react";
 import { buildMetadata, breadcrumbLd } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -22,13 +23,12 @@ import { ExitPopup } from "@/components/site/exit-popup";
 import { Button } from "@/components/ui/button";
 import { DevisButton } from "@/components/devis/devis-button";
 import { cibles, type Cible } from "@/lib/data/publics";
-import { testimonials } from "@/lib/data/content";
 import { association } from "@/lib/data/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Interventions sur mesure : entreprises, écoles & structures sociales",
+  title: "Interventions sur mesure : foyers, structures, écoles & entreprises",
   description:
-    "Team building boxe, cycles éducatifs en centre social, boxe éducative à l'école, programmes insertion & PJJ : le CBAC construit votre intervention sur mesure à Nanterre et dans les Hauts-de-Seine. Devis gratuit sous 48h.",
+    "Initiations, cycles de séances, stages et temps d'échanges : le CBAC construit votre intervention sur mesure, directement dans votre structure — foyer, centre social, école, dispositif d'insertion ou entreprise. Devis gratuit.",
   path: "/interventions",
   image: "/images/corporate-1.svg",
 });
@@ -38,36 +38,47 @@ const cibleExtras: Record<
   Cible["key"],
   { icon: typeof Building2; title: string; cta: string }
 > = {
+  foyers: {
+    icon: HeartHandshake,
+    title: "On boxe, on discute, on crée du lien",
+    cta: "Monter une action chez vous",
+  },
+  "centres-sociaux": {
+    icon: Users2,
+    title: "Des séances qui accrochent vos jeunes",
+    cta: "Devis séance ou cycle",
+  },
+  ecoles: {
+    icon: GraduationCap,
+    title: "La boxe comme support pédagogique",
+    cta: "Devis intervention scolaire",
+  },
+  insertion: {
+    icon: Compass,
+    title: "Un cadre accepté, des valeurs transmises",
+    cta: "Devis cycle insertion",
+  },
   entreprises: {
     icon: Building2,
     title: "Soudez vos équipes, gants aux poings",
     cta: "Devis team building",
   },
-  "centres-sociaux": {
-    icon: HeartHandshake,
-    title: "Des cycles qui accrochent vos jeunes",
-    cta: "Devis cycle éducatif",
-  },
-  ecoles: {
-    icon: GraduationCap,
-    title: "La boxe éducative, clé en main pour l'école",
-    cta: "Devis intervention scolaire",
-  },
-  insertion: {
-    icon: Compass,
-    title: "Un cadre accepté, un projet documenté",
-    cta: "Devis cycle insertion",
-  },
 };
 
 /* Teintes de bande alternées entre les sections cibles. */
-const cibleBands = ["", "border-y border-noir-line bg-bleu-tint/50", "", "border-y border-noir-line bg-or-tint/40"];
+const cibleBands = [
+  "",
+  "border-y border-noir-line bg-bleu-tint/50",
+  "",
+  "border-y border-noir-line bg-or-tint/40",
+  "",
+];
 
 const reassurances = [
-  { icon: Clock, title: "Réponse sous 48h", text: "Une proposition chiffrée et un programme détaillé, sans relance." },
-  { icon: ShieldCheck, title: "Devis gratuit, sans engagement", text: "Vous décidez ensuite, à votre rythme. Aucune surprise." },
-  { icon: Medal, title: "Encadrement diplômé d'État", text: "BPJEPS, DEJEPS, brevets fédéraux et PSC1 — diplômes affichés." },
-  { icon: HeartHandshake, title: "Un impact qui compte double", text: "Chaque intervention finance l'accès à la boxe des jeunes de Nanterre." },
+  { icon: Clock, title: "Devis gratuit, sans engagement", text: "Vous décrivez votre projet, on vous répond — vous décidez ensuite, à votre rythme." },
+  { icon: ShieldCheck, title: "On vient à vous", text: "Pas de gymnase attitré : l'association intervient directement dans votre structure." },
+  { icon: Medal, title: "L'échange au cœur des séances", text: "On boxe, et on discute : l'interaction fait partie intégrante de chaque intervention." },
+  { icon: HeartHandshake, title: "Une asso d'éducation populaire", text: "Plus de 30 actions menées dans des structures en deux ans — foyers en tête." },
 ];
 
 const etapes = [
@@ -78,18 +89,18 @@ const etapes = [
   },
   {
     num: "02",
-    title: "Proposition sous 48h",
-    text: "Devis gratuit, programme séance par séance et coach dédié. Vous ajustez avec nous jusqu'à ce que ce soit exactement votre projet.",
+    title: "On construit ensemble",
+    text: "Devis gratuit et proposition adaptée à votre public. Vous ajustez avec nous jusqu'à ce que ce soit exactement votre projet.",
   },
   {
     num: "03",
     title: "On monte sur le ring",
-    text: "Dans vos locaux ou dans un gymnase mis à disposition : matériel fourni et désinfecté, encadrement diplômé, cadre posé dès la première minute.",
+    text: "Directement dans votre structure : un cadre clair posé dès la première minute — et un temps d'échange à chaque séance.",
   },
   {
     num: "04",
-    title: "Bilan écrit & suite",
-    text: "Chaque cycle se conclut par un bilan transmis pour vos financeurs — et une passerelle vers l'association pour celles et ceux qui veulent continuer.",
+    title: "On fait le point",
+    text: "À la fin de l'action, on débriefe ensemble et on imagine la suite : nouvelle séance, cycle, stage ou temps d'échange.",
   },
 ];
 
@@ -107,14 +118,15 @@ export default function InterventionsPage() {
       <section className="spotlight relative overflow-hidden">
         <div className="container-wide grid items-center gap-10 py-12 lg:grid-cols-[1.05fr_1fr] lg:gap-14 lg:py-20">
           <Reveal className="order-2 flex flex-col gap-6 lg:order-1">
-            <span className="eyebrow">Interventions sur mesure · Entreprises & structures</span>
+            <span className="eyebrow">Interventions sur mesure · Structures & entreprises</span>
             <h1 className="text-balance text-4xl leading-[1.05] sm:text-5xl lg:text-[3.4rem]">
               Faites entrer la boxe <span className="text-or">dans votre structure</span>
             </h1>
             <p className="max-w-lg text-pretty text-base leading-relaxed text-craie-soft">
-              Team building d'entreprise, cycle éducatif en centre social, boxe éducative à l'école,
-              programme insertion ou PJJ : depuis {association.impact.annees} ans, le CBAC construit
-              des interventions qui marquent — zéro coup reçu, un cadre clair, et un bilan écrit à la fin.
+              Initiation en foyer ou en centre social, cycle à l’école, action insertion, team
+              building d’entreprise : en {association.impact.annees} ans, le CBAC a mené plus de{" "}
+              {association.impact.actions} actions dans des structures — on boxe, on discute, on
+              crée du lien.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <DevisButton size="lg">
@@ -129,7 +141,7 @@ export default function InterventionsPage() {
               </Button>
             </div>
             <p className="text-sm text-craie-muted">
-              Devis gratuit sous 48h · {association.impact.structures} structures partenaires nous font déjà confiance
+              Devis gratuit · {association.impact.structures} structures partenaires nous font déjà confiance
             </p>
           </Reveal>
 
@@ -145,10 +157,10 @@ export default function InterventionsPage() {
               />
               <div className="absolute -right-3 top-6 rounded-2xl border border-noir-line bg-noir-deep/90 px-4 py-3 shadow-lift backdrop-blur">
                 <p className="font-condensed text-3xl font-semibold leading-none text-or">
-                  {association.impact.structures} structures
+                  {association.impact.actions}+ actions
                 </p>
                 <p className="mt-1 font-display text-xs uppercase tracking-wide text-craie">
-                  déjà dans notre coin
+                  menées dans des structures
                 </p>
               </div>
             </div>
@@ -158,7 +170,7 @@ export default function InterventionsPage() {
 
       {/* ── Ancres : à chaque cible son round + garanties ── */}
       <section className="container-wide pb-14">
-        <Stagger className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <Stagger className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {cibles.map((c, i) => {
             const Icon = cibleExtras[c.key].icon;
             return (
@@ -231,7 +243,7 @@ export default function InterventionsPage() {
                       {c.persona}
                     </p>
                     <footer className="mt-3 font-condensed text-xs font-semibold uppercase tracking-brand text-craie-muted">
-                      Ce qu'on entend sur le terrain — et notre réponse est juste à côté
+                      Persona des documents de cadrage — notre réponse est juste à côté
                     </footer>
                   </blockquote>
                 </Reveal>
@@ -261,7 +273,7 @@ export default function InterventionsPage() {
                 <Reveal delay={0.1} className="mt-8 border-t border-noir-line pt-6">
                   <h3 className="flex items-center gap-2 font-display text-sm tracking-normal text-or">
                     <Sparkles className="h-4 w-4" strokeWidth={1.75} />
-                    Exemples de séances déjà réalisées
+                    Formats possibles
                   </h3>
                   <ul className="mt-4 flex flex-col gap-3">
                     {c.exemples.map((ex) => (
@@ -287,32 +299,8 @@ export default function InterventionsPage() {
 
       <div className="ring-ropes" aria-hidden />
 
-      {/* ── Témoignages structures — citations nues, sans cartes ── */}
-      <section className="container-wide py-20 lg:py-24">
-        <SectionTitle
-          eyebrow="Round 05 · Ils témoignent"
-          title="Ce que les structures en disent"
-          intro="DRH, direction de centre social, accueil de loisirs, éducateur PJJ : les mêmes questions que vous au départ — et leurs réponses après un cycle avec nous."
-        />
-        <Stagger className="mt-12 grid gap-x-14 gap-y-12 sm:grid-cols-2">
-          {testimonials.slice(0, 4).map((t) => (
-            <StaggerItem key={t.author} className="h-full">
-              <figure className="flex h-full flex-col gap-4 border-t border-noir-line pt-6">
-                <Quote className="h-7 w-7 text-or/50" strokeWidth={1.5} />
-                <blockquote className="text-[15px] leading-relaxed text-craie">
-                  «&nbsp;{t.quote}&nbsp;»
-                </blockquote>
-                <figcaption className="mt-auto text-sm text-craie-soft">
-                  <span className="font-semibold text-craie">{t.author}</span> — {t.role}
-                </figcaption>
-              </figure>
-            </StaggerItem>
-          ))}
-        </Stagger>
-      </section>
-
       {/* ── Round final — comment ça marche + devis + PDF, fusionnés ── */}
-      <section className="container-wide pb-24">
+      <section className="container-wide py-20 pb-24">
         <SectionTitle
           eyebrow="Round 06 · Comment ça marche"
           title="De l'idée au premier coup de gong"
@@ -344,7 +332,7 @@ export default function InterventionsPage() {
               </h2>
               <p className="text-pretty text-[15px] leading-relaxed text-craie">
                 Quatre étapes, deux minutes, zéro engagement : décrivez votre projet et recevez
-                une proposition sur mesure sous 48h. Le reste, on s'en occupe.
+                une proposition sur mesure. Le reste, on s’en occupe.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
                 <DevisButton size="lg" className="bg-craie text-rouge shadow-lift hover:bg-craie/90 hover:shadow-lift">

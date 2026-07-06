@@ -25,6 +25,8 @@ export function ImpactCounter({
   useEffect(() => {
     if (!inView) return;
     if (reduce) {
+      // en reduced motion, on affiche directement la valeur finale (pas d'animation)
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setDisplay(value);
       return;
     }

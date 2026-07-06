@@ -11,7 +11,7 @@ import { GalerieGrid } from "@/components/galerie/galerie-grid";
 export const metadata: Metadata = buildMetadata({
   title: "Galerie",
   description:
-    "Galas amicaux, initiations, sorties et interventions aux quatre coins du territoire : la vie du CBAC en images, du premier assaut éducatif aux projecteurs des soirs de gala.",
+    "Initiations, temps d'échanges, sorties et interventions dans les structures : la vie du CBAC en images.",
   path: "/galerie",
 });
 
@@ -31,7 +31,7 @@ export default function GaleriePage() {
           as="h1"
           eyebrow="En images"
           title="La vie de l'asso, gants aux poings"
-          intro="Galas sous les projecteurs, cours au gymnase, sorties et séances découverte : filtrez par catégorie, cliquez pour agrandir."
+          intro="Séances d'initiation, temps d'échanges, sorties et événements : filtrez par catégorie, cliquez pour agrandir."
         />
       </section>
 
@@ -57,8 +57,8 @@ export default function GaleriePage() {
             Envie d&apos;être sur la prochaine photo ?
           </h2>
           <p className="text-[15px] leading-relaxed text-craie-soft">
-            Nos galas sont ouverts à tous, entrée libre — et la première séance d&apos;essai
-            est offerte, dès 6 ans, matériel prêté.
+            Nos actions sont ouvertes à tous, débutants bienvenus — venez nous rencontrer sur
+            l&apos;un de nos lieux d&apos;intervention.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button asChild size="lg">

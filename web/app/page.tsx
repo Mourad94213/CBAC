@@ -9,22 +9,20 @@ import { Divider } from "@/components/site/divider";
 import { ParallaxImage } from "@/components/site/parallax";
 import { ImpactCounter } from "@/components/site/impact-counter";
 import { Quiz } from "@/components/site/quiz";
-import { TestimonialSlider } from "@/components/site/testimonial-slider";
 import { ActionCard } from "@/components/actions/action-card";
 import { CoachCard } from "@/components/coachs/coach-card";
 import { CalendrierMois } from "@/components/planning/mois-calendar";
-import { JsonLd } from "@/components/seo/json-ld";
-import { buildMetadata, eventLd } from "@/lib/seo";
+import { buildMetadata } from "@/lib/seo";
 import { association } from "@/lib/data/site";
 import { actions } from "@/lib/data/actions";
 import { coachs, fondateur } from "@/lib/data/coachs";
 import { eventsMois } from "@/lib/data/schedule";
-import { instaPosts, partenaires, stages } from "@/lib/data/content";
+import { instaPosts } from "@/lib/data/content";
 
 export const metadata = buildMetadata({
-  title: "Boxe anglaise & éducation populaire à Nanterre",
+  title: "Boxe anglaise & éducation populaire",
   description:
-    "CBAC, association de boxe anglaise et d'éducation populaire à Nanterre : cours d'initiation, stages vacances, galas amicaux et interventions sur mesure — dans les gymnases, foyers, centres sociaux, écoles et entreprises. Première initiation offerte.",
+    "CBAC, association d'éducation populaire qui crée du lien social par la boxe anglaise : initiations et cours, stages, temps d'échanges et sorties boxe — directement dans les structures qui nous accueillent : foyers, centres sociaux, écoles, entreprises.",
   path: "/",
 });
 
@@ -34,37 +32,33 @@ const portes = [
     name: "Jeunes & familles",
     href: "/actions",
     img: "/images/cours-2.svg",
-    note: "Initiations près de chez vous dès 6 ans, stages à chaque vacances.",
-    alt: "Groupe de boxe éducative 6-11 ans en cercle autour du coach",
+    note: "Initiations ouvertes à tous, débutants bienvenus — et des stages avec nos partenaires.",
+    alt: "Groupe de jeunes en cercle autour du coach pendant une initiation",
   },
   {
-    name: "Structures & collectivités",
+    name: "Foyers, structures & collectivités",
     href: "/interventions",
     img: "/images/centre-social-1.svg",
-    note: "Centres sociaux, foyers, écoles, insertion : des cycles co-construits, chez vous.",
-    alt: "Séance découverte de boxe dans un centre social partenaire",
+    note: "Foyers, centres sociaux, écoles, insertion : on vient chez vous, on boxe et on discute.",
+    alt: "Séance découverte de boxe dans une structure d’accueil",
   },
   {
     name: "Entreprises",
     href: "/interventions#entreprises",
     img: "/images/corporate-1.svg",
-    note: "Team building aux gants : cohésion maximale, zéro coup reçu.",
+    note: "Team building aux gants — et votre séance soutient nos actions sociales.",
     alt: "Atelier team building boxe avec une équipe d’entreprise",
   },
 ];
 
-const stageOuvert = stages.find((s) => s.statut === "ouvert")!;
-
 export default function HomePage() {
   return (
     <>
-      <JsonLd data={eventLd(stageOuvert)} />
-
       {/* ── HERO — split asymétrique, entrée dramatique sous projecteur ── */}
       <div className="spotlight grain relative overflow-hidden">
         <section className="container-wide relative grid items-center gap-10 py-12 lg:grid-cols-[1.05fr_1fr] lg:gap-14 lg:py-20">
           <Reveal className="order-2 flex flex-col gap-6 lg:order-1">
-            <span className="eyebrow">Boxe anglaise &amp; éducation populaire · Nanterre</span>
+            <span className="eyebrow">Boxe anglaise &amp; éducation populaire</span>
             <h1 className="text-balance text-4xl leading-[1.04] sm:text-5xl lg:text-[3.6rem]">
               La boxe anglaise comme <span className="text-or">école de vie.</span>
             </h1>
@@ -73,8 +67,8 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg">
-                <Link href="/adhesion">
-                  Première initiation offerte
+                <Link href="/actions">
+                  Découvrir nos actions
                   <ArrowRight className="h-4 w-4" strokeWidth={2} />
                 </Link>
               </Button>
@@ -82,7 +76,7 @@ export default function HomePage() {
             </div>
             <p className="flex items-center gap-2 text-sm text-craie-muted">
               <MapPin className="h-4 w-4 shrink-0 text-bleu-light" strokeWidth={1.75} />
-              Nanterre &amp; Hauts-de-Seine · on se déplace · dès 6 ans · matériel fourni
+              Pas de gymnase attitré : on intervient là où on nous accueille
             </p>
           </Reveal>
 
@@ -90,7 +84,7 @@ export default function HomePage() {
             <div className="relative">
               <ParallaxImage
                 src="/images/hero-ring.svg"
-                alt="Boxeur à l’entraînement sur un ring sous les projecteurs, lors d'un événement du CBAC"
+                alt="Boxeur à l’entraînement sur un ring sous les projecteurs"
                 priority
                 amount={40}
                 className="aspect-[4/5] rounded-5xl border border-noir-line shadow-card sm:aspect-[5/6]"
@@ -114,18 +108,15 @@ export default function HomePage() {
       <section className="border-y border-noir-line bg-bleu-tint/60 py-14 sm:py-16">
         <div className="container-wide">
           <h2 className="sr-only">L’impact du CBAC en chiffres</h2>
-          <Stagger className="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-4">
+          <Stagger className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-3">
             <StaggerItem>
-              <ImpactCounter value={association.impact.jeunes} suffix="+" label="Jeunes accompagnés" />
+              <ImpactCounter value={association.impact.actions} suffix="+" label="Actions menées dans des structures" />
             </StaggerItem>
             <StaggerItem>
               <ImpactCounter value={association.impact.structures} label="Structures partenaires" />
             </StaggerItem>
             <StaggerItem>
-              <ImpactCounter value={association.impact.annees} label="Ans d’engagement" />
-            </StaggerItem>
-            <StaggerItem>
-              <ImpactCounter value={association.impact.seances} label="Séances par an" />
+              <ImpactCounter value={association.impact.annees} label="Ans d’existence" />
             </StaggerItem>
           </Stagger>
         </div>
@@ -137,7 +128,7 @@ export default function HomePage() {
           <SectionTitle
             eyebrow="Round 01 · Nos actions"
             title="Pas de salle à nous : on vient à vous"
-            intro="Initiations, stages vacances, galas amicaux, sorties boxe — là où on nous accueille : gymnases, foyers, centres sociaux, écoles."
+            intro="Initiations et cours, stages, temps d'échanges et sorties boxe — dans les structures qui nous accueillent : foyers, centres sociaux, écoles, entreprises. Et à chaque séance, on prend le temps de discuter : c'est comme ça qu'on crée du lien."
           />
           <Button asChild variant="outline" size="md" className="shrink-0">
             <Link href="/actions">Toutes nos actions</Link>
@@ -153,12 +144,12 @@ export default function HomePage() {
         <Reveal delay={0.1} className="container-wide mt-8">
           <p className="flex flex-wrap items-center gap-2 text-[15px] text-craie-soft">
             <Flame className="h-4 w-4 shrink-0 text-rouge" strokeWidth={1.75} />
-            Cet été, les stages « Premiers gants » et « Ring d’été » sont ouverts à tous, sans expérience.
+            En deux ans, plus de 30 actions menées dans des structures — foyers en tête.
             <Link
-              href="/stages"
+              href="/interventions"
               className="inline-flex items-center gap-1.5 font-condensed text-sm font-semibold uppercase tracking-wide text-or transition-colors hover:text-craie"
             >
-              Voir les stages
+              Accueillir le CBAC chez vous
               <ArrowRight className="h-4 w-4" strokeWidth={2} />
             </Link>
           </p>
@@ -221,9 +212,9 @@ export default function HomePage() {
       {/* ── ROUND 04 — le coin des coachs ── */}
       <section className="container-wide py-20">
         <SectionTitle
-          eyebrow="Round 04 · Le coin des coachs"
-          title="Des coachs diplômés, exigeants et bienveillants"
-          intro="BPJEPS, DEJEPS, brevets fédéraux : les diplômes sont présentés à chaque structure qui nous accueille — et affichés ici. Parce que la confiance, ça se prouve."
+          eyebrow="Round 04 · L'équipe"
+          title="Une équipe de bénévoles motivés"
+          intro="Autour de son président fondateur, l'association s'appuie sur de jeunes coachs issus de la boxe amateur. L'équipe est présentée à chaque structure avant l'intervention."
         />
         <div className="mt-10 grid gap-6 lg:grid-cols-[1.2fr_2fr]">
           <Reveal className="group relative overflow-hidden rounded-4xl border border-noir-line">
@@ -239,12 +230,12 @@ export default function HomePage() {
               <span className="pill bg-or text-noir-deep">Fondateur &amp; président</span>
               <h3 className="mt-2 font-display text-2xl text-craie">{fondateur.name}</h3>
               <p className="mt-1 max-w-sm text-sm text-craie-soft">
-                Ancien compétiteur amateur, prévôt fédéral, il a fondé le CBAC il y a douze ans.
-                D’un gymnase à l’autre : premier arrivé, dernier à ranger les gants.
+                Il porte le projet associatif du CBAC : créer du lien social à travers la boxe
+                anglaise, dans les structures qui accueillent l&apos;association.
               </p>
             </div>
           </Reveal>
-          <Stagger className="grid gap-5 sm:grid-cols-3">
+          <Stagger className="grid gap-5 sm:grid-cols-2">
             {coachs.filter((c) => !c.founder).map((coach) => (
               <StaggerItem key={coach.slug} className="h-full">
                 <CoachCard coach={coach} />
@@ -262,40 +253,13 @@ export default function HomePage() {
         </Reveal>
       </section>
 
-      {/* ── ROUND 05 — témoignages + partenaires ── */}
-      <section className="container-wide py-20">
-        <SectionTitle
-          eyebrow="Round 05 · Ils en parlent"
-          title="Sur le ring, la confiance se gagne"
-          intro="Parents, participants, structures partenaires : ils en parlent mieux que nous."
-        />
-        <div className="mt-12">
-          <TestimonialSlider />
-        </div>
-        <Reveal delay={0.1} className="mt-16 flex flex-col items-center gap-5 text-center">
-          <p className="font-condensed text-sm font-semibold uppercase tracking-brand text-craie-muted">
-            Ils nous font confiance
-          </p>
-          <ul className="flex flex-wrap justify-center gap-2">
-            {partenaires.map((p) => (
-              <li
-                key={p.name}
-                className="rounded-full border border-noir-line bg-noir-card/70 px-4 py-2 text-sm text-craie-soft transition-colors duration-300 hover:border-or hover:text-craie"
-              >
-                {p.name}
-              </li>
-            ))}
-          </ul>
-        </Reveal>
-      </section>
-
-      {/* ── ROUND 06 — la vie de l'asso : calendrier du mois + coulisses Instagram ── */}
+      {/* ── ROUND 05 — la vie de l'asso : calendrier du mois + coulisses Instagram ── */}
       <section className="container-wide py-20">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <SectionTitle
-            eyebrow="Round 06 · La vie de l'asso"
-            title="Gala, stages, coulisses : l’association vit toute l’année"
-            intro="Les rendez-vous du mois — et les dernières images d’entre les cordes."
+            eyebrow="Round 05 · La vie de l'asso"
+            title="L’association vit toute l’année"
+            intro="Les prochains rendez-vous — et les dernières images d’entre les cordes."
           />
           <Button asChild variant="outline" size="md" className="shrink-0">
             <Link href="/calendrier">
@@ -355,8 +319,8 @@ export default function HomePage() {
               Prêt·e à enfiler les gants&nbsp;?
             </h2>
             <p className="text-pretty text-craie">
-              Première initiation offerte pour les particuliers, devis sous 48h pour les structures
-              et les entreprises. On apporte le ring.
+              Particuliers, structures, entreprises : décrivez-nous votre projet, on construit la
+              suite ensemble — et on vient à vous.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <DevisButton

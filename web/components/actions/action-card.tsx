@@ -8,16 +8,16 @@ import { cn } from "@/lib/utils";
 const chipTint: Record<string, string> = {
   "cours-initiation": "bg-or-tint text-or",
   "stages-vacances": "bg-bleu-tint text-bleu-light",
+  "temps-echanges": "bg-craie/10 text-craie",
   "galas-amicaux": "bg-rouge-tint text-rouge-light",
-  "sorties-evenements": "bg-craie/10 text-craie",
 };
 
 /** Libellé court du badge par action. */
 const chipLabel: Record<string, string> = {
-  "cours-initiation": "Dès 6 ans",
-  "stages-vacances": "6-15 ans",
-  "galas-amicaux": "Entrée libre",
-  "sorties-evenements": "Sur invitation",
+  "cours-initiation": "Tous publics",
+  "stages-vacances": "Avec nos partenaires",
+  "temps-echanges": "Temps conviviaux",
+  "galas-amicaux": "En projet",
 };
 
 export function ActionCard({

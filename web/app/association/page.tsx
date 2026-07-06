@@ -34,7 +34,7 @@ import { faqSecurite } from "@/lib/data/content";
 export const metadata: Metadata = buildMetadata({
   title: "L'association",
   description:
-    "CBAC, association loi 1901 de boxe anglaise et d'éducation populaire à Nanterre. Notre histoire, nos valeurs, le mot du président Soungui Gomis, notre projet pédagogique et toutes nos garanties d'encadrement.",
+    "CBAC, association d'éducation populaire qui crée du lien social à travers la boxe anglaise. Nos valeurs, le mot du président Soungui Gomis, notre démarche et nos réponses à vos questions.",
   path: "/association",
 });
 
@@ -47,7 +47,7 @@ const valeurs = [
   {
     icon: HeartPulse,
     title: "La gestion des émotions",
-    text: "La colère, la peur, le trac : la boxe les met à nu pour mieux apprendre à les maîtriser. Souffler, garder sa garde, encaisser sans exploser — des réflexes qui servent au gymnase comme au collège.",
+    text: "La colère, la peur, le trac : la boxe les met à nu pour mieux apprendre à les maîtriser. Souffler, garder sa garde, encaisser sans exploser — des réflexes qui servent sur le ring comme dans la vie.",
   },
   {
     icon: Mountain,
@@ -56,55 +56,51 @@ const valeurs = [
   },
 ];
 
-const jalons = [
+/** Ce qu'on sait vraiment, en chiffres — l'histoire détaillée sera ajoutée quand l'association fournira son document. */
+const reperes = [
   {
-    annee: "2014",
-    titre: "Le premier gong",
+    chiffre: `${association.impact.annees} ans`,
+    titre: "D'existence",
     texte:
-      "Soungui Gomis fonde le CBAC avec deux sacs de frappe prêtés, un coin de gymnase municipal et une poignée de jeunes du quartier. L'association loi 1901 est née — sans salle à elle, et fière de l'être.",
+      "Le CBAC est une jeune association d'éducation populaire, qui vise à créer du lien social à travers le sport — particulièrement la boxe anglaise.",
   },
   {
-    annee: "2018",
-    titre: "Toujours plus loin",
+    chiffre: `${association.impact.actions}+`,
+    titre: "Actions menées dans des structures",
     texte:
-      "Écoles, centres sociaux, premiers foyers : la boxe éducative va chercher les jeunes là où ils sont. Le principe itinérant devient la marque de fabrique du CBAC.",
+      "Initiations, cours et temps d'échanges, menés directement dans les structures qui accueillent l'association — foyers en tête.",
   },
   {
-    annee: "2022",
-    titre: "La relève sur le ring",
+    chiffre: `${association.impact.structures}`,
+    titre: "Structures partenaires",
     texte:
-      "Premiers galas amicaux devant des salles pleines, premières conventions avec la Ville. Les jeunes accompagnés par l'association deviennent à leur tour bénévoles et exemples pour les plus petits.",
-  },
-  {
-    annee: "2026",
-    titre: "Une maison qui compte",
-    texte: `${association.impact.jeunes}+ jeunes accompagnés, ${association.impact.structures} structures partenaires et ${association.impact.seances} séances par an : le CBAC est devenu un acteur éducatif à part entière du territoire.`,
+      "Des partenariats qui permettent d'élargir les actions de l'association et d'offrir une expérience plus riche à son public.",
   },
 ];
 
 const documents = [
   {
-    title: "Projet pédagogique CBAC",
+    title: "Dossier de présentation CBAC",
     description:
-      "Notre méthode complète, noir sur blanc : objectifs éducatifs, progression par gants de couleur, protocoles de sécurité et modalités d'évaluation. Le document qui rassure les familles et sert de socle aux dossiers de nos partenaires.",
+      "Qui nous sommes, nos actions, nos publics et nos axes de développement : le dossier de présentation de l'association, à partager avec vos équipes ou vos financeurs.",
     href: "/docs/projet-pedagogique-cbac.pdf",
-    meta: "PDF · 12 pages",
-    cta: "Télécharger le projet pédagogique",
+    meta: "PDF",
+    cta: "Télécharger le dossier",
   },
   {
     title: "Plaquette entreprises & structures",
     description:
-      "Team building, cycles éducatifs, stages clé en main : nos formats d'intervention, des exemples de séances et les témoignages de structures accompagnées. À glisser directement dans votre prochain comité de direction.",
+      "Nos formats d'intervention pour les structures et les entreprises, en un document à glisser dans votre prochaine réunion.",
     href: "/docs/plaquette-entreprises-cbac.pdf",
-    meta: "PDF · 8 pages",
+    meta: "PDF",
     cta: "Télécharger la plaquette",
   },
 ];
 
 const garanties = [
-  { icon: Award, text: "100 % de coachs diplômés (BPJEPS, DEJEPS, brevets fédéraux), diplômes présentés à chaque structure" },
-  { icon: ShieldCheck, text: "Assurance de l'association couvrant chaque participant, sur tous nos lieux d'intervention" },
-  { icon: Sparkles, text: "Matériel fourni et désinfecté après chaque séance" },
+  { icon: Award, text: "Une équipe de bénévoles motivés, présentée à chaque structure avant l'intervention" },
+  { icon: ShieldCheck, text: "Un cadre clair posé dès la première séance : respect, écoute, dépassement de soi" },
+  { icon: Sparkles, text: "Un temps d'échange et de discussion intégré à chaque séance" },
 ];
 
 export default function AssociationPage() {
@@ -127,22 +123,22 @@ export default function AssociationPage() {
             as="h1"
             eyebrow="L'association"
             title="Pas de salle, une école de vie"
-            intro={`${association.legalName}, association loi 1901 née il y a ${association.impact.annees} ans à Nanterre, fait de la boxe anglaise un outil d'éducation populaire. Sans salle attitrée, elle installe son ring là où on l'accueille — et on y apprend bien plus que le jab.`}
+            intro={`${association.legalName}, association d'éducation populaire née il y a ${association.impact.annees} ans, fait de la boxe anglaise un outil de lien social. Sans gymnase attitré, elle intervient là où on l'accueille — et on y apprend bien plus que le jab.`}
           />
 
           <Reveal delay={0.12}>
             <div className="relative">
               <ParallaxImage
                 src="/images/hero-ring.svg"
-                alt="Un ring sous les projecteurs lors d'un gala du CBAC, silhouette d'un boxeur"
+                alt="Un ring de boxe sous les projecteurs, silhouette d'un boxeur"
                 priority
                 amount={40}
                 className="aspect-[4/5] rounded-5xl border border-noir-line shadow-card sm:aspect-[5/6]"
                 sizes="(max-width: 1024px) 100vw, 45vw"
               />
               <div className="absolute -right-3 top-6 rounded-2xl border border-noir-line bg-noir-card/95 px-4 py-3 shadow-lift backdrop-blur">
-                <p className="font-condensed text-xs font-semibold uppercase tracking-brand text-or">depuis</p>
-                <p className="font-display text-2xl leading-none text-craie">2014</p>
+                <p className="font-condensed text-xs font-semibold uppercase tracking-brand text-or">déjà</p>
+                <p className="font-display text-2xl leading-none text-craie">{association.impact.actions}+ actions</p>
               </div>
             </div>
           </Reveal>
@@ -171,29 +167,30 @@ export default function AssociationPage() {
           </Reveal>
 
           <Reveal className="flex flex-col gap-6">
-            <span className="eyebrow">Round 01 · Notre histoire</span>
+            <span className="eyebrow">Round 01 · L’association en bref</span>
             <h2 className="max-w-xl text-3xl leading-[1.08] sm:text-4xl">
-              Douze ans d'éducation populaire, gants aux poings
+              Deux ans d’éducation populaire, gants aux poings
             </h2>
             <p className="max-w-xl text-[15px] leading-relaxed text-craie-soft">
-              Le CBAC est né d'une conviction simple : dans un quartier, une salle de boxe bien tenue
-              change des trajectoires. Soungui Gomis a voulu offrir aux jeunes ce que le ring lui avait
-              donné — un cadre, des repères, des adultes qui croient en vous.
+              Le CBAC vise à créer du lien social à travers le sport, particulièrement la boxe
+              anglaise : en transmettant les valeurs de ce sport à travers ses actions,
+              l’association construit un projet ambitieux et durable, porté par les compétences et
+              les valeurs de son équipe de bénévoles motivés.
             </p>
 
             <ol className="mt-2 flex flex-col">
-              {jalons.map((j, i) => (
+              {reperes.map((r, i) => (
                 <li
-                  key={j.annee}
-                  className={`relative border-l border-noir-line pl-8 ${i === jalons.length - 1 ? "" : "pb-8"}`}
+                  key={r.titre}
+                  className={`relative border-l border-noir-line pl-8 ${i === reperes.length - 1 ? "" : "pb-8"}`}
                 >
                   <span
                     className="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-or shadow-glow-or"
                     aria-hidden
                   />
-                  <p className="font-condensed text-2xl font-semibold leading-none text-or">{j.annee}</p>
-                  <h3 className="mt-2 font-display text-lg text-craie">{j.titre}</h3>
-                  <p className="mt-1.5 max-w-lg text-[15px] leading-relaxed text-craie-soft">{j.texte}</p>
+                  <p className="font-condensed text-2xl font-semibold leading-none text-or">{r.chiffre}</p>
+                  <h3 className="mt-2 font-display text-lg text-craie">{r.titre}</h3>
+                  <p className="mt-1.5 max-w-lg text-[15px] leading-relaxed text-craie-soft">{r.texte}</p>
                 </li>
               ))}
             </ol>
@@ -248,24 +245,27 @@ export default function AssociationPage() {
           <Reveal delay={0.1} className="flex flex-col gap-6">
             <span className="eyebrow">Round 03 · Le mot du président</span>
             <h2 className="max-w-xl text-3xl leading-[1.08] sm:text-4xl">
-              « La boxe m'a tout appris. Notre travail, c'est de le rendre. »
+              « Créer du lien social à travers le sport. »
             </h2>
+            {/* Texte repris du dossier de présentation de l'association (mot du président). */}
             <div className="flex max-w-xl flex-col gap-4 text-[15px] leading-relaxed text-craie-soft">
               <p>
-                « J'ai grandi à Nanterre, à dix minutes du gymnase. À quinze ans, j'étais un gamin en
-                colère ; c'est un entraîneur bénévole qui m'a tendu mes premiers gants — et avec eux, un
-                cadre, une exigence, une fierté. Ce que cette association m'a donné, aucune médaille ne le vaut.
+                « Le CBAC est une association d’éducation populaire, qui vise à créer du lien social
+                à travers le sport, particulièrement la boxe anglaise. En associant et transmettant
+                les valeurs de ce sport à travers ses diverses actions, le CBAC souhaite construire
+                et développer un projet ambitieux et durable, en s’appuyant sur les compétences et
+                les valeurs portées par son équipe de bénévoles motivés.
               </p>
               <p>
-                Le CBAC, c'est cette dette que je rembourse chaque semaine, d'un gymnase à un foyer,
-                d'une école à un centre social. Nous ne formons pas d'abord des champions : nous
-                accompagnons des enfants qui apprennent à canaliser leur énergie, des ados qui
-                reprennent confiance, des adultes qui se remettent en mouvement. Quand un ancien du
-                CBAC revient aider les petits à lacer leurs gants, c'est notre plus belle victoire.
+                Le respect, la gestion des émotions, le dépassement de soi et bien d’autres valeurs
+                sont des facteurs de réussite dans le sport et la vie en société. Nous souhaitons
+                valoriser notre public en lui créant un environnement sportif sain et convivial,
+                favorisant son épanouissement par la performance et l’évolution sportive.
               </p>
               <p>
-                Venez nous voir sur l'une de nos séances, où qu'elle soit : vous verrez du sérieux,
-                de la sueur et beaucoup de sourires. Ici, tout le monde a sa place sur le ring. »
+                Le CBAC est destiné à tous les publics, aussi bien expérimentés en boxe que
+                débutants. Et souhaite particulièrement travailler et mettre en place des activités
+                pour des structures et dispositifs privés ou publics. »
               </p>
             </div>
             <div className="flex items-center gap-4">
@@ -277,7 +277,7 @@ export default function AssociationPage() {
             <div>
               <Button asChild variant="outline" size="md">
                 <Link href="/coachs">
-                  Rencontrer toute l'équipe
+                  Rencontrer toute l’équipe
                   <ArrowRight className="h-4 w-4" strokeWidth={1.75} />
                 </Link>
               </Button>
@@ -292,7 +292,7 @@ export default function AssociationPage() {
           <SectionTitle
             eyebrow="Round 04 · Nos documents"
             title="Tout est écrit, tout est téléchargeable"
-            intro="Parce que la confiance se construit sur des preuves : notre projet pédagogique et notre plaquette d'intervention sont publics. Servez-vous, partagez, imprimez."
+            intro="Le dossier de présentation de l'association et la plaquette d'intervention sont publics. Servez-vous, partagez, imprimez."
           />
           <Stagger className="mt-10 grid gap-5 md:grid-cols-2">
             {documents.map((doc) => (
@@ -330,13 +330,13 @@ export default function AssociationPage() {
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
           <div className="flex flex-col gap-8 lg:sticky lg:top-28 lg:self-start">
             <SectionTitle
-              eyebrow="Round 05 · Sécurité & encadrement"
-              title="Vos questions, nos garanties"
-              intro="La question qu'on nous pose le plus souvent : « la boxe, ce n'est pas dangereux pour mon enfant ? ». Voici nos réponses, sans détour — la sécurité est le premier chapitre de notre projet pédagogique."
+              eyebrow="Round 05 · Vos questions"
+              title="Comment ça se passe, concrètement ?"
+              intro="Les réponses aux questions qu'on nous pose le plus souvent — sur le déroulé des séances, l'encadrement et les publics concernés."
             />
             <Reveal delay={0.08} className="flex flex-col gap-4">
               <p className="font-condensed text-xs font-semibold uppercase tracking-brand text-or">
-                Nos trois garanties
+                Nos engagements
               </p>
               <ul className="flex flex-col gap-3.5">
                 {garanties.map((g) => (
@@ -347,7 +347,7 @@ export default function AssociationPage() {
                 ))}
               </ul>
               <Link href="/coachs" className="link-underline self-start text-sm font-semibold text-bleu-light">
-                Voir les diplômes de nos coachs
+                Rencontrer l’équipe
               </Link>
             </Reveal>
           </div>
@@ -374,13 +374,13 @@ export default function AssociationPage() {
               Venez voir par vous-même
             </h2>
             <p className="text-pretty text-craie">
-              La meilleure façon de comprendre l'esprit CBAC, c'est de venir à une initiation ou à
-              un gala près de chez vous. Première séance offerte, gants prêtés, sourire garanti.
+              La meilleure façon de comprendre l’esprit CBAC, c’est de venir à l’une de nos
+              séances : on boxe, on discute, on repart avec le sourire.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg" variant="secondary" className="bg-craie text-rouge hover:bg-craie/90 hover:shadow-none">
                 <Link href="/adhesion">
-                  Venir essayer gratuitement
+                  Rejoindre l’association
                   <ArrowRight className="h-4 w-4" strokeWidth={2} />
                 </Link>
               </Button>

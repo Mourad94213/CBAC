@@ -59,8 +59,8 @@ export default function EspacePartenairesPage() {
         <Reveal className="mx-auto flex max-w-xl flex-col items-center gap-5 text-center">
           <h2 className="text-balance text-2xl sm:text-3xl">Pas encore partenaire du CBAC ?</h2>
           <p className="text-[15px] leading-relaxed text-craie-soft">
-            Team building, cycle éducatif, stage clé en main : décrivez votre besoin en
-            quatre étapes et recevez une proposition sur mesure sous 48 h ouvrées.
+            Initiation, cycle de séances, stage, temps d&apos;échange : décrivez votre besoin en
+            quatre étapes et recevez une proposition sur mesure.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <DevisButton size="lg">Créer mon intervention</DevisButton>

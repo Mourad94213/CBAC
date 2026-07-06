@@ -37,12 +37,13 @@ const STEPS = ["Vous êtes", "Votre projet", "Logistique", "Coordonnées"] as co
 
 type IconType = ComponentType<{ className?: string; strokeWidth?: number }>;
 
-/* Cibles du configurateur : les 4 cibles B2B/B2A + le particulier. */
+/* Cibles du configurateur : les 5 cibles B2B/B2A + le particulier. */
 const CIBLE_META: Record<CibleDevis, { icon: IconType; tagline: string }> = {
-  entreprises: { icon: Briefcase, tagline: "Team building, QVT, cohésion d'équipe" },
-  "centres-sociaux": { icon: HeartHandshake, tagline: "Cycles éducatifs pour vos jeunes" },
-  ecoles: { icon: GraduationCap, tagline: "EPS, périscolaire, stages clé en main" },
-  insertion: { icon: Compass, tagline: "Cycles insertion & PJJ, projet écrit" },
+  foyers: { icon: HeartHandshake, tagline: "Initiations & temps d'échanges chez vous" },
+  "centres-sociaux": { icon: Users, tagline: "Séances et cycles pour vos jeunes" },
+  ecoles: { icon: GraduationCap, tagline: "Temps scolaire, périscolaire, stages" },
+  insertion: { icon: Compass, tagline: "Un cadre accepté, des valeurs transmises" },
+  entreprises: { icon: Briefcase, tagline: "Team building, cohésion d'équipe" },
   particulier: { icon: User, tagline: "Pour vous, votre enfant ou vos proches" },
 };
 
@@ -52,11 +53,11 @@ const CIBLE_OPTIONS: { key: CibleDevis; name: string }[] = [
 ];
 
 const FORMATS: { id: string; name: string; desc: string; icon: IconType }[] = [
-  { id: "decouverte", name: "Séance découverte", desc: "1h à 1h30 pour mettre les gants, matériel fourni.", icon: Sparkles },
-  { id: "cycle", name: "Cycle sur mesure", desc: "5 à 12 séances, objectifs définis ensemble, bilan écrit.", icon: CalendarRange },
-  { id: "stage", name: "Stage vacances", desc: "Une semaine clé en main pendant les vacances scolaires.", icon: Sun },
-  { id: "team-building", name: "Team building", desc: "De 1h30 à la journée, défis d'équipe, zéro coup porté.", icon: Users },
-  { id: "gala", name: "Événement & mini-gala", desc: "Démonstrations, assauts amicaux, temps fort fédérateur.", icon: Trophy },
+  { id: "decouverte", name: "Séance d'initiation", desc: "Mettre les gants, apprendre les bases — et échanger.", icon: Sparkles },
+  { id: "cycle", name: "Cycle de séances", desc: "Plusieurs séances dans la durée, objectifs définis ensemble.", icon: CalendarRange },
+  { id: "stage", name: "Stage", desc: "Monté avec votre structure, notamment pendant les vacances.", icon: Sun },
+  { id: "team-building", name: "Team building", desc: "Cohésion d'équipe autour des gants, dans vos locaux.", icon: Users },
+  { id: "echange", name: "Temps d'échange", desc: "Rencontre avec un boxeur, sortie gala, soirée boxe.", icon: Trophy },
   { id: "autre", name: "Autre projet", desc: "Une idée hors cadre ? On adore. Racontez-nous tout.", icon: Wand2 },
 ];
 
@@ -86,7 +87,7 @@ export function DevisWizard() {
   const format = FORMATS.find((f) => f.id === data.format);
   const lieux = [
     { label: isParticulier ? "Sur le lieu de votre choix" : "Dans vos locaux", icon: Building2 },
-    { label: "Dans un gymnase mis à disposition", icon: MapPin },
+    { label: "Sur un lieu à trouver ensemble", icon: MapPin },
     { label: "À définir ensemble", icon: Shuffle },
   ];
 
@@ -204,13 +205,12 @@ export function DevisWizard() {
                     <p className="flex items-start gap-2 rounded-xl bg-bleu-tint px-4 py-3 text-xs leading-relaxed text-craie-soft">
                       <Info className="mt-0.5 h-4 w-4 shrink-0 text-or" strokeWidth={1.75} />
                       <span>
-                        Bon à savoir : pour rejoindre un cours à l&apos;année, la séance d&apos;essai est
-                        gratuite —{" "}
+                        Bon à savoir : pour rejoindre la vie de l&apos;association toute l&apos;année,{" "}
                         <Link href="/adhesion" onClick={closeDevis} className="font-semibold text-craie underline underline-offset-2">
                           direction la page Adhésion
                         </Link>
-                        . Ici, on construit plutôt un projet sur mesure : anniversaire, groupe
-                        d&apos;amis, coaching…
+                        . Ici, on construit plutôt un projet sur mesure : groupe d&apos;amis,
+                        événement, coaching…
                       </span>
                     </p>
                   )}
@@ -316,7 +316,7 @@ export function DevisWizard() {
                       })}
                     </div>
                     <p className="mt-1.5 text-xs text-craie-muted">
-                      Nous nous déplaçons partout dans les Hauts-de-Seine, matériel compris.
+                      Pas de gymnase attitré : l&apos;association se déplace là où on l&apos;accueille.
                     </p>
                   </div>
 
@@ -398,8 +398,8 @@ export function DevisWizard() {
                   </div>
 
                   <p className="text-xs leading-relaxed text-craie-muted">
-                    Devis gratuit et sans engagement, réponse sous 48h ouvrées. Maquette de
-                    démonstration : aucune donnée n&apos;est réellement envoyée.
+                    Devis gratuit et sans engagement. Maquette de démonstration : aucune donnée
+                    n&apos;est réellement envoyée.
                   </p>
                 </div>
               )}

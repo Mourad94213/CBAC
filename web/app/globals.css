@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --header-h: 76px;
+  }
+
+  * {
+    @apply border-noir-line;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: var(--header-h);
+  }
+
+  body {
+    @apply bg-noir text-craie font-sans antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-display uppercase tracking-tight text-craie;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    @apply bg-rouge text-craie;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-or ring-offset-2 ring-offset-noir;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply mx-auto w-full max-w-8xl px-5 md:px-8 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply font-condensed text-xs font-semibold uppercase tracking-brand text-or;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold leading-none;
+  }
+
+  .link-underline {
+    @apply relative inline-flex w-fit after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-300 after:ease-smooth hover:after:origin-left hover:after:scale-x-100;
+  }
+
+  /* Cordes du ring : triple ligne horizontale, utilisée en séparateur de sections */
+  .ring-ropes {
+    @apply relative h-4 w-full;
+    background-image:
+      linear-gradient(to bottom, transparent 2px, rgba(215, 38, 61, 0.55) 2px, rgba(215, 38, 61, 0.55) 3px, transparent 3px),
+      linear-gradient(to bottom, transparent 8px, rgba(242, 239, 230, 0.28) 8px, rgba(242, 239, 230, 0.28) 9px, transparent 9px),
+      linear-gradient(to bottom, transparent 14px, rgba(33, 89, 216, 0.55) 14px, rgba(33, 89, 216, 0.55) 15px, transparent 15px);
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  /* Grain photographique pour les heros (coût fixe, pointer-none) */
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.4;
+    mix-blend-mode: soft-light;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
+  }
+
+  /* Halo projecteur pour les sections immersives */
+  .spotlight {
+    background-image: radial-gradient(ellipse 70% 55% at 50% 0%, rgba(33, 89, 216, 0.22), transparent 70%);
+  }
+}

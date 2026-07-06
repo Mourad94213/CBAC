@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-label="Groupe d'enfants qui sautent sous des fanions de vacances">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0" stop-color="#0B0E14"/>
+      <stop offset="1" stop-color="#151A24"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.44" r="0.8">
+      <stop offset="0.55" stop-color="#05070B" stop-opacity="0"/>
+      <stop offset="1" stop-color="#05070B" stop-opacity="0.82"/>
+    </radialGradient>
+    <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6F0DA" stop-opacity="0.42"/>
+      <stop offset="0.75" stop-color="#F6F0DA" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowOr"><stop offset="0" stop-color="#E4CE7E" stop-opacity="0.5"/><stop offset="1" stop-color="#E4CE7E" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowBleu"><stop offset="0" stop-color="#2159D8" stop-opacity="0.55"/><stop offset="1" stop-color="#2159D8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowRouge"><stop offset="0" stop-color="#D7263D" stop-opacity="0.5"/><stop offset="1" stop-color="#D7263D" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowCraie"><stop offset="0" stop-color="#F6F0DA" stop-opacity="0.4"/><stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/></radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.92  0 0 0 0 0.90  0 0 0 0 0.84  0 0 0 0.06 0"/>
+    </filter>
+  </defs>
+  <rect width="900" height="1200" fill="url(#bg)"/>
+
+  <path d="M 60 120 Q 450 170 840 100" stroke="#E8E6DF" stroke-opacity="0.4" stroke-width="3" fill="none"/><path d="M 125.00000000000003 128.8 L 151.00000000000003 128.8 L 138.00000000000003 158.8 Z" fill="#E4CE7E" opacity="0.9"/><path d="M 203.00000000000006 135.20000000000002 L 229.00000000000006 135.20000000000002 L 216.00000000000006 165.20000000000002 Z" fill="#D7263D" opacity="0.9"/><path d="M 281 139.2 L 307 139.2 L 294 169.2 Z" fill="#2159D8" opacity="0.9"/><path d="M 359 140.79999999999998 L 385 140.79999999999998 L 372 170.79999999999998 Z" fill="#E4CE7E" opacity="0.9"/><path d="M 437 140 L 463 140 L 450 170 Z" fill="#D7263D" opacity="0.9"/><path d="M 515 136.8 L 541 136.8 L 528 166.8 Z" fill="#2159D8" opacity="0.9"/><path d="M 593 131.2 L 619 131.2 L 606 161.2 Z" fill="#E4CE7E" opacity="0.9"/><path d="M 671.0000000000001 123.2 L 697.0000000000001 123.2 L 684.0000000000001 153.2 Z" fill="#D7263D" opacity="0.9"/><path d="M 749.0000000000001 112.8 L 775.0000000000001 112.8 L 762.0000000000001 142.8 Z" fill="#2159D8" opacity="0.9"/>
+  <ellipse cx="450" cy="520" rx="380" ry="320" fill="url(#glowOr)" opacity="0.45"/>
+  <path d="M 310 -20 L 590 -20 L 870 1010 L 30 1010 Z" fill="url(#cone)" opacity="0.35"/>
+  <line x1="90" y1="1010" x2="810" y2="1010" stroke="#E8E6DF" stroke-opacity="0.2" stroke-width="2"/>
+  <ellipse cx="450" cy="1012" rx="320" ry="34" fill="url(#glowOr)" opacity="0.4"/>
+  <g transform="translate(250 970) scale(1.5 1.5)" opacity="1">
+    <path d="M -10 -66 Q -20 -42 -32 -28" stroke="#04060B" stroke-width="20" stroke-linecap="round" fill="none"/><path d="M 12 -66 Q 24 -44 36 -30" stroke="#04060B" stroke-width="20" stroke-linecap="round" fill="none"/>
+    <path d="M -24 -152 Q 2 -164 28 -150 L 30 -92 Q 26 -72 16 -60 L -16 -60 Q -26 -76 -28 -98 Z" fill="#04060B"/>
+    <circle cx="2" cy="-178" r="25" fill="#04060B"/>
+    <path d="M -18 -140 Q -34 -164 -40 -184" stroke="#04060B" stroke-width="16" stroke-linecap="round" fill="none"/><path d="M 20 -140 Q 36 -166 42 -186" stroke="#04060B" stroke-width="16" stroke-linecap="round" fill="none"/><circle cx="-43" cy="-192" r="14" fill="#D7263D"/><circle cx="45" cy="-194" r="14" fill="#D7263D"/>
+  </g>
+  <g transform="translate(470 940) scale(1.7 1.7)" opacity="1">
+    <path d="M -10 -66 Q -20 -42 -32 -28" stroke="#04060B" stroke-width="20" stroke-linecap="round" fill="none"/><path d="M 12 -66 Q 24 -44 36 -30" stroke="#04060B" stroke-width="20" stroke-linecap="round" fill="none"/>
+    <path d="M -24 -152 Q 2 -164 28 -150 L 30 -92 Q 26 -72 16 -60 L -16 -60 Q -26 -76 -28 -98 Z" fill="#04060B"/>
+    <circle cx="2" cy="-178" r="25" fill="#04060B"/>
+    <path d="M -18 -140 Q -34 -164 -40 -184" stroke="#04060B" stroke-width="16" stroke-linecap="round" fill="none"/><path d="M 20 -140 Q 36 -166 42 -186" stroke="#04060B" stroke-width="16" stroke-linecap="round" fill="none"/><circle cx="-43" cy="-192" r="14" fill="#2159D8"/><circle cx="45" cy="-194" r="14" fill="#2159D8"/>
+  </g>
+  <g transform="translate(690 976) scale(-1.45 1.45)" opacity="1">
+    <path d="M -10 -66 Q -20 -42 -32 -28" stroke="#04060B" stroke-width="20" stroke-linecap="round" fill="none"/><path d="M 12 -66 Q 24 -44 36 -30" stroke="#04060B" stroke-width="20" stroke-linecap="round" fill="none"/>
+    <path d="M -24 -152 Q 2 -164 28 -150 L 30 -92 Q 26 -72 16 -60 L -16 -60 Q -26 -76 -28 -98 Z" fill="#04060B"/>
+    <circle cx="2" cy="-178" r="25" fill="#04060B"/>
+    <path d="M -18 -140 Q -34 -164 -40 -184" stroke="#04060B" stroke-width="16" stroke-linecap="round" fill="none"/><path d="M 20 -140 Q 36 -166 42 -186" stroke="#04060B" stroke-width="16" stroke-linecap="round" fill="none"/><circle cx="-43" cy="-192" r="14" fill="#E4CE7E"/><circle cx="45" cy="-194" r="14" fill="#E4CE7E"/>
+  </g>
+  <g><rect x="301" y="666" width="9" height="4" rx="1" fill="#2159D8" opacity="0.37" transform="rotate(83 301 666)"/><rect x="284" y="578" width="9" height="4" rx="1" fill="#2159D8" opacity="0.39" transform="rotate(48 284 578)"/><rect x="434" y="516" width="9" height="4" rx="1" fill="#E4CE7E" opacity="0.82" transform="rotate(85 434 516)"/><rect x="727" y="285" width="9" height="4" rx="1" fill="#E4CE7E" opacity="0.72" transform="rotate(53 727 285)"/><rect x="562" y="697" width="9" height="4" rx="1" fill="#E4CE7E" opacity="0.44" transform="rotate(55 562 697)"/><rect x="274" y="531" width="9" height="4" rx="1" fill="#2159D8" opacity="0.74" transform="rotate(76 274 531)"/><rect x="256" y="502" width="9" height="4" rx="1" fill="#E4CE7E" opacity="0.47" transform="rotate(33 256 502)"/><rect x="706" y="690" width="9" height="4" rx="1" fill="#E4CE7E" opacity="0.60" transform="rotate(70 706 690)"/><rect x="703" y="436" width="9" height="4" rx="1" fill="#E8E6DF" opacity="0.81" transform="rotate(68 703 436)"/><rect x="208" y="416" width="9" height="4" rx="1" fill="#E8E6DF" opacity="0.41" transform="rotate(41 208 416)"/><rect x="679" y="564" width="9" height="4" rx="1" fill="#E8E6DF" opacity="0.55" transform="rotate(11 679 564)"/><rect x="571" y="407" width="9" height="4" rx="1" fill="#E8E6DF" opacity="0.77" transform="rotate(60 571 407)"/><rect x="530" y="725" width="9" height="4" rx="1" fill="#E4CE7E" opacity="0.49" transform="rotate(83 530 725)"/><rect x="406" y="566" width="9" height="4" rx="1" fill="#E8E6DF" opacity="0.38" transform="rotate(36 406 566)"/><rect x="722" y="408" width="9" height="4" rx="1" fill="#E8E6DF" opacity="0.67" transform="rotate(79 722 408)"/><rect x="421" y="425" width="9" height="4" rx="1" fill="#2159D8" opacity="0.56" transform="rotate(34 421 425)"/><rect x="364" y="419" width="9" height="4" rx="1" fill="#E4CE7E" opacity="0.75" transform="rotate(71 364 419)"/><rect x="162" y="548" width="9" height="4" rx="1" fill="#2159D8" opacity="0.77" transform="rotate(16 162 548)"/><rect x="340" y="552" width="9" height="4" rx="1" fill="#E8E6DF" opacity="0.65" transform="rotate(14 340 552)"/><rect x="641" y="481" width="9" height="4" rx="1" fill="#E8E6DF" opacity="0.79" transform="rotate(23 641 481)"/><rect x="412" y="419" width="9" height="4" rx="1" fill="#2159D8" opacity="0.68" transform="rotate(31 412 419)"/><rect x="146" y="592" width="9" height="4" rx="1" fill="#E8E6DF" opacity="0.75" transform="rotate(58 146 592)"/><rect x="705" y="605" width="9" height="4" rx="1" fill="#2159D8" opacity="0.48" transform="rotate(60 705 605)"/><rect x="630" y="497" width="9" height="4" rx="1" fill="#2159D8" opacity="0.80" transform="rotate(41 630 497)"/><rect x="392" y="466" width="9" height="4" rx="1" fill="#2159D8" opacity="0.57" transform="rotate(38 392 466)"/><rect x="482" y="648" width="9" height="4" rx="1" fill="#E4CE7E" opacity="0.42" transform="rotate(67 482 648)"/></g>
+
+  <rect width="900" height="1200" filter="url(#grain)" opacity="0.55"/>
+  <rect width="900" height="1200" fill="url(#vig)"/>
+  <text x="450" y="1177" text-anchor="middle" font-family="Barlow, Segoe UI, Arial, sans-serif" font-size="18" letter-spacing="4" fill="#E8E6DF" fill-opacity="0.4">STAGES VACANCES</text>
+</svg>

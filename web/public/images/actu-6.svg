@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Mégaphone et fanions : appel aux bénévoles">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0" stop-color="#0B0E14"/>
+      <stop offset="1" stop-color="#151A24"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.44" r="0.8">
+      <stop offset="0.55" stop-color="#05070B" stop-opacity="0"/>
+      <stop offset="1" stop-color="#05070B" stop-opacity="0.82"/>
+    </radialGradient>
+    <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6F0DA" stop-opacity="0.42"/>
+      <stop offset="0.75" stop-color="#F6F0DA" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowOr"><stop offset="0" stop-color="#E4CE7E" stop-opacity="0.5"/><stop offset="1" stop-color="#E4CE7E" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowBleu"><stop offset="0" stop-color="#2159D8" stop-opacity="0.55"/><stop offset="1" stop-color="#2159D8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowRouge"><stop offset="0" stop-color="#D7263D" stop-opacity="0.5"/><stop offset="1" stop-color="#D7263D" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowCraie"><stop offset="0" stop-color="#F6F0DA" stop-opacity="0.4"/><stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/></radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.92  0 0 0 0 0.90  0 0 0 0 0.84  0 0 0 0.06 0"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+
+  <path d="M 100 110 Q 600 148 1100 90" stroke="#E8E6DF" stroke-opacity="0.4" stroke-width="3" fill="none"/><path d="M 170.33333333333331 115.66666666666666 L 196.33333333333331 115.66666666666666 L 183.33333333333331 145.66666666666666 Z" fill="#E4CE7E" opacity="0.9"/><path d="M 253.66666666666669 120.00000000000001 L 279.6666666666667 120.00000000000001 L 266.6666666666667 150 Z" fill="#2159D8" opacity="0.9"/><path d="M 337 123 L 363 123 L 350 153 Z" fill="#D7263D" opacity="0.9"/><path d="M 420.33333333333337 124.66666666666669 L 446.33333333333337 124.66666666666669 L 433.33333333333337 154.66666666666669 Z" fill="#E4CE7E" opacity="0.9"/><path d="M 503.66666666666663 124.99999999999997 L 529.6666666666666 124.99999999999997 L 516.6666666666666 154.99999999999997 Z" fill="#2159D8" opacity="0.9"/><path d="M 587 124 L 613 124 L 600 154 Z" fill="#D7263D" opacity="0.9"/><path d="M 670.3333333333335 121.66666666666666 L 696.3333333333335 121.66666666666666 L 683.3333333333335 151.66666666666666 Z" fill="#E4CE7E" opacity="0.9"/><path d="M 753.6666666666666 118.00000000000001 L 779.6666666666666 118.00000000000001 L 766.6666666666666 148 Z" fill="#2159D8" opacity="0.9"/><path d="M 837 113 L 863 113 L 850 143 Z" fill="#D7263D" opacity="0.9"/><path d="M 920.3333333333335 106.66666666666667 L 946.3333333333335 106.66666666666667 L 933.3333333333335 136.66666666666669 Z" fill="#E4CE7E" opacity="0.9"/><path d="M 1003.6666666666666 99 L 1029.6666666666665 99 L 1016.6666666666666 129 Z" fill="#2159D8" opacity="0.9"/>
+  <ellipse cx="560" cy="420" rx="360" ry="280" fill="url(#glowRouge)" opacity="0.4"/>
+  <g transform="translate(480 420) rotate(-14)">
+    <path d="M -140 -40 L 20 -96 L 20 96 L -140 40 Z" fill="#D7263D"/>
+    <rect x="-200" y="-44" width="70" height="88" rx="18" fill="#D7263D" opacity="0.9"/>
+    <rect x="-176" y="44" width="34" height="80" rx="12" fill="#10151F" stroke="#E8E6DF" stroke-opacity="0.3" stroke-width="3"/>
+  </g>
+  <path d="M 600 300 Q 680 320 700 380 M 640 240 Q 760 270 790 370 M 680 180 Q 840 220 880 360" stroke="#E4CE7E" stroke-opacity="0.6" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <circle cx="940" cy="300" r="8" fill="#E4CE7E" opacity="0.8"/>
+  <circle cx="900" cy="440" r="6" fill="#2159D8" opacity="0.8"/>
+
+  <rect width="1200" height="750" filter="url(#grain)" opacity="0.55"/>
+  <rect width="1200" height="750" fill="url(#vig)"/>
+  <text x="600" y="719" text-anchor="middle" font-family="Barlow, Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="5" fill="#E8E6DF" fill-opacity="0.4">ACTUALITÉ · APPEL AUX BÉNÉVOLES</text>
+</svg>

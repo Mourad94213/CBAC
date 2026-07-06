@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-label="Chronomètre de round sur fond sombre">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0" stop-color="#0B0E14"/>
+      <stop offset="1" stop-color="#151A24"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.44" r="0.8">
+      <stop offset="0.55" stop-color="#05070B" stop-opacity="0"/>
+      <stop offset="1" stop-color="#05070B" stop-opacity="0.82"/>
+    </radialGradient>
+    <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6F0DA" stop-opacity="0.42"/>
+      <stop offset="0.75" stop-color="#F6F0DA" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowOr"><stop offset="0" stop-color="#E4CE7E" stop-opacity="0.5"/><stop offset="1" stop-color="#E4CE7E" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowBleu"><stop offset="0" stop-color="#2159D8" stop-opacity="0.55"/><stop offset="1" stop-color="#2159D8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowRouge"><stop offset="0" stop-color="#D7263D" stop-opacity="0.5"/><stop offset="1" stop-color="#D7263D" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowCraie"><stop offset="0" stop-color="#F6F0DA" stop-opacity="0.4"/><stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/></radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.92  0 0 0 0 0.90  0 0 0 0 0.84  0 0 0 0.06 0"/>
+    </filter>
+  </defs>
+  <rect width="900" height="900" fill="url(#bg)"/>
+
+  <ellipse cx="450" cy="430" rx="340" ry="340" fill="url(#glowBleu)" opacity="0.45"/>
+  <circle cx="450" cy="430" r="230" fill="#0D1320" stroke="#E8E6DF" stroke-opacity="0.6" stroke-width="10"/>
+  <g stroke="#E8E6DF" stroke-opacity="0.5" stroke-width="6" stroke-linecap="round"><line x1="450" y1="230" x2="450" y2="252"/><line x1="550" y1="257" x2="539" y2="276"/><line x1="623" y1="330" x2="604" y2="341"/><line x1="650" y1="430" x2="628" y2="430"/><line x1="623" y1="530" x2="604" y2="519"/><line x1="550" y1="603" x2="539" y2="584"/><line x1="450" y1="630" x2="450" y2="608"/><line x1="350" y1="603" x2="361" y2="584"/><line x1="277" y1="530" x2="296" y2="519"/><line x1="250" y1="430" x2="272" y2="430"/><line x1="277" y1="330" x2="296" y2="341"/><line x1="350" y1="257" x2="361" y2="276"/></g>
+  <path d="M 450 430 L 450 280" stroke="#D7263D" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 450 430 L 552 490" stroke="#E4CE7E" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="450" cy="430" r="18" fill="#E4CE7E"/>
+  <rect x="410" y="150" width="80" height="34" rx="10" fill="#D7263D"/>
+
+  <rect width="900" height="900" filter="url(#grain)" opacity="0.55"/>
+  <rect width="900" height="900" fill="url(#vig)"/>
+  <text x="450" y="877" text-anchor="middle" font-family="Barlow, Segoe UI, Arial, sans-serif" font-size="18" letter-spacing="4" fill="#E8E6DF" fill-opacity="0.4">@CBACBOXE · TROIS MINUTES</text>
+</svg>

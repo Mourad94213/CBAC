@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Paire de gants suspendue à un clou, lumière rasante : nouveaux créneaux">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0" stop-color="#0B0E14"/>
+      <stop offset="1" stop-color="#151A24"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.44" r="0.8">
+      <stop offset="0.55" stop-color="#05070B" stop-opacity="0"/>
+      <stop offset="1" stop-color="#05070B" stop-opacity="0.82"/>
+    </radialGradient>
+    <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6F0DA" stop-opacity="0.42"/>
+      <stop offset="0.75" stop-color="#F6F0DA" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowOr"><stop offset="0" stop-color="#E4CE7E" stop-opacity="0.5"/><stop offset="1" stop-color="#E4CE7E" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowBleu"><stop offset="0" stop-color="#2159D8" stop-opacity="0.55"/><stop offset="1" stop-color="#2159D8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowRouge"><stop offset="0" stop-color="#D7263D" stop-opacity="0.5"/><stop offset="1" stop-color="#D7263D" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowCraie"><stop offset="0" stop-color="#F6F0DA" stop-opacity="0.4"/><stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/></radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.92  0 0 0 0 0.90  0 0 0 0 0.84  0 0 0 0.06 0"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+
+  <path d="M 520 -20 L 680 -20 L 920 620 L 280 620 Z" fill="url(#cone)" opacity="0.5"/>
+  <circle cx="600" cy="150" r="9" fill="#E8E6DF" opacity="0.6"/>
+  <path d="M 600 150 Q 540 240 528 320 M 600 150 Q 660 240 672 320" stroke="#E8E6DF" stroke-opacity="0.45" stroke-width="6" fill="none"/>
+  <g transform="translate(520 360) rotate(74) scale(1.75)">
+    <path d="M 22 -30 Q -16 -34 -34 -14 Q -48 2 -36 18 Q -24 32 2 32 L 22 32 Q 38 32 38 12 L 38 -12 Q 38 -28 22 -30 Z" fill="#D7263D"/>
+    <ellipse cx="-26" cy="12" rx="12" ry="9" fill="#D7263D"/>
+    <rect x="30" y="-18" width="20" height="50" rx="7" fill="#D7263D" opacity="0.8"/>
+    <path d="M -26 -8 Q -6 -16 14 -10" stroke="#05070B" stroke-opacity="0.35" stroke-width="4" fill="none"/>
+  </g>
+  <g transform="translate(682 360) rotate(-74) scale(-1.75)">
+    <path d="M 22 -30 Q -16 -34 -34 -14 Q -48 2 -36 18 Q -24 32 2 32 L 22 32 Q 38 32 38 12 L 38 -12 Q 38 -28 22 -30 Z" fill="#D7263D"/>
+    <ellipse cx="-26" cy="12" rx="12" ry="9" fill="#D7263D"/>
+    <rect x="30" y="-18" width="20" height="50" rx="7" fill="#D7263D" opacity="0.8"/>
+    <path d="M -26 -8 Q -6 -16 14 -10" stroke="#05070B" stroke-opacity="0.35" stroke-width="4" fill="none"/>
+  </g>
+  <ellipse cx="600" cy="380" rx="300" ry="260" fill="url(#glowRouge)" opacity="0.35"/>
+  <g><circle cx="487" cy="475" r="1.1" fill="#E8E6DF" opacity="0.29"/><circle cx="704" cy="141" r="2.8" fill="#E8E6DF" opacity="0.14"/><circle cx="550" cy="456" r="3.0" fill="#E8E6DF" opacity="0.40"/><circle cx="818" cy="189" r="2.8" fill="#E8E6DF" opacity="0.27"/><circle cx="525" cy="428" r="2.1" fill="#E8E6DF" opacity="0.22"/><circle cx="762" cy="200" r="1.7" fill="#E8E6DF" opacity="0.34"/><circle cx="832" cy="291" r="2.1" fill="#E8E6DF" opacity="0.13"/><circle cx="790" cy="338" r="3.3" fill="#E8E6DF" opacity="0.40"/><circle cx="580" cy="142" r="3.3" fill="#E8E6DF" opacity="0.16"/><circle cx="610" cy="336" r="2.5" fill="#E8E6DF" opacity="0.15"/><circle cx="408" cy="260" r="2.7" fill="#E8E6DF" opacity="0.23"/><circle cx="497" cy="148" r="1.0" fill="#E8E6DF" opacity="0.37"/><circle cx="460" cy="340" r="1.2" fill="#E8E6DF" opacity="0.28"/><circle cx="332" cy="251" r="2.6" fill="#E8E6DF" opacity="0.34"/><circle cx="774" cy="282" r="1.5" fill="#E8E6DF" opacity="0.21"/><circle cx="505" cy="444" r="1.2" fill="#E8E6DF" opacity="0.24"/><circle cx="729" cy="236" r="1.7" fill="#E8E6DF" opacity="0.32"/><circle cx="742" cy="190" r="2.0" fill="#E8E6DF" opacity="0.34"/><circle cx="345" cy="298" r="1.4" fill="#E8E6DF" opacity="0.12"/><circle cx="799" cy="512" r="1.4" fill="#E8E6DF" opacity="0.17"/></g>
+  <line x1="240" y1="620" x2="960" y2="620" stroke="#E8E6DF" stroke-opacity="0.2" stroke-width="2"/>
+
+  <rect width="1200" height="750" filter="url(#grain)" opacity="0.55"/>
+  <rect width="1200" height="750" fill="url(#vig)"/>
+  <text x="600" y="719" text-anchor="middle" font-family="Barlow, Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="5" fill="#E8E6DF" fill-opacity="0.4">ACTUALITÉ · NOUVEAUX CRÉNEAUX</text>
+</svg>

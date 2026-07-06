@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-label="Gros plan sur un gant de boxe rouge">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0" stop-color="#0B0E14"/>
+      <stop offset="1" stop-color="#151A24"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.44" r="0.8">
+      <stop offset="0.55" stop-color="#05070B" stop-opacity="0"/>
+      <stop offset="1" stop-color="#05070B" stop-opacity="0.82"/>
+    </radialGradient>
+    <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6F0DA" stop-opacity="0.42"/>
+      <stop offset="0.75" stop-color="#F6F0DA" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowOr"><stop offset="0" stop-color="#E4CE7E" stop-opacity="0.5"/><stop offset="1" stop-color="#E4CE7E" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowBleu"><stop offset="0" stop-color="#2159D8" stop-opacity="0.55"/><stop offset="1" stop-color="#2159D8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowRouge"><stop offset="0" stop-color="#D7263D" stop-opacity="0.5"/><stop offset="1" stop-color="#D7263D" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowCraie"><stop offset="0" stop-color="#F6F0DA" stop-opacity="0.4"/><stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/></radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.92  0 0 0 0 0.90  0 0 0 0 0.84  0 0 0 0.06 0"/>
+    </filter>
+  </defs>
+  <rect width="900" height="900" fill="url(#bg)"/>
+
+  <ellipse cx="450" cy="430" rx="360" ry="360" fill="url(#glowRouge)" opacity="0.45"/>
+  <g transform="translate(450 430) rotate(-18) scale(3.4)">
+    <path d="M 22 -30 Q -16 -34 -34 -14 Q -48 2 -36 18 Q -24 32 2 32 L 22 32 Q 38 32 38 12 L 38 -12 Q 38 -28 22 -30 Z" fill="#D7263D"/>
+    <ellipse cx="-26" cy="12" rx="12" ry="9" fill="#D7263D"/>
+    <rect x="30" y="-18" width="20" height="50" rx="7" fill="#D7263D" opacity="0.8"/>
+    <path d="M -26 -8 Q -6 -16 14 -10" stroke="#05070B" stroke-opacity="0.35" stroke-width="4" fill="none"/>
+  </g>
+  <g><circle cx="330" cy="538" r="2.8" fill="#E8E6DF" opacity="0.21"/><circle cx="149" cy="694" r="1.9" fill="#E8E6DF" opacity="0.24"/><circle cx="503" cy="708" r="3.2" fill="#E8E6DF" opacity="0.31"/><circle cx="404" cy="218" r="1.8" fill="#E8E6DF" opacity="0.36"/><circle cx="406" cy="158" r="2.0" fill="#E8E6DF" opacity="0.15"/><circle cx="519" cy="368" r="2.7" fill="#E8E6DF" opacity="0.17"/><circle cx="302" cy="260" r="2.1" fill="#E8E6DF" opacity="0.24"/><circle cx="163" cy="640" r="2.7" fill="#E8E6DF" opacity="0.13"/><circle cx="593" cy="200" r="3.2" fill="#E8E6DF" opacity="0.29"/><circle cx="543" cy="693" r="2.4" fill="#E8E6DF" opacity="0.13"/><circle cx="641" cy="185" r="3.1" fill="#E8E6DF" opacity="0.27"/><circle cx="384" cy="122" r="3.3" fill="#E8E6DF" opacity="0.32"/><circle cx="269" cy="485" r="3.3" fill="#E8E6DF" opacity="0.34"/><circle cx="159" cy="675" r="2.3" fill="#E8E6DF" opacity="0.11"/><circle cx="211" cy="518" r="1.8" fill="#E8E6DF" opacity="0.18"/><circle cx="307" cy="704" r="1.2" fill="#E8E6DF" opacity="0.27"/><circle cx="278" cy="371" r="3.0" fill="#E8E6DF" opacity="0.19"/><circle cx="278" cy="449" r="3.2" fill="#E8E6DF" opacity="0.13"/></g>
+  <circle cx="450" cy="430" r="330" fill="none" stroke="#E4CE7E" stroke-opacity="0.25" stroke-width="3" stroke-dasharray="4 30" stroke-linecap="round"/>
+
+  <rect width="900" height="900" filter="url(#grain)" opacity="0.55"/>
+  <rect width="900" height="900" fill="url(#vig)"/>
+  <text x="450" y="877" text-anchor="middle" font-family="Barlow, Segoe UI, Arial, sans-serif" font-size="18" letter-spacing="4" fill="#E8E6DF" fill-opacity="0.4">@CBACBOXE · LE GANT</text>
+</svg>

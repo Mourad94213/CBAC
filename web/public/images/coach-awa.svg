@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Portrait silhouette d'Awa Diallo, coach boxe éducative">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0" stop-color="#0B0E14"/>
+      <stop offset="1" stop-color="#151A24"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.44" r="0.8">
+      <stop offset="0.55" stop-color="#05070B" stop-opacity="0"/>
+      <stop offset="1" stop-color="#05070B" stop-opacity="0.82"/>
+    </radialGradient>
+    <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6F0DA" stop-opacity="0.42"/>
+      <stop offset="0.75" stop-color="#F6F0DA" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowOr"><stop offset="0" stop-color="#E4CE7E" stop-opacity="0.5"/><stop offset="1" stop-color="#E4CE7E" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowBleu"><stop offset="0" stop-color="#2159D8" stop-opacity="0.55"/><stop offset="1" stop-color="#2159D8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowRouge"><stop offset="0" stop-color="#D7263D" stop-opacity="0.5"/><stop offset="1" stop-color="#D7263D" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowCraie"><stop offset="0" stop-color="#F6F0DA" stop-opacity="0.4"/><stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/></radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.92  0 0 0 0 0.90  0 0 0 0 0.84  0 0 0 0.06 0"/>
+    </filter>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+
+  <path d="M 290 -20 L 510 -20 L 730 700 L 70 700 Z" fill="url(#cone)" opacity="0.4"/>
+  <circle cx="400" cy="430" r="295" fill="url(#glowBleu)" opacity="0.8"/>
+  <circle cx="400" cy="430" r="252" fill="none" stroke="#2159D8" stroke-opacity="0.5" stroke-width="3" stroke-dasharray="5 20" stroke-linecap="round"/>
+  <path d="M 130 1000 Q 152 764 268 700 Q 336 664 400 660 Q 464 664 532 700 Q 648 764 670 1000 Z" fill="#04060B"/>
+      <rect x="368" y="576" width="64" height="96" fill="#04060B"/>
+  <ellipse cx="400" cy="500" rx="88" ry="104" fill="#04060B"/>
+      <circle cx="400" cy="376" r="52" fill="#04060B"/>
+      <path d="M 348 420 Q 400 396 452 420" fill="#04060B"/>
+  <circle cx="308" cy="548" r="15" fill="none" stroke="#E4CE7E" stroke-width="5" opacity="0.9"/>
+      <circle cx="492" cy="548" r="15" fill="none" stroke="#E4CE7E" stroke-width="5" opacity="0.9"/>
+      <path d="M 306 928 L 494 928" stroke="#2159D8" stroke-opacity="0.7" stroke-width="4" stroke-linecap="round"/>
+
+  <rect width="800" height="1000" filter="url(#grain)" opacity="0.55"/>
+  <rect width="800" height="1000" fill="url(#vig)"/>
+  <text x="400" y="978" text-anchor="middle" font-family="Barlow, Segoe UI, Arial, sans-serif" font-size="17" letter-spacing="4" fill="#E8E6DF" fill-opacity="0.4">AWA DIALLO · BOXE ÉDUCATIVE</text>
+</svg>

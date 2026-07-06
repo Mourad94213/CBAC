@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Poignée de gants entre partenaires, étoile de la convention">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0" stop-color="#0B0E14"/>
+      <stop offset="1" stop-color="#151A24"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.44" r="0.8">
+      <stop offset="0.55" stop-color="#05070B" stop-opacity="0"/>
+      <stop offset="1" stop-color="#05070B" stop-opacity="0.82"/>
+    </radialGradient>
+    <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6F0DA" stop-opacity="0.42"/>
+      <stop offset="0.75" stop-color="#F6F0DA" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowOr"><stop offset="0" stop-color="#E4CE7E" stop-opacity="0.5"/><stop offset="1" stop-color="#E4CE7E" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowBleu"><stop offset="0" stop-color="#2159D8" stop-opacity="0.55"/><stop offset="1" stop-color="#2159D8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowRouge"><stop offset="0" stop-color="#D7263D" stop-opacity="0.5"/><stop offset="1" stop-color="#D7263D" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowCraie"><stop offset="0" stop-color="#F6F0DA" stop-opacity="0.4"/><stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/></radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.92  0 0 0 0 0.90  0 0 0 0 0.84  0 0 0 0.06 0"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+
+  <ellipse cx="600" cy="370" rx="400" ry="300" fill="url(#glowBleu)" opacity="0.5"/>
+  <g transform="translate(510 380) rotate(22) scale(1.7)">
+    <path d="M 22 -30 Q -16 -34 -34 -14 Q -48 2 -36 18 Q -24 32 2 32 L 22 32 Q 38 32 38 12 L 38 -12 Q 38 -28 22 -30 Z" fill="#2159D8"/>
+    <ellipse cx="-26" cy="12" rx="12" ry="9" fill="#2159D8"/>
+    <rect x="30" y="-18" width="20" height="50" rx="7" fill="#2159D8" opacity="0.8"/>
+    <path d="M -26 -8 Q -6 -16 14 -10" stroke="#05070B" stroke-opacity="0.35" stroke-width="4" fill="none"/>
+  </g>
+  <g transform="translate(694 380) rotate(-22) scale(-1.7)">
+    <path d="M 22 -30 Q -16 -34 -34 -14 Q -48 2 -36 18 Q -24 32 2 32 L 22 32 Q 38 32 38 12 L 38 -12 Q 38 -28 22 -30 Z" fill="#E4CE7E"/>
+    <ellipse cx="-26" cy="12" rx="12" ry="9" fill="#E4CE7E"/>
+    <rect x="30" y="-18" width="20" height="50" rx="7" fill="#E4CE7E" opacity="0.8"/>
+    <path d="M -26 -8 Q -6 -16 14 -10" stroke="#05070B" stroke-opacity="0.35" stroke-width="4" fill="none"/>
+  </g>
+  <circle cx="602" cy="368" r="84" fill="url(#glowCraie)" opacity="0.8"/>
+  <g fill="#E8E6DF" opacity="0.85"><path d="M 602 200 L 616 244 L 662 244 L 626 272 L 640 316 L 602 290 L 564 316 L 578 272 L 542 244 L 588 244 Z"/></g>
+  <path d="M 240 560 L 960 560" stroke="#E8E6DF" stroke-opacity="0.2" stroke-width="3" stroke-dasharray="3 16" stroke-linecap="round"/>
+
+  <rect width="1200" height="750" filter="url(#grain)" opacity="0.55"/>
+  <rect width="1200" height="750" fill="url(#vig)"/>
+  <text x="600" y="719" text-anchor="middle" font-family="Barlow, Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="5" fill="#E8E6DF" fill-opacity="0.4">ACTUALITÉ · NOUVEAU PARTENARIAT</text>
+</svg>

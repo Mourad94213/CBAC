@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-label="Silhouette frappant un sac, ligne d'énergie cardio">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0" stop-color="#0B0E14"/>
+      <stop offset="1" stop-color="#151A24"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.44" r="0.8">
+      <stop offset="0.55" stop-color="#05070B" stop-opacity="0"/>
+      <stop offset="1" stop-color="#05070B" stop-opacity="0.82"/>
+    </radialGradient>
+    <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6F0DA" stop-opacity="0.42"/>
+      <stop offset="0.75" stop-color="#F6F0DA" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowOr"><stop offset="0" stop-color="#E4CE7E" stop-opacity="0.5"/><stop offset="1" stop-color="#E4CE7E" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowBleu"><stop offset="0" stop-color="#2159D8" stop-opacity="0.55"/><stop offset="1" stop-color="#2159D8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowRouge"><stop offset="0" stop-color="#D7263D" stop-opacity="0.5"/><stop offset="1" stop-color="#D7263D" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowCraie"><stop offset="0" stop-color="#F6F0DA" stop-opacity="0.4"/><stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/></radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.92  0 0 0 0 0.90  0 0 0 0 0.84  0 0 0 0.06 0"/>
+    </filter>
+  </defs>
+  <rect width="900" height="1200" fill="url(#bg)"/>
+
+  <ellipse cx="560" cy="460" rx="340" ry="340" fill="url(#glowOr)" opacity="0.4"/>
+  <line x1="600" y1="120" x2="600" y2="162" stroke="#E8E6DF" stroke-opacity="0.35" stroke-width="4"/>
+  <rect x="548" y="162" width="104" height="330" rx="43.333333333333336" fill="#10151F"/>
+  <path d="M 560 186 Q 556 327 562 468" stroke="#E8E6DF" stroke-opacity="0.12" stroke-width="8" fill="none"/>
+  <rect x="548" y="300.6" width="104" height="14" fill="#D7263D" opacity="0.75"/>
+  <g transform="translate(330 1010) scale(1.35 1.35)" opacity="1">
+    <path d="M -16 -118 Q -26 -62 -38 -10" stroke="#04060B" stroke-width="30" stroke-linecap="round" fill="none"/><path d="M 20 -118 Q 34 -64 48 -10" stroke="#04060B" stroke-width="30" stroke-linecap="round" fill="none"/>
+    <ellipse cx="-44" cy="-6" rx="17" ry="8" fill="#04060B"/><ellipse cx="56" cy="-6" rx="17" ry="8" fill="#04060B"/>
+    <path d="M -36 -262 Q 4 -280 44 -258 L 50 -168 Q 44 -132 28 -110 L -26 -110 Q -44 -140 -46 -178 Z" fill="#04060B"/>
+    <circle cx="6" cy="-292" r="27" fill="#04060B"/>
+    <path d="M -28 -238 Q -2 -230 20 -248" stroke="#04060B" stroke-width="24" stroke-linecap="round" fill="none"/><path d="M 38 -244 Q 84 -248 124 -250" stroke="#04060B" stroke-width="24" stroke-linecap="round" fill="none"/><circle cx="136" cy="-250" r="22" fill="#E4CE7E"/><circle cx="26" cy="-252" r="17" fill="#E4CE7E"/>
+  </g>
+  <path d="M 90 300 L 300 300 L 340 240 L 400 360 L 450 280 L 490 320 L 810 320" stroke="#D7263D" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+  <path d="M 700 560 Q 760 620 740 700" stroke="#E4CE7E" stroke-opacity="0.5" stroke-width="5" fill="none" stroke-dasharray="2 14" stroke-linecap="round"/>
+  <path d="M 200 520 Q 150 600 180 680" stroke="#E4CE7E" stroke-opacity="0.4" stroke-width="5" fill="none" stroke-dasharray="2 14" stroke-linecap="round"/>
+  <line x1="120" y1="1010" x2="780" y2="1010" stroke="#E8E6DF" stroke-opacity="0.2" stroke-width="2"/>
+  <ellipse cx="430" cy="1012" rx="280" ry="34" fill="url(#glowOr)" opacity="0.45"/>
+
+  <rect width="900" height="1200" filter="url(#grain)" opacity="0.55"/>
+  <rect width="900" height="1200" fill="url(#vig)"/>
+  <text x="450" y="1177" text-anchor="middle" font-family="Barlow, Segoe UI, Arial, sans-serif" font-size="18" letter-spacing="4" fill="#E8E6DF" fill-opacity="0.4">BOXE SANTÉ &amp; FORME</text>
+</svg>

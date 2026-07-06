@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Deux gants se saluent au centre d'un cercle de participants">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0" stop-color="#0B0E14"/>
+      <stop offset="1" stop-color="#151A24"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.44" r="0.8">
+      <stop offset="0.55" stop-color="#05070B" stop-opacity="0"/>
+      <stop offset="1" stop-color="#05070B" stop-opacity="0.82"/>
+    </radialGradient>
+    <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6F0DA" stop-opacity="0.42"/>
+      <stop offset="0.75" stop-color="#F6F0DA" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowOr"><stop offset="0" stop-color="#E4CE7E" stop-opacity="0.5"/><stop offset="1" stop-color="#E4CE7E" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowBleu"><stop offset="0" stop-color="#2159D8" stop-opacity="0.55"/><stop offset="1" stop-color="#2159D8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowRouge"><stop offset="0" stop-color="#D7263D" stop-opacity="0.5"/><stop offset="1" stop-color="#D7263D" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowCraie"><stop offset="0" stop-color="#F6F0DA" stop-opacity="0.4"/><stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/></radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.92  0 0 0 0 0.90  0 0 0 0 0.84  0 0 0 0.06 0"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+
+  <ellipse cx="600" cy="430" rx="420" ry="320" fill="url(#glowOr)" opacity="0.5"/>
+  <circle cx="600" cy="450" r="270" fill="none" stroke="#E4CE7E" stroke-opacity="0.5" stroke-width="4" stroke-dasharray="5 24" stroke-linecap="round"/>
+  <g transform="translate(520 440) rotate(18) scale(1.5)">
+    <path d="M 22 -30 Q -16 -34 -34 -14 Q -48 2 -36 18 Q -24 32 2 32 L 22 32 Q 38 32 38 12 L 38 -12 Q 38 -28 22 -30 Z" fill="#D7263D"/>
+    <ellipse cx="-26" cy="12" rx="12" ry="9" fill="#D7263D"/>
+    <rect x="30" y="-18" width="20" height="50" rx="7" fill="#D7263D" opacity="0.8"/>
+    <path d="M -26 -8 Q -6 -16 14 -10" stroke="#05070B" stroke-opacity="0.35" stroke-width="4" fill="none"/>
+  </g>
+  <g transform="translate(690 440) rotate(-18) scale(-1.5)">
+    <path d="M 22 -30 Q -16 -34 -34 -14 Q -48 2 -36 18 Q -24 32 2 32 L 22 32 Q 38 32 38 12 L 38 -12 Q 38 -28 22 -30 Z" fill="#2159D8"/>
+    <ellipse cx="-26" cy="12" rx="12" ry="9" fill="#2159D8"/>
+    <rect x="30" y="-18" width="20" height="50" rx="7" fill="#2159D8" opacity="0.8"/>
+    <path d="M -26 -8 Q -6 -16 14 -10" stroke="#05070B" stroke-opacity="0.35" stroke-width="4" fill="none"/>
+  </g>
+  <circle cx="600" cy="440" r="90" fill="url(#glowCraie)" opacity="0.7"/>
+  <line x1="100" y1="704" x2="1100" y2="704" stroke="#E8E6DF" stroke-opacity="0.2" stroke-width="2"/>
+  <g transform="translate(170 706) scale(0.9 0.9)" opacity="0.85">
+    <path d="M -16 -118 Q -26 -62 -38 -10" stroke="#0A0F18" stroke-width="30" stroke-linecap="round" fill="none"/><path d="M 20 -118 Q 34 -64 48 -10" stroke="#0A0F18" stroke-width="30" stroke-linecap="round" fill="none"/>
+    <ellipse cx="-44" cy="-6" rx="17" ry="8" fill="#0A0F18"/><ellipse cx="56" cy="-6" rx="17" ry="8" fill="#0A0F18"/>
+    <path d="M -36 -262 Q 4 -280 44 -258 L 50 -168 Q 44 -132 28 -110 L -26 -110 Q -44 -140 -46 -178 Z" fill="#0A0F18"/>
+    <circle cx="6" cy="-292" r="27" fill="#0A0F18"/>
+    <path d="M -30 -240 Q -4 -230 28 -244" stroke="#0A0F18" stroke-width="24" stroke-linecap="round" fill="none"/><path d="M 34 -238 Q 50 -242 52 -256" stroke="#0A0F18" stroke-width="24" stroke-linecap="round" fill="none"/><circle cx="56" cy="-262" r="21" fill="#E4CE7E"/><circle cx="32" cy="-246" r="18" fill="#E4CE7E"/>
+  </g>
+  <g transform="translate(1030 706) scale(-0.9 0.9)" opacity="0.85">
+    <path d="M -16 -118 Q -26 -62 -38 -10" stroke="#0A0F18" stroke-width="30" stroke-linecap="round" fill="none"/><path d="M 20 -118 Q 34 -64 48 -10" stroke="#0A0F18" stroke-width="30" stroke-linecap="round" fill="none"/>
+    <ellipse cx="-44" cy="-6" rx="17" ry="8" fill="#0A0F18"/><ellipse cx="56" cy="-6" rx="17" ry="8" fill="#0A0F18"/>
+    <path d="M -36 -262 Q 4 -280 44 -258 L 50 -168 Q 44 -132 28 -110 L -26 -110 Q -44 -140 -46 -178 Z" fill="#0A0F18"/>
+    <circle cx="6" cy="-292" r="27" fill="#0A0F18"/>
+    <path d="M -30 -240 Q -4 -230 28 -244" stroke="#0A0F18" stroke-width="24" stroke-linecap="round" fill="none"/><path d="M 34 -238 Q 50 -242 52 -256" stroke="#0A0F18" stroke-width="24" stroke-linecap="round" fill="none"/><circle cx="56" cy="-262" r="21" fill="#E4CE7E"/><circle cx="32" cy="-246" r="18" fill="#E4CE7E"/>
+  </g>
+  <g transform="translate(350 708) scale(1.2 1.2)" opacity="0.85">
+    <path d="M -10 -66 Q -14 -36 -20 -6" stroke="#0A0F18" stroke-width="20" stroke-linecap="round" fill="none"/><path d="M 12 -66 Q 18 -36 24 -6" stroke="#0A0F18" stroke-width="20" stroke-linecap="round" fill="none"/>
+    <path d="M -24 -152 Q 2 -164 28 -150 L 30 -92 Q 26 -72 16 -60 L -16 -60 Q -26 -76 -28 -98 Z" fill="#0A0F18"/>
+    <circle cx="2" cy="-178" r="25" fill="#0A0F18"/>
+    <path d="M -20 -138 Q 0 -130 14 -140" stroke="#0A0F18" stroke-width="16" stroke-linecap="round" fill="none"/><circle cx="24" cy="-146" r="15" fill="#2159D8"/><circle cx="8" cy="-134" r="13" fill="#2159D8"/>
+  </g>
+  <g transform="translate(860 708) scale(-1.2 1.2)" opacity="0.85">
+    <path d="M -10 -66 Q -14 -36 -20 -6" stroke="#0A0F18" stroke-width="20" stroke-linecap="round" fill="none"/><path d="M 12 -66 Q 18 -36 24 -6" stroke="#0A0F18" stroke-width="20" stroke-linecap="round" fill="none"/>
+    <path d="M -24 -152 Q 2 -164 28 -150 L 30 -92 Q 26 -72 16 -60 L -16 -60 Q -26 -76 -28 -98 Z" fill="#0A0F18"/>
+    <circle cx="2" cy="-178" r="25" fill="#0A0F18"/>
+    <path d="M -20 -138 Q 0 -130 14 -140" stroke="#0A0F18" stroke-width="16" stroke-linecap="round" fill="none"/><circle cx="24" cy="-146" r="15" fill="#D7263D"/><circle cx="8" cy="-134" r="13" fill="#D7263D"/>
+  </g>
+  <g><rect x="468" y="286" width="9" height="4" rx="1" fill="#E4CE7E" opacity="0.70" transform="rotate(76 468 286)"/><rect x="368" y="190" width="9" height="4" rx="1" fill="#E4CE7E" opacity="0.39" transform="rotate(89 368 190)"/><rect x="341" y="204" width="9" height="4" rx="1" fill="#E8E6DF" opacity="0.75" transform="rotate(39 341 204)"/><rect x="410" y="183" width="9" height="4" rx="1" fill="#E4CE7E" opacity="0.78" transform="rotate(11 410 183)"/><rect x="671" y="208" width="9" height="4" rx="1" fill="#E4CE7E" opacity="0.49" transform="rotate(31 671 208)"/><rect x="414" y="322" width="9" height="4" rx="1" fill="#E4CE7E" opacity="0.79" transform="rotate(86 414 322)"/><rect x="745" y="290" width="9" height="4" rx="1" fill="#E4CE7E" opacity="0.80" transform="rotate(80 745 290)"/><rect x="838" y="260" width="9" height="4" rx="1" fill="#E4CE7E" opacity="0.41" transform="rotate(45 838 260)"/><rect x="899" y="303" width="9" height="4" rx="1" fill="#E8E6DF" opacity="0.51" transform="rotate(63 899 303)"/><rect x="338" y="371" width="9" height="4" rx="1" fill="#E4CE7E" opacity="0.61" transform="rotate(85 338 371)"/><rect x="822" y="244" width="9" height="4" rx="1" fill="#E8E6DF" opacity="0.66" transform="rotate(69 822 244)"/><rect x="345" y="277" width="9" height="4" rx="1" fill="#E4CE7E" opacity="0.54" transform="rotate(50 345 277)"/><rect x="464" y="376" width="9" height="4" rx="1" fill="#E4CE7E" opacity="0.42" transform="rotate(0 464 376)"/><rect x="694" y="260" width="9" height="4" rx="1" fill="#E8E6DF" opacity="0.82" transform="rotate(56 694 260)"/><rect x="314" y="196" width="9" height="4" rx="1" fill="#E4CE7E" opacity="0.56" transform="rotate(43 314 196)"/><rect x="834" y="285" width="9" height="4" rx="1" fill="#E8E6DF" opacity="0.59" transform="rotate(71 834 285)"/><rect x="894" y="265" width="9" height="4" rx="1" fill="#E8E6DF" opacity="0.39" transform="rotate(44 894 265)"/><rect x="888" y="204" width="9" height="4" rx="1" fill="#E8E6DF" opacity="0.84" transform="rotate(65 888 204)"/><rect x="388" y="355" width="9" height="4" rx="1" fill="#E8E6DF" opacity="0.56" transform="rotate(47 388 355)"/><rect x="315" y="217" width="9" height="4" rx="1" fill="#E4CE7E" opacity="0.58" transform="rotate(27 315 217)"/></g>
+
+  <rect width="1200" height="900" filter="url(#grain)" opacity="0.55"/>
+  <rect width="1200" height="900" fill="url(#vig)"/>
+  <text x="600" y="869" text-anchor="middle" font-family="Barlow, Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="5" fill="#E8E6DF" fill-opacity="0.4">ÉVÉNEMENT · LE SALUT DES GANTS</text>
+</svg>

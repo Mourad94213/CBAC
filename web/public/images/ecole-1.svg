@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Tableau noir avec un boxeur dessiné à la craie devant la classe">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0" stop-color="#0B0E14"/>
+      <stop offset="1" stop-color="#151A24"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.44" r="0.8">
+      <stop offset="0.55" stop-color="#05070B" stop-opacity="0"/>
+      <stop offset="1" stop-color="#05070B" stop-opacity="0.82"/>
+    </radialGradient>
+    <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6F0DA" stop-opacity="0.42"/>
+      <stop offset="0.75" stop-color="#F6F0DA" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowOr"><stop offset="0" stop-color="#E4CE7E" stop-opacity="0.5"/><stop offset="1" stop-color="#E4CE7E" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowBleu"><stop offset="0" stop-color="#2159D8" stop-opacity="0.55"/><stop offset="1" stop-color="#2159D8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowRouge"><stop offset="0" stop-color="#D7263D" stop-opacity="0.5"/><stop offset="1" stop-color="#D7263D" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowCraie"><stop offset="0" stop-color="#F6F0DA" stop-opacity="0.4"/><stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/></radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.92  0 0 0 0 0.90  0 0 0 0 0.84  0 0 0 0.06 0"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+
+  <rect x="180" y="110" width="600" height="380" rx="10" fill="#0C1017" stroke="#E4CE7E" stroke-opacity="0.4" stroke-width="6"/>
+  <g stroke="#E8E6DF" stroke-opacity="0.75" stroke-width="5" fill="none" stroke-linecap="round">
+    <circle cx="420" cy="220" r="26"/>
+    <path d="M 420 246 L 414 340 M 388 278 L 452 262 M 458 260 L 486 246 M 414 340 L 388 420 M 416 340 L 452 416"/>
+    <circle cx="494" cy="242" r="12"/>
+  </g>
+  <path d="M 560 200 L 700 200 M 560 236 L 672 236 M 560 272 L 692 272" stroke="#E8E6DF" stroke-opacity="0.3" stroke-width="5" stroke-linecap="round"/>
+  <rect x="220" y="470" width="90" height="10" rx="5" fill="#E8E6DF" opacity="0.35"/>
+  <line x1="60" y1="600" x2="1140" y2="600" stroke="#E8E6DF" stroke-opacity="0.22" stroke-width="2"/>
+  <ellipse cx="920" cy="480" rx="260" ry="220" fill="url(#glowBleu)" opacity="0.45"/>
+  <g transform="translate(960 600) scale(-1 1)" opacity="1">
+    <path d="M -16 -118 Q -26 -62 -38 -10" stroke="#04060B" stroke-width="30" stroke-linecap="round" fill="none"/><path d="M 20 -118 Q 34 -64 48 -10" stroke="#04060B" stroke-width="30" stroke-linecap="round" fill="none"/>
+    <ellipse cx="-44" cy="-6" rx="17" ry="8" fill="#04060B"/><ellipse cx="56" cy="-6" rx="17" ry="8" fill="#04060B"/>
+    <path d="M -36 -262 Q 4 -280 44 -258 L 50 -168 Q 44 -132 28 -110 L -26 -110 Q -44 -140 -46 -178 Z" fill="#04060B"/>
+    <circle cx="6" cy="-292" r="27" fill="#04060B"/>
+    <path d="M -28 -238 Q -6 -228 16 -240" stroke="#04060B" stroke-width="24" stroke-linecap="round" fill="none"/><path d="M 38 -240 Q 84 -226 116 -204" stroke="#04060B" stroke-width="24" stroke-linecap="round" fill="none"/><circle cx="126" cy="-198" r="21" fill="#D7263D"/><circle cx="22" cy="-244" r="16" fill="#D7263D"/>
+  </g>
+  <g transform="translate(770 600) scale(1.25 1.25)" opacity="1">
+    <path d="M -10 -66 Q -14 -36 -20 -6" stroke="#04060B" stroke-width="20" stroke-linecap="round" fill="none"/><path d="M 12 -66 Q 18 -36 24 -6" stroke="#04060B" stroke-width="20" stroke-linecap="round" fill="none"/>
+    <path d="M -24 -152 Q 2 -164 28 -150 L 30 -92 Q 26 -72 16 -60 L -16 -60 Q -26 -76 -28 -98 Z" fill="#04060B"/>
+    <circle cx="2" cy="-178" r="25" fill="#04060B"/>
+    <path d="M -20 -138 Q 0 -130 14 -140" stroke="#04060B" stroke-width="16" stroke-linecap="round" fill="none"/><circle cx="24" cy="-146" r="15" fill="#2159D8"/><circle cx="8" cy="-134" r="13" fill="#2159D8"/>
+  </g>
+  <g transform="translate(620 604) scale(1.1 1.1)" opacity="0.85">
+    <path d="M -10 -66 Q -14 -36 -20 -6" stroke="#0A0F18" stroke-width="20" stroke-linecap="round" fill="none"/><path d="M 12 -66 Q 18 -36 24 -6" stroke="#0A0F18" stroke-width="20" stroke-linecap="round" fill="none"/>
+    <path d="M -24 -152 Q 2 -164 28 -150 L 30 -92 Q 26 -72 16 -60 L -16 -60 Q -26 -76 -28 -98 Z" fill="#0A0F18"/>
+    <circle cx="2" cy="-178" r="25" fill="#0A0F18"/>
+    <path d="M -20 -138 Q 0 -130 14 -140" stroke="#0A0F18" stroke-width="16" stroke-linecap="round" fill="none"/><circle cx="24" cy="-146" r="15" fill="#E4CE7E"/><circle cx="8" cy="-134" r="13" fill="#E4CE7E"/>
+  </g>
+
+  <rect width="1200" height="750" filter="url(#grain)" opacity="0.55"/>
+  <rect width="1200" height="750" fill="url(#vig)"/>
+  <text x="600" y="719" text-anchor="middle" font-family="Barlow, Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="5" fill="#E8E6DF" fill-opacity="0.4">LA BOXE À L'ÉCOLE</text>
+</svg>

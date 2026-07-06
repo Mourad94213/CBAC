@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Rangée de sacs de frappe, un boxeur travaille au sac">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0" stop-color="#0B0E14"/>
+      <stop offset="1" stop-color="#151A24"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.44" r="0.8">
+      <stop offset="0.55" stop-color="#05070B" stop-opacity="0"/>
+      <stop offset="1" stop-color="#05070B" stop-opacity="0.82"/>
+    </radialGradient>
+    <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6F0DA" stop-opacity="0.42"/>
+      <stop offset="0.75" stop-color="#F6F0DA" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowOr"><stop offset="0" stop-color="#E4CE7E" stop-opacity="0.5"/><stop offset="1" stop-color="#E4CE7E" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowBleu"><stop offset="0" stop-color="#2159D8" stop-opacity="0.55"/><stop offset="1" stop-color="#2159D8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowRouge"><stop offset="0" stop-color="#D7263D" stop-opacity="0.5"/><stop offset="1" stop-color="#D7263D" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowCraie"><stop offset="0" stop-color="#F6F0DA" stop-opacity="0.4"/><stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/></radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.92  0 0 0 0 0.90  0 0 0 0 0.84  0 0 0 0.06 0"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+
+  <path d="M 250 -20 L 390 -20 L 560 700 L 80 700 Z" fill="url(#cone)" opacity="0.45"/>
+  <path d="M 690 -20 L 830 -20 L 1000 700 L 520 700 Z" fill="url(#cone)" opacity="0.45"/>
+  <line x1="300" y1="60" x2="300" y2="102" stroke="#E8E6DF" stroke-opacity="0.35" stroke-width="4"/>
+  <rect x="252" y="102" width="96" height="300" rx="40" fill="#10151F"/>
+  <path d="M 264 126 Q 260 252 266 378" stroke="#E8E6DF" stroke-opacity="0.12" stroke-width="8" fill="none"/>
+  <rect x="252" y="228" width="96" height="14" fill="#D7263D" opacity="0.75"/>
+  <line x1="580" y1="60" x2="580" y2="102" stroke="#E8E6DF" stroke-opacity="0.35" stroke-width="4"/>
+  <rect x="535" y="102" width="90" height="280" rx="37.5" fill="#0D1119"/>
+  <path d="M 547 126 Q 543 242 549 358" stroke="#E8E6DF" stroke-opacity="0.12" stroke-width="8" fill="none"/>
+  <rect x="535" y="219.6" width="90" height="14" fill="#D7263D" opacity="0.75"/>
+  <line x1="860" y1="60" x2="860" y2="102" stroke="#E8E6DF" stroke-opacity="0.35" stroke-width="4"/>
+  <rect x="812" y="102" width="96" height="300" rx="40" fill="#10151F"/>
+  <path d="M 824 126 Q 820 252 826 378" stroke="#E8E6DF" stroke-opacity="0.12" stroke-width="8" fill="none"/>
+  <rect x="812" y="228" width="96" height="14" fill="#D7263D" opacity="0.75"/>
+  <ellipse cx="600" cy="702" rx="420" ry="38" fill="url(#glowBleu)" opacity="0.35"/>
+  <line x1="80" y1="700" x2="1120" y2="700" stroke="#E8E6DF" stroke-opacity="0.22" stroke-width="2"/>
+  <g transform="translate(1000 700) scale(-1.08 1.08)" opacity="1">
+    <path d="M -16 -118 Q -26 -62 -38 -10" stroke="#04060B" stroke-width="30" stroke-linecap="round" fill="none"/><path d="M 20 -118 Q 34 -64 48 -10" stroke="#04060B" stroke-width="30" stroke-linecap="round" fill="none"/>
+    <ellipse cx="-44" cy="-6" rx="17" ry="8" fill="#04060B"/><ellipse cx="56" cy="-6" rx="17" ry="8" fill="#04060B"/>
+    <path d="M -36 -262 Q 4 -280 44 -258 L 50 -168 Q 44 -132 28 -110 L -26 -110 Q -44 -140 -46 -178 Z" fill="#04060B"/>
+    <circle cx="6" cy="-292" r="27" fill="#04060B"/>
+    <path d="M -28 -238 Q -2 -230 20 -248" stroke="#04060B" stroke-width="24" stroke-linecap="round" fill="none"/><path d="M 38 -244 Q 84 -248 124 -250" stroke="#04060B" stroke-width="24" stroke-linecap="round" fill="none"/><circle cx="136" cy="-250" r="22" fill="#D7263D"/><circle cx="26" cy="-252" r="17" fill="#D7263D"/>
+  </g>
+  <g><circle cx="417" cy="405" r="1.3" fill="#E8E6DF" opacity="0.11"/><circle cx="226" cy="465" r="2.4" fill="#E8E6DF" opacity="0.10"/><circle cx="841" cy="532" r="1.2" fill="#E8E6DF" opacity="0.12"/><circle cx="607" cy="390" r="2.9" fill="#E8E6DF" opacity="0.38"/><circle cx="716" cy="480" r="2.3" fill="#E8E6DF" opacity="0.20"/><circle cx="531" cy="509" r="1.9" fill="#E8E6DF" opacity="0.33"/><circle cx="756" cy="376" r="2.3" fill="#E8E6DF" opacity="0.22"/><circle cx="320" cy="302" r="3.0" fill="#E8E6DF" opacity="0.14"/><circle cx="226" cy="417" r="1.4" fill="#E8E6DF" opacity="0.28"/><circle cx="646" cy="608" r="2.8" fill="#E8E6DF" opacity="0.37"/><circle cx="906" cy="179" r="2.2" fill="#E8E6DF" opacity="0.24"/><circle cx="232" cy="198" r="1.5" fill="#E8E6DF" opacity="0.38"/><circle cx="520" cy="500" r="2.5" fill="#E8E6DF" opacity="0.22"/><circle cx="592" cy="426" r="1.4" fill="#E8E6DF" opacity="0.11"/><circle cx="399" cy="553" r="3.0" fill="#E8E6DF" opacity="0.16"/><circle cx="232" cy="478" r="1.3" fill="#E8E6DF" opacity="0.28"/><circle cx="207" cy="241" r="2.0" fill="#E8E6DF" opacity="0.30"/><circle cx="688" cy="241" r="1.4" fill="#E8E6DF" opacity="0.32"/><circle cx="505" cy="548" r="2.4" fill="#E8E6DF" opacity="0.23"/><circle cx="430" cy="213" r="2.5" fill="#E8E6DF" opacity="0.18"/><circle cx="379" cy="476" r="3.1" fill="#E8E6DF" opacity="0.30"/><circle cx="600" cy="285" r="1.9" fill="#E8E6DF" opacity="0.29"/><circle cx="504" cy="210" r="2.3" fill="#E8E6DF" opacity="0.37"/><circle cx="211" cy="171" r="1.6" fill="#E8E6DF" opacity="0.16"/></g>
+
+  <rect width="1200" height="900" filter="url(#grain)" opacity="0.55"/>
+  <rect width="1200" height="900" fill="url(#vig)"/>
+  <text x="600" y="869" text-anchor="middle" font-family="Barlow, Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="5" fill="#E8E6DF" fill-opacity="0.4">AU CŒUR DU COURS · TRAVAIL AU SAC</text>
+</svg>

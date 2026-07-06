@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Initiation en plein air sous une guirlande de fanions">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0" stop-color="#0B0E14"/>
+      <stop offset="1" stop-color="#151A24"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.44" r="0.8">
+      <stop offset="0.55" stop-color="#05070B" stop-opacity="0"/>
+      <stop offset="1" stop-color="#05070B" stop-opacity="0.82"/>
+    </radialGradient>
+    <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6F0DA" stop-opacity="0.42"/>
+      <stop offset="0.75" stop-color="#F6F0DA" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowOr"><stop offset="0" stop-color="#E4CE7E" stop-opacity="0.5"/><stop offset="1" stop-color="#E4CE7E" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowBleu"><stop offset="0" stop-color="#2159D8" stop-opacity="0.55"/><stop offset="1" stop-color="#2159D8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowRouge"><stop offset="0" stop-color="#D7263D" stop-opacity="0.5"/><stop offset="1" stop-color="#D7263D" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowCraie"><stop offset="0" stop-color="#F6F0DA" stop-opacity="0.4"/><stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/></radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.92  0 0 0 0 0.90  0 0 0 0 0.84  0 0 0 0.06 0"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+
+  <path d="M 80 130 Q 600 174 1120 110" stroke="#E8E6DF" stroke-opacity="0.4" stroke-width="3" fill="none"/><path d="M 147 136.13017751479293 L 173 136.13017751479293 L 160 166.13017751479293 Z" fill="#E4CE7E" opacity="0.9"/><path d="M 227 140.98224852071007 L 253 140.98224852071007 L 240 170.98224852071007 Z" fill="#D7263D" opacity="0.9"/><path d="M 306.99999999999994 144.55621301775145 L 332.99999999999994 144.55621301775145 L 319.99999999999994 174.55621301775145 Z" fill="#2159D8" opacity="0.9"/><path d="M 387.00000000000006 146.85207100591714 L 413.00000000000006 146.85207100591714 L 400.00000000000006 176.85207100591714 Z" fill="#E4CE7E" opacity="0.9"/><path d="M 467 147.86982248520712 L 493 147.86982248520712 L 480 177.86982248520712 Z" fill="#D7263D" opacity="0.9"/><path d="M 547 147.6094674556213 L 573 147.6094674556213 L 560 177.6094674556213 Z" fill="#2159D8" opacity="0.9"/><path d="M 627 146.07100591715977 L 653 146.07100591715977 L 640 176.07100591715977 Z" fill="#E4CE7E" opacity="0.9"/><path d="M 707 143.25443786982248 L 733 143.25443786982248 L 720 173.25443786982248 Z" fill="#D7263D" opacity="0.9"/><path d="M 787 139.15976331360946 L 813 139.15976331360946 L 800 169.15976331360946 Z" fill="#2159D8" opacity="0.9"/><path d="M 867 133.7869822485207 L 893 133.7869822485207 L 880 163.7869822485207 Z" fill="#E4CE7E" opacity="0.9"/><path d="M 947 127.13609467455622 L 973 127.13609467455622 L 960 157.1360946745562 Z" fill="#D7263D" opacity="0.9"/><path d="M 1027 119.20710059171597 L 1053 119.20710059171597 L 1040 149.20710059171597 Z" fill="#2159D8" opacity="0.9"/>
+  <ellipse cx="600" cy="480" rx="460" ry="320" fill="url(#glowOr)" opacity="0.4"/>
+  <line x1="90" y1="700" x2="1110" y2="700" stroke="#E8E6DF" stroke-opacity="0.22" stroke-width="2"/>
+  <ellipse cx="600" cy="702" rx="400" ry="34" fill="url(#glowOr)" opacity="0.4"/>
+  <g transform="translate(590 700) scale(1.08 1.08)" opacity="1">
+    <path d="M -16 -118 Q -26 -62 -38 -10" stroke="#04060B" stroke-width="30" stroke-linecap="round" fill="none"/><path d="M 20 -118 Q 34 -64 48 -10" stroke="#04060B" stroke-width="30" stroke-linecap="round" fill="none"/>
+    <ellipse cx="-44" cy="-6" rx="17" ry="8" fill="#04060B"/><ellipse cx="56" cy="-6" rx="17" ry="8" fill="#04060B"/>
+    <path d="M -36 -262 Q 4 -280 44 -258 L 50 -168 Q 44 -132 28 -110 L -26 -110 Q -44 -140 -46 -178 Z" fill="#04060B"/>
+    <circle cx="6" cy="-292" r="27" fill="#04060B"/>
+    <path d="M -28 -238 Q -6 -228 16 -240" stroke="#04060B" stroke-width="24" stroke-linecap="round" fill="none"/><path d="M 38 -240 Q 84 -226 116 -204" stroke="#04060B" stroke-width="24" stroke-linecap="round" fill="none"/><circle cx="126" cy="-198" r="21" fill="#D7263D"/><circle cx="22" cy="-244" r="16" fill="#D7263D"/>
+  </g>
+  <g transform="translate(340 700) scale(1.4 1.4)" opacity="1">
+    <path d="M -10 -66 Q -14 -36 -20 -6" stroke="#04060B" stroke-width="20" stroke-linecap="round" fill="none"/><path d="M 12 -66 Q 18 -36 24 -6" stroke="#04060B" stroke-width="20" stroke-linecap="round" fill="none"/>
+    <path d="M -24 -152 Q 2 -164 28 -150 L 30 -92 Q 26 -72 16 -60 L -16 -60 Q -26 -76 -28 -98 Z" fill="#04060B"/>
+    <circle cx="2" cy="-178" r="25" fill="#04060B"/>
+    <path d="M -20 -138 Q 0 -130 14 -140" stroke="#04060B" stroke-width="16" stroke-linecap="round" fill="none"/><circle cx="24" cy="-146" r="15" fill="#2159D8"/><circle cx="8" cy="-134" r="13" fill="#2159D8"/>
+  </g>
+  <g transform="translate(850 700) scale(-1.35 1.35)" opacity="1">
+    <path d="M -10 -66 Q -14 -36 -20 -6" stroke="#04060B" stroke-width="20" stroke-linecap="round" fill="none"/><path d="M 12 -66 Q 18 -36 24 -6" stroke="#04060B" stroke-width="20" stroke-linecap="round" fill="none"/>
+    <path d="M -24 -152 Q 2 -164 28 -150 L 30 -92 Q 26 -72 16 -60 L -16 -60 Q -26 -76 -28 -98 Z" fill="#04060B"/>
+    <circle cx="2" cy="-178" r="25" fill="#04060B"/>
+    <path d="M -20 -138 Q 0 -130 14 -140" stroke="#04060B" stroke-width="16" stroke-linecap="round" fill="none"/><circle cx="24" cy="-146" r="15" fill="#E4CE7E"/><circle cx="8" cy="-134" r="13" fill="#E4CE7E"/>
+  </g>
+  <g transform="translate(1040 706) scale(-1.2 1.2)" opacity="0.8">
+    <path d="M -10 -66 Q -14 -36 -20 -6" stroke="#0A0F18" stroke-width="20" stroke-linecap="round" fill="none"/><path d="M 12 -66 Q 18 -36 24 -6" stroke="#0A0F18" stroke-width="20" stroke-linecap="round" fill="none"/>
+    <path d="M -24 -152 Q 2 -164 28 -150 L 30 -92 Q 26 -72 16 -60 L -16 -60 Q -26 -76 -28 -98 Z" fill="#0A0F18"/>
+    <circle cx="2" cy="-178" r="25" fill="#0A0F18"/>
+    <path d="M 18 -140 Q 42 -158 58 -176" stroke="#0A0F18" stroke-width="16" stroke-linecap="round" fill="none"/><path d="M -18 -136 Q -4 -128 6 -134" stroke="#0A0F18" stroke-width="16" stroke-linecap="round" fill="none"/><circle cx="66" cy="-182" r="15" fill="#2159D8"/>
+  </g>
+  <circle cx="180" cy="300" r="9" fill="#E4CE7E" opacity="0.7"/>
+  <circle cx="1010" cy="260" r="7" fill="#2159D8" opacity="0.7"/>
+
+  <rect width="1200" height="900" filter="url(#grain)" opacity="0.55"/>
+  <rect width="1200" height="900" fill="url(#vig)"/>
+  <text x="600" y="869" text-anchor="middle" font-family="Barlow, Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="5" fill="#E8E6DF" fill-opacity="0.4">ÉVÉNEMENT · INITIATION EN PLEIN AIR</text>
+</svg>

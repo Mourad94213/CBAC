@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="Poster du témoignage vidéo : salle de boxe et bouton lecture">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0" stop-color="#0B0E14"/>
+      <stop offset="1" stop-color="#151A24"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.44" r="0.8">
+      <stop offset="0.55" stop-color="#05070B" stop-opacity="0"/>
+      <stop offset="1" stop-color="#05070B" stop-opacity="0.82"/>
+    </radialGradient>
+    <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6F0DA" stop-opacity="0.42"/>
+      <stop offset="0.75" stop-color="#F6F0DA" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowOr"><stop offset="0" stop-color="#E4CE7E" stop-opacity="0.5"/><stop offset="1" stop-color="#E4CE7E" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowBleu"><stop offset="0" stop-color="#2159D8" stop-opacity="0.55"/><stop offset="1" stop-color="#2159D8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowRouge"><stop offset="0" stop-color="#D7263D" stop-opacity="0.5"/><stop offset="1" stop-color="#D7263D" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowCraie"><stop offset="0" stop-color="#F6F0DA" stop-opacity="0.4"/><stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/></radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.92  0 0 0 0 0.90  0 0 0 0 0.84  0 0 0 0.06 0"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <path d="M 260 -20 L 420 -20 L 600 600 L 80 600 Z" fill="url(#cone)" opacity="0.4"/>
+  <line x1="300" y1="60" x2="300" y2="102" stroke="#E8E6DF" stroke-opacity="0.35" stroke-width="4"/>
+  <rect x="258" y="102" width="84" height="260" rx="35" fill="#0C1119"/>
+  <path d="M 270 126 Q 266 232 272 338" stroke="#E8E6DF" stroke-opacity="0.12" stroke-width="8" fill="none"/>
+  <rect x="258" y="211.2" width="84" height="14" fill="#D7263D" opacity="0.75"/>
+  <g transform="translate(1020 600) scale(-1 1)" opacity="0.75">
+    <path d="M -16 -118 Q -26 -62 -38 -10" stroke="#0A0F18" stroke-width="30" stroke-linecap="round" fill="none"/><path d="M 20 -118 Q 34 -64 48 -10" stroke="#0A0F18" stroke-width="30" stroke-linecap="round" fill="none"/>
+    <ellipse cx="-44" cy="-6" rx="17" ry="8" fill="#0A0F18"/><ellipse cx="56" cy="-6" rx="17" ry="8" fill="#0A0F18"/>
+    <path d="M -36 -262 Q 4 -280 44 -258 L 50 -168 Q 44 -132 28 -110 L -26 -110 Q -44 -140 -46 -178 Z" fill="#0A0F18"/>
+    <circle cx="6" cy="-292" r="27" fill="#0A0F18"/>
+    <path d="M -30 -240 Q -4 -230 28 -244" stroke="#0A0F18" stroke-width="24" stroke-linecap="round" fill="none"/><path d="M 34 -238 Q 50 -242 52 -256" stroke="#0A0F18" stroke-width="24" stroke-linecap="round" fill="none"/><circle cx="56" cy="-262" r="21" fill="#D7263D"/><circle cx="32" cy="-246" r="18" fill="#D7263D"/>
+  </g>
+  <g transform="translate(190 604) scale(0.9 0.9)" opacity="0.6">
+    <path d="M -16 -118 Q -26 -62 -38 -10" stroke="#0A0F18" stroke-width="30" stroke-linecap="round" fill="none"/><path d="M 20 -118 Q 34 -64 48 -10" stroke="#0A0F18" stroke-width="30" stroke-linecap="round" fill="none"/>
+    <ellipse cx="-44" cy="-6" rx="17" ry="8" fill="#0A0F18"/><ellipse cx="56" cy="-6" rx="17" ry="8" fill="#0A0F18"/>
+    <path d="M -36 -262 Q 4 -280 44 -258 L 50 -168 Q 44 -132 28 -110 L -26 -110 Q -44 -140 -46 -178 Z" fill="#0A0F18"/>
+    <circle cx="6" cy="-292" r="27" fill="#0A0F18"/>
+    <path d="M -28 -238 Q -2 -230 20 -248" stroke="#0A0F18" stroke-width="24" stroke-linecap="round" fill="none"/><path d="M 38 -244 Q 84 -248 124 -250" stroke="#0A0F18" stroke-width="24" stroke-linecap="round" fill="none"/><circle cx="136" cy="-250" r="22" fill="#2159D8"/><circle cx="26" cy="-252" r="17" fill="#2159D8"/>
+  </g>
+  <line x1="60" y1="600" x2="1220" y2="600" stroke="#E8E6DF" stroke-opacity="0.16" stroke-width="2"/>
+  <g><circle cx="466" cy="436" r="3.2" fill="#E8E6DF" opacity="0.40"/><circle cx="508" cy="312" r="1.1" fill="#E8E6DF" opacity="0.19"/><circle cx="638" cy="282" r="1.9" fill="#E8E6DF" opacity="0.35"/><circle cx="778" cy="378" r="1.1" fill="#E8E6DF" opacity="0.17"/><circle cx="989" cy="484" r="2.1" fill="#E8E6DF" opacity="0.19"/><circle cx="817" cy="434" r="1.0" fill="#E8E6DF" opacity="0.25"/><circle cx="277" cy="446" r="2.1" fill="#E8E6DF" opacity="0.33"/><circle cx="1025" cy="398" r="3.0" fill="#E8E6DF" opacity="0.26"/><circle cx="286" cy="148" r="3.3" fill="#E8E6DF" opacity="0.22"/><circle cx="274" cy="414" r="2.5" fill="#E8E6DF" opacity="0.29"/><circle cx="625" cy="205" r="1.7" fill="#E8E6DF" opacity="0.40"/><circle cx="512" cy="125" r="3.4" fill="#E8E6DF" opacity="0.19"/><circle cx="402" cy="147" r="1.1" fill="#E8E6DF" opacity="0.16"/><circle cx="663" cy="164" r="2.4" fill="#E8E6DF" opacity="0.38"/><circle cx="607" cy="127" r="1.7" fill="#E8E6DF" opacity="0.34"/><circle cx="904" cy="274" r="1.2" fill="#E8E6DF" opacity="0.11"/><circle cx="1059" cy="454" r="2.3" fill="#E8E6DF" opacity="0.10"/><circle cx="630" cy="456" r="1.4" fill="#E8E6DF" opacity="0.39"/><circle cx="700" cy="148" r="2.9" fill="#E8E6DF" opacity="0.32"/><circle cx="646" cy="333" r="1.6" fill="#E8E6DF" opacity="0.25"/><circle cx="368" cy="123" r="3.2" fill="#E8E6DF" opacity="0.39"/><circle cx="799" cy="348" r="1.5" fill="#E8E6DF" opacity="0.27"/><circle cx="1006" cy="194" r="2.0" fill="#E8E6DF" opacity="0.23"/><circle cx="960" cy="384" r="2.4" fill="#E8E6DF" opacity="0.38"/><circle cx="821" cy="309" r="2.0" fill="#E8E6DF" opacity="0.37"/><circle cx="966" cy="206" r="3.0" fill="#E8E6DF" opacity="0.10"/></g>
+  <ellipse cx="640" cy="356" rx="300" ry="260" fill="url(#glowCraie)" opacity="0.35"/>
+  <circle cx="640" cy="352" r="78" fill="#05070B" fill-opacity="0.55" stroke="#E8E6DF" stroke-width="6"/>
+  <circle cx="640" cy="352" r="94" fill="none" stroke="#E8E6DF" stroke-opacity="0.3" stroke-width="3"/>
+  <path d="M 618 316 L 618 388 L 684 352 Z" fill="#D7263D"/>
+  <rect x="80" y="620" width="220" height="14" rx="7" fill="#E8E6DF" opacity="0.35"/>
+  <rect x="80" y="648" width="140" height="12" rx="6" fill="#E8E6DF" opacity="0.2"/>
+  <rect x="1130" y="628" width="70" height="30" rx="8" fill="#05070B" fill-opacity="0.6" stroke="#E8E6DF" stroke-opacity="0.35" stroke-width="2"/>
+  <text x="1165" y="649" text-anchor="middle" font-family="Barlow, Segoe UI, Arial, sans-serif" font-size="17" fill="#E8E6DF" fill-opacity="0.7">1:24</text>
+
+  <rect width="1280" height="720" filter="url(#grain)" opacity="0.55"/>
+  <rect width="1280" height="720" fill="url(#vig)"/>
+  <text x="640" y="686" text-anchor="middle" font-family="Barlow, Segoe UI, Arial, sans-serif" font-size="26" letter-spacing="6" fill="#E8E6DF" fill-opacity="0.4">TÉMOIGNAGE VIDÉO</text>
+</svg>

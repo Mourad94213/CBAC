@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Groupe en shadow-boxing synchronisé sur les lignes du gymnase">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0" stop-color="#0B0E14"/>
+      <stop offset="1" stop-color="#151A24"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.44" r="0.8">
+      <stop offset="0.55" stop-color="#05070B" stop-opacity="0"/>
+      <stop offset="1" stop-color="#05070B" stop-opacity="0.82"/>
+    </radialGradient>
+    <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6F0DA" stop-opacity="0.42"/>
+      <stop offset="0.75" stop-color="#F6F0DA" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowOr"><stop offset="0" stop-color="#E4CE7E" stop-opacity="0.5"/><stop offset="1" stop-color="#E4CE7E" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowBleu"><stop offset="0" stop-color="#2159D8" stop-opacity="0.55"/><stop offset="1" stop-color="#2159D8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowRouge"><stop offset="0" stop-color="#D7263D" stop-opacity="0.5"/><stop offset="1" stop-color="#D7263D" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowCraie"><stop offset="0" stop-color="#F6F0DA" stop-opacity="0.4"/><stop offset="1" stop-color="#F6F0DA" stop-opacity="0"/></radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.92  0 0 0 0 0.90  0 0 0 0 0.84  0 0 0 0.06 0"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+
+  <path d="M 440 -20 L 760 -20 L 1070 710 L 130 710 Z" fill="url(#cone)" opacity="0.4"/>
+  <path d="M 60 780 L 1140 780" stroke="#2159D8" stroke-opacity="0.4" stroke-width="5"/>
+  <path d="M 130 840 L 1070 840" stroke="#E4CE7E" stroke-opacity="0.25" stroke-width="4"/>
+  <ellipse cx="600" cy="712" rx="430" ry="36" fill="url(#glowCraie)" opacity="0.4"/>
+  <line x1="60" y1="710" x2="1140" y2="710" stroke="#E8E6DF" stroke-opacity="0.2" stroke-width="2"/>
+  <g transform="translate(250 710) scale(1.02 1.02)" opacity="1">
+    <path d="M -16 -118 Q -26 -62 -38 -10" stroke="#04060B" stroke-width="30" stroke-linecap="round" fill="none"/><path d="M 20 -118 Q 34 -64 48 -10" stroke="#04060B" stroke-width="30" stroke-linecap="round" fill="none"/>
+    <ellipse cx="-44" cy="-6" rx="17" ry="8" fill="#04060B"/><ellipse cx="56" cy="-6" rx="17" ry="8" fill="#04060B"/>
+    <path d="M -36 -262 Q 4 -280 44 -258 L 50 -168 Q 44 -132 28 -110 L -26 -110 Q -44 -140 -46 -178 Z" fill="#04060B"/>
+    <circle cx="6" cy="-292" r="27" fill="#04060B"/>
+    <path d="M -28 -238 Q -2 -230 20 -248" stroke="#04060B" stroke-width="24" stroke-linecap="round" fill="none"/><path d="M 38 -244 Q 84 -248 124 -250" stroke="#04060B" stroke-width="24" stroke-linecap="round" fill="none"/><circle cx="136" cy="-250" r="22" fill="#D7263D"/><circle cx="26" cy="-252" r="17" fill="#D7263D"/>
+  </g>
+  <g transform="translate(570 710) scale(1.02 1.02)" opacity="1">
+    <path d="M -16 -118 Q -26 -62 -38 -10" stroke="#04060B" stroke-width="30" stroke-linecap="round" fill="none"/><path d="M 20 -118 Q 34 -64 48 -10" stroke="#04060B" stroke-width="30" stroke-linecap="round" fill="none"/>
+    <ellipse cx="-44" cy="-6" rx="17" ry="8" fill="#04060B"/><ellipse cx="56" cy="-6" rx="17" ry="8" fill="#04060B"/>
+    <path d="M -36 -262 Q 4 -280 44 -258 L 50 -168 Q 44 -132 28 -110 L -26 -110 Q -44 -140 -46 -178 Z" fill="#04060B"/>
+    <circle cx="6" cy="-292" r="27" fill="#04060B"/>
+    <path d="M -28 -238 Q -2 -230 20 -248" stroke="#04060B" stroke-width="24" stroke-linecap="round" fill="none"/><path d="M 38 -244 Q 84 -248 124 -250" stroke="#04060B" stroke-width="24" stroke-linecap="round" fill="none"/><circle cx="136" cy="-250" r="22" fill="#2159D8"/><circle cx="26" cy="-252" r="17" fill="#2159D8"/>
+  </g>
+  <g transform="translate(890 710) scale(1.02 1.02)" opacity="1">
+    <path d="M -16 -118 Q -26 -62 -38 -10" stroke="#04060B" stroke-width="30" stroke-linecap="round" fill="none"/><path d="M 20 -118 Q 34 -64 48 -10" stroke="#04060B" stroke-width="30" stroke-linecap="round" fill="none"/>
+    <ellipse cx="-44" cy="-6" rx="17" ry="8" fill="#04060B"/><ellipse cx="56" cy="-6" rx="17" ry="8" fill="#04060B"/>
+    <path d="M -36 -262 Q 4 -280 44 -258 L 50 -168 Q 44 -132 28 -110 L -26 -110 Q -44 -140 -46 -178 Z" fill="#04060B"/>
+    <circle cx="6" cy="-292" r="27" fill="#04060B"/>
+    <path d="M -28 -238 Q -2 -230 20 -248" stroke="#04060B" stroke-width="24" stroke-linecap="round" fill="none"/><path d="M 38 -244 Q 84 -248 124 -250" stroke="#04060B" stroke-width="24" stroke-linecap="round" fill="none"/><circle cx="136" cy="-250" r="22" fill="#E4CE7E"/><circle cx="26" cy="-252" r="17" fill="#E4CE7E"/>
+  </g>
+  <g><circle cx="402" cy="353" r="3.3" fill="#E8E6DF" opacity="0.22"/><circle cx="774" cy="222" r="3.1" fill="#E8E6DF" opacity="0.15"/><circle cx="941" cy="329" r="2.5" fill="#E8E6DF" opacity="0.37"/><circle cx="404" cy="168" r="1.2" fill="#E8E6DF" opacity="0.28"/><circle cx="315" cy="533" r="2.3" fill="#E8E6DF" opacity="0.16"/><circle cx="446" cy="330" r="1.2" fill="#E8E6DF" opacity="0.25"/><circle cx="925" cy="551" r="2.2" fill="#E8E6DF" opacity="0.13"/><circle cx="378" cy="372" r="2.7" fill="#E8E6DF" opacity="0.31"/><circle cx="746" cy="434" r="1.3" fill="#E8E6DF" opacity="0.35"/><circle cx="269" cy="246" r="2.7" fill="#E8E6DF" opacity="0.21"/><circle cx="343" cy="573" r="1.3" fill="#E8E6DF" opacity="0.11"/><circle cx="230" cy="193" r="1.5" fill="#E8E6DF" opacity="0.21"/><circle cx="493" cy="283" r="2.4" fill="#E8E6DF" opacity="0.10"/><circle cx="1036" cy="334" r="1.3" fill="#E8E6DF" opacity="0.14"/><circle cx="953" cy="380" r="3.2" fill="#E8E6DF" opacity="0.29"/><circle cx="609" cy="282" r="1.2" fill="#E8E6DF" opacity="0.14"/><circle cx="384" cy="494" r="2.6" fill="#E8E6DF" opacity="0.39"/><circle cx="464" cy="549" r="3.2" fill="#E8E6DF" opacity="0.37"/><circle cx="956" cy="379" r="1.6" fill="#E8E6DF" opacity="0.13"/><circle cx="987" cy="454" r="2.7" fill="#E8E6DF" opacity="0.26"/><circle cx="904" cy="370" r="1.3" fill="#E8E6DF" opacity="0.38"/><circle cx="510" cy="461" r="3.4" fill="#E8E6DF" opacity="0.10"/></g>
+
+  <rect width="1200" height="900" filter="url(#grain)" opacity="0.55"/>
+  <rect width="1200" height="900" fill="url(#vig)"/>
+  <text x="600" y="869" text-anchor="middle" font-family="Barlow, Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="5" fill="#E8E6DF" fill-opacity="0.4">AU CŒUR DU COURS · SHADOW-BOXING</text>
+</svg>

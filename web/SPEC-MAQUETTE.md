@@ -1,5 +1,7 @@
 # SPEC — Maquette site CBAC (boxe anglaise & éducation populaire)
 
+> **RÉVISION 2026-07-06 — association itinérante.** Le CBAC est une association (loi 1901), pas un club : **pas de salle attitrée, pas de créneaux hebdomadaires, pas de grille tarifaire publique**. L'association se déplace là où on l'accueille (gymnases mis à disposition par les villes, foyers, centres sociaux, écoles, entreprises). Conséquences appliquées au site : pages `/tarifs` et `/activites(+slug)` supprimées ; page `/actions` créée (cours d'initiation, stages vacances, galas amicaux, sorties & événements — les actions listées dans la doc) ; `/calendrier` réduit au calendrier du mois avec les **lieux** ; `/adhesion` reformulée (bulletin + cotisation libre, sans licence de saison) ; planning hebdo (`days/creneaux`, WeeklySchedule) et données tarifs supprimés. Les sections ci-dessous antérieures à cette révision restent la référence de *construction* (patterns, granularité), mais la structure qui prévaut est celle-ci.
+
 ## 0. Contexte
 
 Maquette complète d'un site vitrine pour l'association **CBAC** (boxe anglaise / éducation populaire), construite en **miroir exact de la construction** du site existant `D:/Code/Prospection/20eDanse/web` (Next.js 16 App Router, React 19, Tailwind 3.4, Radix UI, motion, lucide-react, CVA), avec une **direction artistique différente** (univers boxe, voir §2) et un contenu issu des documents de cadrage :
@@ -23,12 +25,11 @@ Projet cible : `D:/Code/CBAC/web` (déjà scaffoldé : package.json, node_module
 app/
   layout.tsx  page.tsx  not-found.tsx  robots.ts  sitemap.ts  globals.css(fait)
   association/page.tsx
-  activites/page.tsx        activites/[slug]/page.tsx
+  actions/page.tsx          (les 4 actions, sections ancrées — remplace activites/*)
   stages/page.tsx
   interventions/page.tsx
   coachs/page.tsx
-  calendrier/page.tsx
-  tarifs/page.tsx
+  calendrier/page.tsx       (calendrier du mois + lieux uniquement — pas de planning hebdo)
   adhesion/page.tsx
   galerie/page.tsx
   actualites/page.tsx
@@ -36,20 +37,20 @@ app/
   espace-partenaires/page.tsx
 components/
   layout/   header.tsx footer.tsx announcement-bar.tsx mobile-action-bar.tsx rappel-flottant.tsx
-  site/     reveal.tsx parallax.tsx marquee.tsx section-title.tsx divider.tsx brand-mark.tsx
+  site/     reveal.tsx parallax.tsx section-title.tsx divider.tsx brand-mark.tsx
             social-icons.tsx testimonial-slider.tsx framed-image.tsx impact-counter.tsx quiz.tsx exit-popup.tsx
   ui/       button.tsx badge.tsx accordion.tsx dialog.tsx form.tsx
   forms/    contact-form.tsx newsletter-form.tsx adhesion-form.tsx groupe-form.tsx
   devis/    devis-store.tsx devis-root.tsx devis-wizard.tsx devis-button.tsx
-  planning/ weekly-schedule.tsx mois-calendar.tsx
+  planning/ mois-calendar.tsx
   coachs/   coach-card.tsx
-  activites/activite-card.tsx
+  actions/  action-card.tsx
   actus/    actu-card.tsx
   galerie/  galerie-grid.tsx
   seo/      json-ld.tsx
 lib/
   utils.ts (fait)  seo.ts
-  data/  site.ts activites.ts publics.ts coachs.ts schedule.ts content.ts
+  data/  site.ts actions.ts publics.ts coachs.ts schedule.ts content.ts
 public/
   images/  (SVG placeholders, voir §5 ; logo-cbac.jpg déjà présent)
   docs/    projet-pedagogique-cbac.pdf  plaquette-entreprises-cbac.pdf
@@ -73,20 +74,20 @@ public/
 - **Baseline** : « La boxe anglaise comme école de vie ». Promesse : « Ici, on apprend à encaisser, à respecter et à se dépasser — sur le ring comme dans la vie. »
 - **Publics** : jeunes des quartiers, particuliers (enfants/ados/adultes), et structures B2B/B2A : entreprises (team building), centres sociaux & structures jeunesse, écoles, structures d'insertion/PJJ.
 - **Actions** : cours d'initiation, stages vacances, galas amicaux, sorties/événements boxe, interventions sur mesure.
-- **Coordonnées maquette (fictives)** : Gymnase Léo-Lagrange, 12 rue du Ring, 92000 Nanterre · 06 12 34 56 78 · contact@cbac-boxe.fr · Instagram/Facebook `@cbacboxe`. `SITE_URL = https://www.cbac-boxe.fr` (déjà dans lib/utils.ts).
+- **Coordonnées maquette (fictives)** : siège social (adresse administrative uniquement) Maison des associations, 12 rue du Ring, 92000 Nanterre · 06 12 34 56 78 · contact@cbac-boxe.fr · Instagram/Facebook `@cbacboxe`. `SITE_URL = https://www.cbac-boxe.fr` (déjà dans lib/utils.ts). Pas de local d'accueil : permanence téléphonique.
 - **Compteurs d'impact (maquette)** : 450+ jeunes accompagnés · 25 structures partenaires · 12 ans d'engagement · 300 séances par an.
 - **Marquee valeurs** : RESPECT · DISCIPLINE · DÉPASSEMENT DE SOI · TRANSMISSION · CONFIANCE · ÉNERGIE (+ répétition).
 - **Newsletter** : « Les news du ring ».
-- **Activités (6)** : slugs exacts → `boxe-educative` (6-11 ans), `boxe-loisir` (ados/adultes), `boxe-competition`, `boxe-sante-forme` (cardio-boxe, remise en forme), `initiation-decouverte` (séance d'essai, structures), `stage-vacances`.
-- **Coachs maquette (4)** : Soungui Gomis (fondateur, BPJEPS boxe anglaise, prévôt fédéral), Awa Diallo (BMF2, boxe éducative), Karim Benali (DEJEPS, compétition), Léa Fontaine (BPJEPS AF, cardio-boxe). Diplômes affichés (exigence docs).
+- **Actions (4, révision 2026-07-06)** : slugs/ancres exacts → `cours-initiation`, `stages-vacances`, `galas-amicaux`, `sorties-evenements`. Ce sont les actions listées dans la doc de cadrage ; les interventions sur mesure restent portées par `/interventions`.
+- **Coachs maquette (4)** : Soungui Gomis (fondateur, BPJEPS boxe anglaise, prévôt fédéral), Awa Diallo (BMF2, boxe éducative — écoles & enfance), Karim Benali (DEJEPS — interventions jeunesse & insertion), Léa Fontaine (BPJEPS AF — cardio-boxe & bien-être en entreprise). Diplômes affichés (exigence docs).
 
 ## 4. Contrats d'exports (OBLIGATOIRES pour les imports croisés)
 
 ### lib/data/site.ts
-`export const association = { name, legalName, president, tagline, promise, address: { street, zip, city, full, venue }, phone, email, socials: { instagram, facebook }, impact: { jeunes: 450, structures: 25, annees: 12, seances: 300 } }` ; `export const navigation: { label: string; href: string }[]` (ordre header : Association, Activités, Stages, Interventions, Coachs, Calendrier, Tarifs, Actualités, Contact — Galerie & Adhésion accessibles via footer/CTA) ; `export const announcement: string` (bandeau : rentrée/gala).
+`export const association = { name, legalName, president, tagline, promise, address: { street, zip, city, full, venue }, phone, email, socials: { instagram, facebook }, impact: { jeunes: 450, structures: 25, annees: 12, seances: 300 } }` ; `export const navigation: { label: string; href: string }[]` (ordre header : Association, Nos actions, Stages, Interventions, Coachs, Calendrier, Actualités, Contact — Galerie & Adhésion accessibles via footer/CTA) ; `export const announcement: string` (bandeau : gala/stages) ; `export const hours` (permanences téléphoniques — pas de local d'accueil).
 
-### lib/data/activites.ts
-`export type Activite = { slug; name; short; description; audience; ages; levels: string[]; duration; image; points: string[]; faq?: { q; a }[] }` ; `export const activites: Activite[]` (les 6 du §3) ; `export function getActivite(slug: string): Activite | undefined`.
+### lib/data/actions.ts (remplace activites.ts — révision 2026-07-06)
+`export type Action = { slug; name; short; description; publics; lieux; image; points: string[]; faq?: { q; a }[] }` ; `export const actions: Action[]` (les 4 du §3). Pas de pages détail : les slugs servent d'ancres sur `/actions`.
 
 ### lib/data/publics.ts (cibles B2B/B2A — personas des docs)
 `export type Cible = { key: "entreprises" | "centres-sociaux" | "ecoles" | "insertion"; name; anchor; persona; pitch; points: string[]; image; exemples: string[] }` ; `export const cibles: Cible[]`.
@@ -95,13 +96,13 @@ public/
 `export type Coach = { slug; name; role; bio; diplomes: string[]; image; founder?: boolean }` ; `export const coachs: Coach[]`.
 
 ### lib/data/schedule.ts
-`export const days: string[]` (Lundi→Samedi) ; `export type Creneau = { day; start; end; activite: string /* slug */; lieu; audience }` ; `export const creneaux: Creneau[]` (planning hebdo réaliste ~14 créneaux) ; `export type EventMois = { date; title; lieu; type: "gala" | "stage" | "sortie" | "initiation" | "reunion" }` ; `export const eventsMois: EventMois[]` (~6 événements juillet 2026).
+`export type EventMois = { date; title; lieu; type: "gala" | "stage" | "sortie" | "initiation" | "reunion" }` ; `export const eventsMois: EventMois[]` (~7 événements juillet 2026, lieux variés : gymnases mis à disposition, foyer, centre social, salle municipale, maison des associations). **Plus de planning hebdo** (`days`/`creneaux` supprimés — révision 2026-07-06).
 
 ### lib/data/content.ts
-`export const testimonials: { quote; author; role }[]` (≥6 : DRH, directrice centre social, éducateur, parents, adhérents — reprendre les personas Sophie/Marc/Fatima/Thomas des docs) ; `export const partenaires: { name: string }[]` (≥8, fictifs crédibles : Ville de Nanterre, CAF 92, Fédération FF Boxe, collèges, PME…) ; `export const faqSecurite: { q; a }[]` (≥6 : encadrement, matériel, âge minimum, assurance, certificat médical, mixité) ; `export const stages: { title; dates; ages; places; image; description; statut: "ouvert" | "complet" | "bientot" }[]` (≥4, vacances 2026) ; `export const actus: { slug; date; title; excerpt; image; tag }[]` (≥6) ; `export const galerie: { src; alt; cat: "gala" | "cours" | "evenement" }[]` (≥9) ; `export const quiz: { question; options: { label; scores: Record<string,number> }[] }[]` + `export const quizProfiles: Record<string, { title; text; href; cta }>` (profils : enfant→boxe-educative, adulte-loisir, compet, forme, structure→interventions) ; `export const tarifs: { label; public; prix; details: string[] }[]` (adhésion annuelle enfant/ado/adulte, cardio-boxe, licence, réductions QF/Pass'Sport) ; `export const instaPosts: { image; caption; likes }[]` (6, flux mock).
+`export const testimonials: { quote; author; role }[]` (≥6 : DRH, directrice centre social, éducateur, parents, adhérents — reprendre les personas Sophie/Marc/Fatima/Thomas des docs) ; `export const partenaires: { name: string }[]` (≥8, fictifs crédibles : Ville de Nanterre, CAF 92, Fédération FF Boxe, collèges, PME…) ; `export const faqSecurite: { q; a }[]` (≥6 : encadrement, matériel, âge minimum, assurance, certificat médical, mixité) ; `export const stages: { title; dates; ages; places; image; description; statut: "ouvert" | "complet" | "bientot" }[]` (≥4, vacances 2026) ; `export const actus: { slug; date; title; excerpt; image; tag }[]` (≥6) ; `export const galerie: { src; alt; cat: "gala" | "cours" | "evenement" }[]` (≥9) ; `export const quiz: { question; options: { label; scores: Record<string,number> }[] }[]` + `export const quizProfiles: Record<string, { title; text; href; cta }>` (profils révisés : enfant→/stages, adulte→/actions#cours-initiation, structure→/interventions, entreprise→/interventions#entreprises) ; `export const instaPosts: { image; caption; likes }[]` (6, flux mock). **Plus d'export `tarifs`** (page /tarifs supprimée — le prix passe par le devis et les aides sont mentionnées sur /stages et /adhesion).
 
 ### lib/seo.ts (miroir de 20eDanse/lib/seo.ts)
-`buildMetadata({ title, description, path?, image? }): Metadata` (canonical, OG 1200×630, twitter) ; `localBusinessLd()` (`@type: ["SportsActivityLocation","SportsClub"]`) ; `activiteLd(a: Activite)` (`@type: Course`) ; `eventLd(stage)` (`@type: Event`) ; `faqLd(items)` ; `breadcrumbLd(crumbs)`.
+`buildMetadata({ title, description, path?, image? }): Metadata` (canonical, OG 1200×630, twitter) ; `localBusinessLd()` (`@type: ["SportsActivityLocation","SportsClub"]` — type schema.org technique, sans équivalent « association sportive ») ; `eventLd(stage)` (`@type: Event`, lieu « communiqué à l'inscription ») ; `faqLd(items)` ; `breadcrumbLd(crumbs)`. **`activiteLd` supprimé** (plus de pages détail d'activité).
 
 ### components/seo/json-ld.tsx
 `export function JsonLd({ data }: { data: object | object[] })`.
@@ -120,10 +121,10 @@ public/
 `devis-store.tsx`: `DevisProvider`, `useDevis()` (contexte : open/close, étape, données). `devis-root.tsx`: `DevisRoot` (Dialog global monté dans layout). `devis-wizard.tsx`: `DevisWizard` — configurateur « Créez votre intervention sur mesure » en 4 étapes : 1) Vous êtes… (cibles de lib/data/publics + particulier) 2) Format & objectifs (initiation, cycle, stage, team building, gala…) 3) Effectif, lieu, période 4) Coordonnées + récap → succès simulé (maquette, pas d'envoi réseau). `devis-button.tsx`: `DevisButton({ size?, variant?, className?, children? })` — ouvre le wizard.
 
 ### components/forms (mêmes patterns que 20eDanse forms : 'use client', état soumis simulé, validation HTML + messages)
-`contact-form.tsx`: `ContactForm` — champ « Vous êtes » (particulier/entreprise/centre social/école/insertion) qui adapte les champs (société, structure, effectif…), case « Je souhaite être rappelé·e » et « Prendre un rendez-vous de présentation ». `newsletter-form.tsx`: `NewsletterForm` (inline, footer). `adhesion-form.tsx`: `AdhesionForm` — adhésion particulier (adhérent, date de naissance, activité souhaitée via select des activités, responsable légal si mineur, droit à l'image) → succès simulé. `groupe-form.tsx`: `GroupeForm` — inscription groupe simplifiée (structure, effectif, tranche d'âge, période souhaitée).
+`contact-form.tsx`: `ContactForm` — champ « Vous êtes » (particulier/entreprise/centre social/école/insertion) qui adapte les champs (société, structure, effectif…), case « Je souhaite être rappelé·e » et « Prendre un rendez-vous de présentation ». `newsletter-form.tsx`: `NewsletterForm` (inline, footer). `adhesion-form.tsx`: `AdhesionForm` — adhésion particulier (adhérent, date de naissance, centre d'intérêt via select statique : initiations/stages/sorties/bénévolat/soutien, responsable légal si mineur, droit à l'image) → succès simulé. `groupe-form.tsx`: `GroupeForm` — inscription groupe simplifiée (structure, effectif, tranche d'âge, période souhaitée).
 
 ### components features
-`planning/weekly-schedule.tsx`: `WeeklySchedule` client — grille hebdo filtrable par jour + par activité (badges colorés par activité). `planning/mois-calendar.tsx`: `CalendrierMois` — liste stylée des `eventsMois` (date en gros font-condensed, type en Badge, lieu avec MapPin). `coachs/coach-card.tsx`: `CoachCard({ coach })` — photo, nom, rôle, diplômes en pills or. `activites/activite-card.tsx`: `ActiviteCard({ activite })` — miroir de course-card.tsx. `actus/actu-card.tsx`: `ActuCard({ actu })`. `galerie/galerie-grid.tsx`: `GalerieGrid` client — filtres par catégorie (Tous/Galas/Cours/Événements) + lightbox Dialog.
+`planning/mois-calendar.tsx`: `CalendrierMois` — liste stylée des `eventsMois` (date en gros font-condensed, type en Badge, lieu avec MapPin). `coachs/coach-card.tsx`: `CoachCard({ coach })` — photo, nom, rôle, diplômes en pills or. `actions/action-card.tsx`: `ActionCard({ action })` — carte d'action (badge, lieux avec MapPin), lien vers `/actions#slug`. `actus/actu-card.tsx`: `ActuCard({ actu })`. `galerie/galerie-grid.tsx`: `GalerieGrid` client — filtres par catégorie (Tous/Galas/Cours/Événements) + lightbox Dialog. **`weekly-schedule.tsx` supprimé** (pas de planning hebdo).
 
 ## 5. Manifest images (public/images/ — SVG placeholders soignés)
 
@@ -146,16 +147,15 @@ Style commun : scènes sombres `#0B0E14`→`#151A24` en dégradés, silhouettes/
 
 ## 6. Pages — briefs (chacune : metadata via buildMetadata, JsonLd pertinent, sections Reveal/Stagger, miroir du page.tsx 20eDanse indiqué)
 
-- **/** (miroir `app/page.tsx`) : hero split (ParallaxImage hero-ring + carte flottante « le respect / avant tout » en condensed/display + mini image transmission) ; Marquee valeurs ; bande **compteurs d'impact** (4 ImpactCounter, exigence docs) ; « Round 01 · Nos actions » grille ActiviteCard scroll horizontal ; « Round 02 · Pour qui ? » 3 panneaux (Jeunes & familles → /activites, Structures & collectivités → /interventions, Entreprises → /interventions#entreprises) ; bande sombre "esprit" (promise + transmission.svg parallax) ; **Quiz** « Quel programme pour vous ? » ; coachs (fondateur + grille) ; TestimonialSlider + « Ils nous font confiance » (marquee/grille de noms partenaires) ; CalendrierMois (teaser 3 événements + lien /calendrier) ; bande flux Instagram mock ; CTA final rouge grain (DevisButton + lien adhésion). Séparateurs `.ring-ropes` entre grandes zones.
+- **/** (miroir `app/page.tsx`) : hero split (ParallaxImage hero-ring + carte flottante « le respect / avant tout » en condensed/display + mini image transmission) ; Marquee valeurs ; bande **compteurs d'impact** (4 ImpactCounter, exigence docs) ; « Round 01 · Nos actions » grille ActionCard scroll horizontal ; « Round 02 · Pour qui ? » 3 panneaux (Jeunes & familles → /actions, Structures & collectivités → /interventions, Entreprises → /interventions#entreprises) ; bande sombre "esprit" (promise + transmission.svg parallax) ; **Quiz** « Quel programme pour vous ? » ; coachs (fondateur + grille) ; TestimonialSlider + « Ils nous font confiance » (marquee/grille de noms partenaires) ; CalendrierMois (teaser 3 événements + lien /calendrier) ; bande flux Instagram mock ; CTA final rouge grain (DevisButton + lien adhésion). Séparateurs `.ring-ropes` entre grandes zones.
 - **/association** (miroir a-propos) : hero éditorial, histoire/mission éducation populaire, valeurs en 3 cartes (Respect/Émotions/Dépassement), mot du président (Soungui Gomis), image transmission, **documents téléchargeables** (projet pédagogique PDF + plaquette), **FAQ sécurité & encadrement** (Accordion + faqLd), CTA.
-- **/activites** (miroir cours) : intro + ancres par public, grille ActiviteCard, bande initiation découverte, CTA adhésion/essai.
-- **/activites/[slug]** (miroir cours/[slug]) : generateStaticParams sur activites, hero, points forts, à qui ça s'adresse, créneaux du planning filtrés pour l'activité, activiteLd + breadcrumbLd, CTA essai + activités liées.
+- **/actions** (révision 2026-07-06, remplace /activites et ses pages détail) : intro « pas de salle, la boxe vient à vous » + ancres par action, une section ancrée par action (image/texte alternés, points, publics + lieux, CTA calendrier ou stages + DevisButton), bande « où nous intervenons » (gymnases municipaux, foyers, centres sociaux, écoles, entreprises, événements de quartier), faqLd sur les FAQ des actions, CTA final devis/contact.
 - **/stages** (miroir stages) : liste des stages vacances (dates, âges, places, statut Badge), fonctionnement d'une journée type, **GroupeForm** (structures), FAQ courte, eventLd.
 - **/interventions** (miroir prestations) : page conversion B2B/B2A — hero + ancres, **une section par cible** de lib/data/publics (entreprises #entreprises, centres sociaux, écoles, insertion) avec persona quote, points, exemples de séances, image ; bande « comment ça marche » (4 étapes) ; **DevisButton** partout ; plaquette PDF ; **ExitPopup** monté ici ; témoignages structures.
 - **/coachs** (miroir profs) : fondateur à l'honneur + grille CoachCard, bloc diplômes/certifications & encadrement sécurisé, CTA.
-- **/calendrier** (miroir planning) : WeeklySchedule (planning hebdo) + CalendrierMois complet (événements du mois, lieux), note « planning susceptible d'évoluer », lien iCal factice.
-- **/tarifs** (miroir tarifs) : tableaux/cartes tarifs (lib/data/content.tarifs), aides (Pass'Sport, QF, paiement fractionné), ce qui est inclus (licence, assurance), FAQ paiement, CTA adhésion.
-- **/adhesion** (miroir adhesion) : parcours d'adhésion en étapes (essai gratuit → dossier → licence), **AdhesionForm**, documents à prévoir, CTA contact.
+- **/calendrier** (révision 2026-07-06) : CalendrierMois complet — les **lieux et événements du mois** (exigence doc), repères chiffrés (nb de rendez-vous, nb de lieux), note « lieux confirmés au fil du mois », lien iCal factice, bloc « un doute ? appelez la permanence ». **Pas de planning hebdo.**
+- **/tarifs** : SUPPRIMÉE (révision 2026-07-06 — pas de grille tarifaire publique ; devis pour les structures, aides mentionnées sur /stages et /adhesion).
+- **/adhesion** (révision 2026-07-06) : parcours en étapes (rencontre sur un lieu d'intervention → bulletin d'adhésion → participation/bénévolat), cotisation libre dès 10 €, **AdhesionForm**, documents à prévoir (sans licence de saison), bloc « comment nous joindre » (pas de local d'accueil), CTA contact.
 - **/galerie** : GalerieGrid (filtres + lightbox), bande CTA « revivez nos galas ».
 - **/actualites** : grille ActuCard (6), bande NewsletterForm « Les news du ring ».
 - **/contact** (miroir contact) : ContactForm multi-profils, coordonnées + carte stylisée maquette (bloc SVG/di v), horaires d'accueil, bloc « Votre corner » (accompagnement personnalisé, rappel 24h, rdv de présentation).

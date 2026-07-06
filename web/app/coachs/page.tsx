@@ -16,7 +16,7 @@ import { association } from "@/lib/data/site";
 export const metadata: Metadata = buildMetadata({
   title: "Vos coachs",
   description:
-    "Quatre coachs diplômés et engagés, dont le fondateur Soungui Gomis, encadrent les entraînements du CBAC à Nanterre : boxe éducative, loisir, compétition et cardio-boxe.",
+    "Quatre coachs diplômés et engagés, dont le fondateur Soungui Gomis, encadrent les actions du CBAC : initiations, stages vacances, cycles en structures et ateliers en entreprise.",
   path: "/coachs",
 });
 
@@ -31,7 +31,7 @@ const garanties = [
   {
     icon: HeartPulse,
     title: "Premiers secours pour tous",
-    text: "Toute l'équipe est titulaire du PSC1. Une trousse de secours complète et un défibrillateur sont disponibles au gymnase, et chaque coach connaît les protocoles d'urgence.",
+    text: "Toute l'équipe est titulaire du PSC1. Une trousse de secours complète voyage avec le matériel sur chaque lieu d'intervention, et chaque coach connaît les protocoles d'urgence.",
   },
   {
     icon: ShieldCheck,
@@ -41,7 +41,7 @@ const garanties = [
   {
     icon: Users,
     title: "Effectifs limités",
-    text: "Seize pratiquants maximum par créneau : chacun est vu, corrigé et encouragé. Les groupes sont constitués par âge et par niveau, jamais au hasard.",
+    text: "Seize pratiquants maximum par séance : chacun est vu, corrigé et encouragé. Les groupes sont constitués par âge et par niveau, jamais au hasard.",
   },
 ];
 
@@ -119,7 +119,7 @@ export default function CoachsPage() {
         <SectionTitle
           eyebrow="Round 02 · L'équipe"
           title="Trois coachs aux côtés de Soungui"
-          intro="Boxe éducative, compétition, cardio-boxe : chacun encadre les groupes de sa spécialité, avec la même attention portée à chaque pratiquant — du gamin de six ans au compétiteur confirmé."
+          intro="Écoles et enfance, jeunesse et insertion, bien-être en entreprise : chacun intervient sur les terrains de sa spécialité, avec la même attention portée à chaque pratiquant — du gamin de six ans au DRH qui découvre le jab."
         />
         <Stagger className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {equipe.map((coach) => (
@@ -167,16 +167,16 @@ export default function CoachsPage() {
           <div className="relative flex flex-col items-center gap-5">
             <span className="eyebrow">Dernier round</span>
             <h2 className="max-w-2xl text-balance text-2xl sm:text-3xl">
-              Venez les rencontrer au gymnase Léo-Lagrange
+              Venez les rencontrer à une initiation près de chez vous
             </h2>
             <p className="max-w-md text-[15px] leading-relaxed text-craie-soft">
-              Le meilleur moyen de choisir son coach, c'est d'enfiler les gants. Première séance
-              d'essai offerte, sans engagement — on vous prête tout le matériel.
+              Le meilleur moyen de choisir son coach, c'est d'enfiler les gants. Première
+              initiation offerte, sans engagement — on apporte tout le matériel.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg">
-                <Link href="/adhesion">
-                  Réserver une séance d'essai
+                <Link href="/calendrier">
+                  Trouver la prochaine initiation
                   <ArrowRight className="h-4 w-4" strokeWidth={2} />
                 </Link>
               </Button>

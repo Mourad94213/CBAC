@@ -11,7 +11,7 @@ import { GalerieGrid } from "@/components/galerie/galerie-grid";
 export const metadata: Metadata = buildMetadata({
   title: "Galerie",
   description:
-    "Galas amicaux, cours au gymnase Léo-Lagrange, sorties et interventions : la vie du CBAC en images, du premier assaut éducatif aux projecteurs des soirs de gala.",
+    "Galas amicaux, initiations, sorties et interventions aux quatre coins du territoire : la vie du CBAC en images, du premier assaut éducatif aux projecteurs des soirs de gala.",
   path: "/galerie",
 });
 
@@ -30,7 +30,7 @@ export default function GaleriePage() {
         <SectionTitle
           as="h1"
           eyebrow="En images"
-          title="La vie du club, gants aux poings"
+          title="La vie de l'asso, gants aux poings"
           intro="Galas sous les projecteurs, cours au gymnase, sorties et séances découverte : filtrez par catégorie, cliquez pour agrandir."
         />
       </section>
@@ -63,7 +63,7 @@ export default function GaleriePage() {
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button asChild size="lg">
               <Link href="/adhesion">
-                Rejoindre le club
+                Rejoindre l&apos;association
                 <ArrowRight className="h-4 w-4" strokeWidth={2} />
               </Link>
             </Button>

@@ -27,21 +27,21 @@ export const testimonials: { quote: string; author: string; role: string }[] = [
   },
   {
     quote:
-      "Mon fils de 9 ans était timide et colérique. Un an de boxe éducative plus tard, il a gagné en calme et en confiance — et il n'a jamais reçu un coup. Les coachs font un travail éducatif remarquable.",
+      "Mon fils de 9 ans était timide et colérique. Deux stages vacances et un cycle avec son centre de loisirs plus tard, il a gagné en calme et en confiance — et il n'a jamais reçu un coup. Les coachs font un travail éducatif remarquable.",
     author: "Nadia K.",
-    role: "Maman d'un adhérent de 9 ans",
+    role: "Maman d'un participant de 9 ans",
   },
   {
     quote:
-      "Je suis arrivé au club à 15 ans, un peu perdu. Aujourd'hui je prépare les championnats départementaux avec Karim. Ici on m'a appris la boxe, mais surtout la discipline et le respect.",
-    author: "Yanis, 17 ans",
-    role: "Adhérent, groupe compétition",
+      "J'ai mis les gants pour la première fois à une initiation au centre social, à 15 ans, un peu perdu. Trois ans plus tard, je suis bénévole au CBAC : c'est moi qui aide les petits à lacer leurs gants pendant les stages. Ici on m'a appris la boxe, mais surtout la discipline et le respect.",
+    author: "Yanis, 18 ans",
+    role: "Bénévole, ancien participant",
   },
   {
     quote:
-      "Le créneau cardio-boxe du jeudi midi est devenu mon rendez-vous sacré. Une heure pour tout évacuer, une ambiance en or, et je n'ai jamais été aussi en forme.",
+      "Nos résidents attendaient chaque séance du cycle avec impatience. Le coach a su poser un cadre où chacun se sentait en sécurité — même ceux qui ne s'inscrivent jamais à rien ont enfilé les gants.",
     author: "Claire D.",
-    role: "Adhérente boxe santé & forme",
+    role: "Animatrice, foyer de jeunes travailleurs",
   },
 ];
 
@@ -65,15 +65,15 @@ export const partenaires: { name: string }[] = [
 export const faqSecurite: { q: string; a: string }[] = [
   {
     q: "Qui encadre les séances ?",
-    a: "Exclusivement des coachs diplômés : BPJEPS, DEJEPS ou brevets fédéraux FFBoxe, tous titulaires du PSC1 (premiers secours). Les diplômes de chaque coach sont affichés au gymnase et détaillés sur la page Coachs.",
+    a: "Exclusivement des coachs diplômés : BPJEPS, DEJEPS ou brevets fédéraux FFBoxe, tous titulaires du PSC1 (premiers secours). Les diplômes de chaque coach sont présentés aux structures avant chaque cycle et détaillés sur la page Coachs.",
   },
   {
     q: "Le matériel est-il fourni ?",
-    a: "Oui. Gants, casques, plastrons et pattes d'ours sont fournis et désinfectés après chaque séance. Seul le protège-dents est personnel : nous en proposons à prix coûtant au club. Prévoyez simplement une tenue de sport et une gourde.",
+    a: "Oui, et c'est le principe même de nos interventions : nous arrivons avec tout le matériel — gants, casques, plastrons, pattes d'ours — fourni et désinfecté après chaque séance. Seul le protège-dents est personnel : nous en proposons à prix coûtant sur place. Prévoyez simplement une tenue de sport et une gourde.",
   },
   {
     q: "À partir de quel âge peut-on boxer ?",
-    a: "Dès 6 ans en boxe éducative : une pratique codifiée où seules les touches légères sont autorisées — les coups appuyés sont interdits et sanctionnés. La boxe avec opposition réelle n'intervient que chez les ados et adultes, toujours sur la base du volontariat.",
+    a: "Dès 6 ans en boxe éducative : une pratique codifiée où seules les touches légères sont autorisées — les coups appuyés sont interdits et sanctionnés. Toutes nos initiations et interventions se font sur cette base, quel que soit l'âge des participants.",
   },
   {
     q: "Les enfants reçoivent-ils des coups à la tête ?",
@@ -81,15 +81,15 @@ export const faqSecurite: { q: string; a: string }[] = [
   },
   {
     q: "Comment êtes-vous assurés ?",
-    a: "L'association est affiliée à la Fédération Française de Boxe : la licence fédérale, incluse dans l'adhésion, couvre chaque pratiquant en responsabilité civile et individuelle accident. Une attestation d'assurance est fournie sur demande aux structures partenaires.",
+    a: "L'association est affiliée à la Fédération Française de Boxe et assurée en responsabilité civile pour l'ensemble de ses interventions : chaque participant est couvert pendant les séances, dans vos locaux comme dans les gymnases mis à disposition. Une attestation d'assurance est fournie sur demande aux structures partenaires.",
   },
   {
     q: "Faut-il un certificat médical ?",
-    a: "Pour les mineurs, un questionnaire de santé suffit dans la plupart des cas. Un certificat médical de non-contre-indication est requis pour les adultes et obligatoire, avec examen approfondi, pour la pratique en compétition.",
+    a: "Pour une initiation ou un atelier ponctuel, un simple questionnaire de santé suffit. Pour les stages vacances, un questionnaire de santé est demandé pour les mineurs et un certificat médical de non-contre-indication pour les adultes.",
   },
   {
-    q: "Les cours sont-ils mixtes ?",
-    a: "Oui, tous nos créneaux sont mixtes, filles et garçons, femmes et hommes — c'est un principe d'éducation populaire auquel nous tenons. Les mises de gants se font toujours entre partenaires de gabarit et de niveau équivalents.",
+    q: "Les séances sont-elles mixtes ?",
+    a: "Oui, toutes nos séances sont mixtes, filles et garçons, femmes et hommes — c'est un principe d'éducation populaire auquel nous tenons. Les ateliers d'opposition se font toujours entre partenaires de gabarit et de niveau équivalents.",
   },
 ];
 
@@ -143,7 +143,7 @@ export const stages: Stage[] = [
     places: "12 places",
     image: "/images/evenement-1.svg",
     description:
-      "Trois matinées intensives pour finir l'année en puissance : cardio-boxe, circuits de renforcement et mise de gants encadrée pour les volontaires. Ouvert aux non-adhérents.",
+      "Trois matinées intensives pour finir l'année en puissance : cardio-boxe, circuits de renforcement et ateliers d'opposition à la touche pour les volontaires. Ouvert à tous, aucune expérience requise.",
     statut: "bientot",
   },
 ];
@@ -156,36 +156,36 @@ export const actus: { slug: string; date: string; title: string; excerpt: string
     date: "28 juin 2026",
     title: "Gala amical d'été : rendez-vous le 4 juillet !",
     excerpt:
-      "Assauts éducatifs des 6-11 ans, démonstrations du groupe compétition et remise des gants de couleur : la grande fête du club revient à la salle des fêtes de Nanterre. Entrée libre, buvette associative.",
+      "Assauts éducatifs des 6-11 ans, démonstrations des ados et des coachs, remise des récompenses de l'année : la grande fête de l'association revient à la salle des fêtes de Nanterre. Entrée libre, buvette associative.",
     image: "/images/actu-1.svg",
     tag: "Événement",
   },
   {
-    slug: "deux-qualifies-finale-departementale",
+    slug: "nouveau-cycle-foyer-les-iris",
     date: "14 juin 2026",
-    title: "Yanis et Inès en finale départementale !",
+    title: "Un nouveau cycle démarre au foyer Les Iris",
     excerpt:
-      "Deux de nos jeunes du groupe compétition se sont qualifiés pour les finales des Hauts-de-Seine. Tout le club sera dans les gradins pour les porter — fiers de vous.",
+      "Six séances co-construites avec l'équipe du foyer de jeunes travailleurs Les Iris : gestion des émotions, confiance, respect du cadre. Le matériel voyage avec nous — les gants aussi.",
     image: "/images/actu-2.svg",
-    tag: "Compétition",
+    tag: "Interventions",
   },
   {
-    slug: "pass-sport-reconduit-2026",
+    slug: "pass-sport-stages-2026",
     date: "2 juin 2026",
-    title: "Pass'Sport reconduit : 50 € de réduction sur l'adhésion",
+    title: "Pass'Sport reconduit : 50 € de réduction sur les stages vacances",
     excerpt:
-      "Bonne nouvelle pour la rentrée : le dispositif Pass'Sport est reconduit pour la saison 2026-2027. 50 € déduits immédiatement de l'adhésion pour les jeunes éligibles — on vous explique tout.",
+      "Bonne nouvelle : le dispositif Pass'Sport est reconduit pour 2026-2027. 50 € déduits immédiatement de l'inscription aux stages pour les jeunes éligibles — on vous explique tout.",
     image: "/images/actu-3.svg",
     tag: "Pratique",
   },
   {
-    slug: "nouveau-creneau-cardio-midi",
+    slug: "deux-nouveaux-gymnases-convention-ville",
     date: "19 mai 2026",
-    title: "Le cardio-boxe du midi affiche complet : un 2e créneau à la rentrée",
+    title: "La Ville met deux nouveaux gymnases à notre disposition",
     excerpt:
-      "Victime de son succès, le créneau boxe santé & forme du jeudi midi double à la rentrée. Un nouveau rendez-vous le mardi à 12h15 ouvrira en septembre — pré-inscriptions ouvertes.",
+      "La convention avec la Ville de Nanterre s'élargit : les gymnases Anatole-France et Joliot-Curie accueilleront nos initiations et nos stages en 2026-2027. Plus de lieux, plus de gants tendus.",
     image: "/images/actu-4.svg",
-    tag: "Vie du club",
+    tag: "Vie de l'asso",
   },
   {
     slug: "cycle-college-paul-eluard",
@@ -199,7 +199,7 @@ export const actus: { slug: string; date: string; title: string; excerpt: string
   {
     slug: "sortie-gala-professionnel",
     date: "21 avril 2026",
-    title: "30 jeunes du club au gala professionnel de Levallois",
+    title: "30 jeunes de l'asso au gala professionnel de Levallois",
     excerpt:
       "Grâce à nos partenaires, 30 jeunes adhérents ont assisté à leur premier gala professionnel. Des étoiles dans les yeux, et une certitude : le travail paie, sur le ring comme ailleurs.",
     image: "/images/actu-6.svg",
@@ -211,13 +211,13 @@ export const actus: { slug: string; date: string; title: string; excerpt: string
 
 export const galerie: { src: string; alt: string; cat: "gala" | "cours" | "evenement" }[] = [
   { src: "/images/gala-1.svg", alt: "Assaut éducatif sous les projecteurs lors du gala d'été", cat: "gala" },
-  { src: "/images/gala-2.svg", alt: "Remise des gants de couleur aux jeunes boxeurs du CBAC", cat: "gala" },
+  { src: "/images/gala-2.svg", alt: "Remise des récompenses aux jeunes participants du gala amical", cat: "gala" },
   { src: "/images/gala-3.svg", alt: "Le public debout autour du ring à la salle des fêtes de Nanterre", cat: "gala" },
-  { src: "/images/cours-1.svg", alt: "Travail aux pattes d'ours pendant le cours de boxe loisir", cat: "cours" },
-  { src: "/images/cours-2.svg", alt: "Groupe boxe éducative 6-11 ans en cercle autour du coach", cat: "cours" },
-  { src: "/images/cours-3.svg", alt: "Séance cardio-boxe du midi au gymnase Léo-Lagrange", cat: "cours" },
+  { src: "/images/cours-1.svg", alt: "Travail aux pattes d'ours pendant un cours d'initiation", cat: "cours" },
+  { src: "/images/cours-2.svg", alt: "Groupe boxe éducative 6-11 ans en cercle autour du coach, en stage vacances", cat: "cours" },
+  { src: "/images/cours-3.svg", alt: "Séance d'initiation dans un gymnase mis à disposition par la Ville", cat: "cours" },
   { src: "/images/evenement-1.svg", alt: "Atelier team building boxe avec une entreprise partenaire", cat: "evenement" },
-  { src: "/images/evenement-2.svg", alt: "Sortie du club au gala de boxe professionnel de Levallois", cat: "evenement" },
+  { src: "/images/evenement-2.svg", alt: "Sortie de l'association au gala de boxe professionnel de Levallois", cat: "evenement" },
   { src: "/images/evenement-3.svg", alt: "Séance découverte au centre social Les Acacias", cat: "evenement" },
 ];
 
@@ -227,140 +227,67 @@ export const quiz: { question: string; options: { label: string; scores: Record<
   {
     question: "Pour qui cherchez-vous un programme ?",
     options: [
-      { label: "Mon enfant (6-11 ans)", scores: { enfant: 3 } },
-      { label: "Mon ado (12-17 ans)", scores: { "adulte-loisir": 2, compet: 1 } },
-      { label: "Moi-même", scores: { "adulte-loisir": 2, forme: 1 } },
-      { label: "Un groupe, une structure ou mon équipe", scores: { structure: 3 } },
+      { label: "Mon enfant ou mon ado", scores: { enfant: 3 } },
+      { label: "Moi-même", scores: { adulte: 3 } },
+      { label: "Les jeunes ou résidents de ma structure", scores: { structure: 3 } },
+      { label: "Mon équipe, mes collègues", scores: { entreprise: 3 } },
     ],
   },
   {
     question: "Quel est l'objectif principal ?",
     options: [
-      { label: "Apprendre en s'amusant, gagner en confiance", scores: { enfant: 2, "adulte-loisir": 1 } },
-      { label: "Me défouler et me remettre en forme", scores: { forme: 3 } },
-      { label: "Progresser sérieusement, viser la compétition", scores: { compet: 3 } },
-      { label: "Créer du lien, souder un groupe", scores: { structure: 2, "adulte-loisir": 1 } },
+      { label: "Découvrir la boxe en s'amusant, gagner en confiance", scores: { enfant: 2, adulte: 2 } },
+      { label: "Occuper les vacances utilement", scores: { enfant: 3 } },
+      { label: "Canaliser l'énergie d'un groupe, poser un cadre", scores: { structure: 3 } },
+      { label: "Souder une équipe autrement", scores: { entreprise: 3 } },
     ],
   },
   {
-    question: "Quel est le niveau de départ ?",
+    question: "Quel format vous parle le plus ?",
     options: [
-      { label: "Jamais mis les gants", scores: { "adulte-loisir": 2, enfant: 1, forme: 1 } },
-      { label: "Quelques bases, envie d'aller plus loin", scores: { "adulte-loisir": 2, compet: 1 } },
-      { label: "Déjà de l'expérience, voire des assauts", scores: { compet: 3 } },
-      { label: "Des niveaux très différents dans le groupe", scores: { structure: 3 } },
+      { label: "Une séance découverte, pour voir", scores: { adulte: 2, enfant: 1 } },
+      { label: "Une semaine de stage pendant les vacances", scores: { enfant: 3 } },
+      { label: "Un cycle de plusieurs séances dans la durée", scores: { structure: 3 } },
+      { label: "Un événement ponctuel, clé en main", scores: { entreprise: 2, structure: 1 } },
     ],
   },
   {
-    question: "Quel rythme vous conviendrait ?",
+    question: "Où imaginez-vous les séances ?",
     options: [
-      { label: "Une séance par semaine, tranquille", scores: { "adulte-loisir": 2, enfant: 1 } },
-      { label: "Deux à trois séances intenses par semaine", scores: { compet: 2, forme: 1 } },
-      { label: "Du cardio sans opposition, midi ou soir", scores: { forme: 3 } },
-      { label: "Un cycle ponctuel ou une intervention sur mesure", scores: { structure: 3 } },
+      { label: "Près de chez moi, dans un gymnase de la ville", scores: { enfant: 2, adulte: 2 } },
+      { label: "Dans nos locaux — venez à nous", scores: { structure: 2, entreprise: 2 } },
+      { label: "Peu importe, du moment que ça bouge", scores: { adulte: 1, enfant: 1 } },
+      { label: "À définir ensemble selon le projet", scores: { structure: 1, entreprise: 1 } },
     ],
   },
 ];
 
 export const quizProfiles: Record<string, { title: string; text: string; href: string; cta: string }> = {
   enfant: {
-    title: "Boxe éducative (6-11 ans)",
-    text: "Votre enfant apprendra la boxe comme un grand jeu : touches légères, zéro coup porté, et une vraie école de respect et de confiance en soi.",
-    href: "/activites/boxe-educative",
-    cta: "Découvrir la boxe éducative",
+    title: "Stages vacances & initiations enfants",
+    text: "Boxe éducative uniquement : touches légères, zéro coup porté, et une vraie école de respect et de confiance. Prochain rendez-vous : les stages des vacances et les initiations près de chez vous.",
+    href: "/stages",
+    cta: "Voir les stages vacances",
   },
-  "adulte-loisir": {
-    title: "Boxe loisir",
-    text: "Le cours idéal pour apprendre vraiment la boxe anglaise : technique, sac, et mise de gants uniquement si vous le souhaitez. Débutants bienvenus.",
-    href: "/activites/boxe-loisir",
-    cta: "Découvrir la boxe loisir",
-  },
-  compet: {
-    title: "Boxe compétition",
-    text: "Préparation physique, tactique et sparring contrôlé : notre groupe compétition vous emmènera jusqu'aux championnats, sérieusement préparé·e.",
-    href: "/activites/boxe-competition",
-    cta: "Découvrir la boxe compétition",
-  },
-  forme: {
-    title: "Boxe santé & forme",
-    text: "Tout l'engagement du boxeur, zéro coup reçu : cardio-boxe, circuits et renforcement en musique, avec un créneau du midi pour les actifs.",
-    href: "/activites/boxe-sante-forme",
-    cta: "Découvrir le cardio-boxe",
+  adulte: {
+    title: "Cours d'initiation",
+    text: "Une séance découverte gratuite pour mettre les gants, apprendre la garde et comprendre pourquoi la boxe est d'abord une école de respect. Consultez le calendrier pour la prochaine séance près de chez vous.",
+    href: "/actions#cours-initiation",
+    cta: "Découvrir les initiations",
   },
   structure: {
     title: "Intervention sur mesure",
-    text: "Team building, cycle éducatif, stage clé en main : construisons ensemble l'intervention adaptée à votre structure, avec devis sous 48h.",
+    text: "Cycle éducatif, initiation ponctuelle, stage clé en main : construisons ensemble l'intervention adaptée à votre structure — dans vos locaux, matériel fourni, devis sous 48h.",
     href: "/interventions",
     cta: "Créer mon intervention",
   },
+  entreprise: {
+    title: "Team building boxe",
+    text: "Vos équipes enfilent les gants, apprennent à se faire confiance et repartent soudées — zéro coup reçu, et chaque séance finance nos actions auprès des jeunes du territoire.",
+    href: "/interventions#entreprises",
+    cta: "Organiser mon team building",
+  },
 };
-
-/* ── Tarifs (maquette — saison 2026-2027) ── */
-
-export const tarifs: { label: string; public: string; prix: string; details: string[] }[] = [
-  {
-    label: "Adhésion annuelle enfant",
-    public: "Boxe éducative · 6-11 ans",
-    prix: "150 € / an",
-    details: [
-      "1 à 2 séances par semaine",
-      "Licence FFBoxe et assurance incluses",
-      "Matériel fourni (hors protège-dents)",
-      "Passage des gants de couleur inclus",
-    ],
-  },
-  {
-    label: "Adhésion annuelle ado",
-    public: "Boxe loisir · 12-17 ans",
-    prix: "180 € / an",
-    details: [
-      "2 séances par semaine",
-      "Licence FFBoxe et assurance incluses",
-      "Accès aux sorties et événements du club",
-    ],
-  },
-  {
-    label: "Adhésion annuelle adulte",
-    public: "Boxe loisir · dès 18 ans",
-    prix: "220 € / an",
-    details: [
-      "Jusqu'à 3 séances par semaine",
-      "Licence FFBoxe et assurance incluses",
-      "Accès libre au créneau du samedi",
-    ],
-  },
-  {
-    label: "Boxe santé & forme",
-    public: "Cardio-boxe · dès 16 ans",
-    prix: "190 € / an",
-    details: [
-      "2 créneaux par semaine, dont le midi",
-      "Sans opposition, tous niveaux",
-      "Licence loisir et assurance incluses",
-    ],
-  },
-  {
-    label: "Option compétition",
-    public: "Sur avis du coach · dès 14 ans",
-    prix: "+60 € / an",
-    details: [
-      "Passeport sportif et licence compétition",
-      "Séances spécifiques et suivi individualisé",
-      "Accompagnement aux compétitions inclus",
-    ],
-  },
-  {
-    label: "Réductions & aides",
-    public: "Selon situation",
-    prix: "Jusqu'à −50 %",
-    details: [
-      "Pass'Sport : 50 € déduits pour les jeunes éligibles",
-      "Tarif solidaire selon quotient familial CAF",
-      "−10 % dès le 2e membre d'une même famille",
-      "Paiement en 3 fois sans frais",
-    ],
-  },
-];
 
 /* ── Flux Instagram (mock) ── */
 
@@ -382,12 +309,12 @@ export const instaPosts: { image: string; caption: string; likes: number }[] = [
   },
   {
     image: "/images/insta-4.svg",
-    caption: "Yanis et Inès qualifiés pour la finale départementale. On est FIERS 💪 #competition",
+    caption: "Le matériel est chargé, direction le foyer Les Iris pour la séance 4 du cycle 🚐🥊 #onvientavous",
     likes: 342,
   },
   {
     image: "/images/insta-5.svg",
-    caption: "Cardio-boxe du jeudi midi : une heure pour tout évacuer. Complet, encore ! #cardioboxe",
+    caption: "Gymnase Anatole-France prêté par la Ville : les initiations de l'été peuvent commencer ! #merci",
     likes: 87,
   },
   {

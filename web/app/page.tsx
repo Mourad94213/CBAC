@@ -10,13 +10,13 @@ import { ParallaxImage } from "@/components/site/parallax";
 import { ImpactCounter } from "@/components/site/impact-counter";
 import { Quiz } from "@/components/site/quiz";
 import { TestimonialSlider } from "@/components/site/testimonial-slider";
-import { ActiviteCard } from "@/components/activites/activite-card";
+import { ActionCard } from "@/components/actions/action-card";
 import { CoachCard } from "@/components/coachs/coach-card";
 import { CalendrierMois } from "@/components/planning/mois-calendar";
 import { JsonLd } from "@/components/seo/json-ld";
 import { buildMetadata, eventLd } from "@/lib/seo";
 import { association } from "@/lib/data/site";
-import { activites } from "@/lib/data/activites";
+import { actions } from "@/lib/data/actions";
 import { coachs, fondateur } from "@/lib/data/coachs";
 import { eventsMois } from "@/lib/data/schedule";
 import { instaPosts, partenaires, stages } from "@/lib/data/content";
@@ -24,7 +24,7 @@ import { instaPosts, partenaires, stages } from "@/lib/data/content";
 export const metadata = buildMetadata({
   title: "Boxe anglaise & éducation populaire à Nanterre",
   description:
-    "CBAC, club de boxe anglaise associatif à Nanterre : boxe éducative dès 6 ans, loisir, compétition, cardio-boxe, stages vacances et interventions sur mesure. Séance d’essai gratuite.",
+    "CBAC, association de boxe anglaise et d'éducation populaire à Nanterre : cours d'initiation, stages vacances, galas amicaux et interventions sur mesure — dans les gymnases, foyers, centres sociaux, écoles et entreprises. Première initiation offerte.",
   path: "/",
 });
 
@@ -32,16 +32,16 @@ export const metadata = buildMetadata({
 const portes = [
   {
     name: "Jeunes & familles",
-    href: "/activites",
+    href: "/actions",
     img: "/images/cours-2.svg",
-    note: "Boxe éducative dès 6 ans, loisir ados & adultes, stages vacances.",
+    note: "Initiations près de chez vous dès 6 ans, stages à chaque vacances.",
     alt: "Groupe de boxe éducative 6-11 ans en cercle autour du coach",
   },
   {
     name: "Structures & collectivités",
     href: "/interventions",
     img: "/images/centre-social-1.svg",
-    note: "Centres sociaux, écoles, insertion : des cycles éducatifs co-construits.",
+    note: "Centres sociaux, foyers, écoles, insertion : des cycles co-construits, chez vous.",
     alt: "Séance découverte de boxe dans un centre social partenaire",
   },
   {
@@ -74,7 +74,7 @@ export default function HomePage() {
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg">
                 <Link href="/adhesion">
-                  Séance d’essai gratuite
+                  Première initiation offerte
                   <ArrowRight className="h-4 w-4" strokeWidth={2} />
                 </Link>
               </Button>
@@ -82,7 +82,7 @@ export default function HomePage() {
             </div>
             <p className="flex items-center gap-2 text-sm text-craie-muted">
               <MapPin className="h-4 w-4 shrink-0 text-bleu-light" strokeWidth={1.75} />
-              {association.address.venue}, {association.address.city} · dès 6 ans · matériel fourni
+              Nanterre &amp; Hauts-de-Seine · on se déplace · dès 6 ans · matériel fourni
             </p>
           </Reveal>
 
@@ -90,7 +90,7 @@ export default function HomePage() {
             <div className="relative">
               <ParallaxImage
                 src="/images/hero-ring.svg"
-                alt="Boxeur à l’entraînement sur le ring du gymnase Léo-Lagrange, sous les projecteurs"
+                alt="Boxeur à l’entraînement sur un ring sous les projecteurs, lors d'un événement du CBAC"
                 priority
                 amount={40}
                 className="aspect-[4/5] rounded-5xl border border-noir-line shadow-card sm:aspect-[5/6]"
@@ -136,24 +136,24 @@ export default function HomePage() {
         <div className="container-wide flex flex-wrap items-end justify-between gap-4">
           <SectionTitle
             eyebrow="Round 01 · Nos actions"
-            title="De la première touche au premier combat"
-            intro="Six façons de mettre les gants, de la boxe éducative dès 6 ans à la compétition."
+            title="Pas de salle à nous : on vient à vous"
+            intro="Initiations, stages vacances, galas amicaux, sorties boxe — là où on nous accueille : gymnases, foyers, centres sociaux, écoles."
           />
           <Button asChild variant="outline" size="md" className="shrink-0">
-            <Link href="/activites">Toutes les activités</Link>
+            <Link href="/actions">Toutes nos actions</Link>
           </Button>
         </div>
         <div className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto px-5 pb-4 md:px-8 lg:px-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          {activites.map((activite) => (
-            <div key={activite.slug} className="w-[74vw] shrink-0 snap-start sm:w-[40vw] lg:w-[19.5rem]">
-              <ActiviteCard activite={activite} />
+          {actions.map((action) => (
+            <div key={action.slug} className="w-[74vw] shrink-0 snap-start sm:w-[40vw] lg:w-[19.5rem]">
+              <ActionCard action={action} />
             </div>
           ))}
         </div>
         <Reveal delay={0.1} className="container-wide mt-8">
           <p className="flex flex-wrap items-center gap-2 text-[15px] text-craie-soft">
             <Flame className="h-4 w-4 shrink-0 text-rouge" strokeWidth={1.75} />
-            Pendant les vacances, les stages « Premiers gants » et « Ring d’été » sont ouverts aux non-adhérents.
+            Cet été, les stages « Premiers gants » et « Ring d’été » sont ouverts à tous, sans expérience.
             <Link
               href="/stages"
               className="inline-flex items-center gap-1.5 font-condensed text-sm font-semibold uppercase tracking-wide text-or transition-colors hover:text-craie"
@@ -208,7 +208,7 @@ export default function HomePage() {
           <SectionTitle
             eyebrow="Round 03 · Quel programme ?"
             title="Trouvez votre programme en quatre questions"
-            intro="Enfant, ado, adulte, structure ou entreprise : répondez en trente secondes, on vous oriente vers le bon créneau — sans détour."
+            intro="Enfant, ado, adulte, structure ou entreprise : répondez en trente secondes, on vous oriente vers la bonne action — sans détour."
             align="center"
             className="items-center text-center"
           />
@@ -223,7 +223,7 @@ export default function HomePage() {
         <SectionTitle
           eyebrow="Round 04 · Le coin des coachs"
           title="Des coachs diplômés, exigeants et bienveillants"
-          intro="BPJEPS, DEJEPS, brevets fédéraux : les diplômes sont affichés au gymnase — et ici. Parce que la confiance, ça se prouve."
+          intro="BPJEPS, DEJEPS, brevets fédéraux : les diplômes sont présentés à chaque structure qui nous accueille — et affichés ici. Parce que la confiance, ça se prouve."
         />
         <div className="mt-10 grid gap-6 lg:grid-cols-[1.2fr_2fr]">
           <Reveal className="group relative overflow-hidden rounded-4xl border border-noir-line">
@@ -240,7 +240,7 @@ export default function HomePage() {
               <h3 className="mt-2 font-display text-2xl text-craie">{fondateur.name}</h3>
               <p className="mt-1 max-w-sm text-sm text-craie-soft">
                 Ancien compétiteur amateur, prévôt fédéral, il a fondé le CBAC il y a douze ans.
-                Premier arrivé au gymnase, dernier à éteindre les projecteurs.
+                D’un gymnase à l’autre : premier arrivé, dernier à ranger les gants.
               </p>
             </div>
           </Reveal>
@@ -267,7 +267,7 @@ export default function HomePage() {
         <SectionTitle
           eyebrow="Round 05 · Ils en parlent"
           title="Sur le ring, la confiance se gagne"
-          intro="Parents, adhérents, structures partenaires : ils en parlent mieux que nous."
+          intro="Parents, participants, structures partenaires : ils en parlent mieux que nous."
         />
         <div className="mt-12">
           <TestimonialSlider />
@@ -289,12 +289,12 @@ export default function HomePage() {
         </Reveal>
       </section>
 
-      {/* ── ROUND 06 — la vie du club : calendrier du mois + coulisses Instagram ── */}
+      {/* ── ROUND 06 — la vie de l'asso : calendrier du mois + coulisses Instagram ── */}
       <section className="container-wide py-20">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <SectionTitle
-            eyebrow="Round 06 · La vie du club"
-            title="Gala, stages, coulisses : le club vit toute l’année"
+            eyebrow="Round 06 · La vie de l'asso"
+            title="Gala, stages, coulisses : l’association vit toute l’année"
             intro="Les rendez-vous du mois — et les dernières images d’entre les cordes."
           />
           <Button asChild variant="outline" size="md" className="shrink-0">
@@ -355,8 +355,8 @@ export default function HomePage() {
               Prêt·e à enfiler les gants&nbsp;?
             </h2>
             <p className="text-pretty text-craie">
-              Séance d’essai gratuite pour les particuliers, devis sous 48h pour les structures et
-              les entreprises. Le ring vous attend.
+              Première initiation offerte pour les particuliers, devis sous 48h pour les structures
+              et les entreprises. On apporte le ring.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <DevisButton
@@ -368,7 +368,7 @@ export default function HomePage() {
                 <ArrowRight className="h-4 w-4" strokeWidth={2} />
               </DevisButton>
               <Button asChild variant="ghost" size="lg" className="ring-1 ring-craie/40 hover:bg-craie/10">
-                <Link href="/adhesion">Adhérer au club</Link>
+                <Link href="/adhesion">Adhérer à l’association</Link>
               </Button>
             </div>
           </div>

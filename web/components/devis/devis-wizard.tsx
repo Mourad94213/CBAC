@@ -86,7 +86,7 @@ export function DevisWizard() {
   const format = FORMATS.find((f) => f.id === data.format);
   const lieux = [
     { label: isParticulier ? "Sur le lieu de votre choix" : "Dans vos locaux", icon: Building2 },
-    { label: "Au gymnase Léo-Lagrange", icon: MapPin },
+    { label: "Dans un gymnase mis à disposition", icon: MapPin },
     { label: "À définir ensemble", icon: Shuffle },
   ];
 

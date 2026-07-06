@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "./utils";
 import { association } from "./data/site";
-import type { Activite } from "./data/activites";
 import type { Stage } from "./data/content";
 
 const DEFAULT_OG = "/images/hero-ring.svg";
@@ -49,7 +48,7 @@ export function localBusinessLd() {
     name: association.name,
     legalName: association.legalName,
     description:
-      "Association de boxe anglaise et d'éducation populaire à Nanterre : boxe éducative dès 6 ans, boxe loisir, compétition, cardio-boxe, stages vacances et interventions sur mesure pour entreprises, écoles et structures sociales.",
+      "Association de boxe anglaise et d'éducation populaire à Nanterre : cours d'initiation, stages vacances, galas amicaux et interventions itinérantes dans les gymnases, foyers, centres sociaux, écoles et entreprises.",
     url: SITE_URL,
     telephone: `+33${association.phone.replace(/\D/g, "").slice(1)}`,
     email: association.email,
@@ -69,30 +68,6 @@ export function localBusinessLd() {
   };
 }
 
-export function activiteLd(a: Activite) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Course",
-    name: a.name,
-    description: a.short,
-    url: `${SITE_URL}/activites/${a.slug}`,
-    provider: {
-      "@type": "SportsClub",
-      name: association.name,
-      sameAs: SITE_URL,
-    },
-    hasCourseInstance: {
-      "@type": "CourseInstance",
-      courseMode: "Onsite",
-      location: {
-        "@type": "Place",
-        name: association.address.venue,
-        address: association.address.full,
-      },
-    },
-  };
-}
-
 export function eventLd(stage: Stage) {
   return {
     "@context": "https://schema.org",
@@ -102,8 +77,8 @@ export function eventLd(stage: Stage) {
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     location: {
       "@type": "Place",
-      name: association.address.venue,
-      address: association.address.full,
+      name: "Nanterre — gymnase communiqué à l'inscription",
+      address: `${association.address.zip} ${association.address.city}`,
     },
     organizer: { "@type": "Organization", name: association.name, url: SITE_URL },
   };

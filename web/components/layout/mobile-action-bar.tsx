@@ -17,7 +17,7 @@ export function MobileActionBar() {
         </DevisButton>
         <a
           href={association.phoneHref}
-          aria-label={`Appeler le club au ${association.phone}`}
+          aria-label={`Appeler l'association au ${association.phone}`}
           className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-craie/30 text-craie transition-colors hover:border-or hover:text-or"
         >
           <Phone className="h-5 w-5" strokeWidth={1.75} />

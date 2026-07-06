@@ -4,13 +4,16 @@ import { useState } from "react";
 import { Check, Send, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Field, Input, Select, Textarea } from "@/components/ui/form";
-import { activites } from "@/lib/data/activites";
 
-/* Seules les activités à l'année sont proposées à l'adhésion
-   (l'initiation se réserve via l'essai gratuit, les stages via /stages). */
-const activitesAdhesion = activites.filter(
-  (a) => a.slug !== "initiation-decouverte" && a.slug !== "stage-vacances",
-);
+/* L'association n'a pas de cours à l'année : l'adhésion est un engagement
+   (participer, donner un coup de main, soutenir), pas une inscription à un créneau. */
+const interets = [
+  "Participer aux cours d'initiation",
+  "Inscrire mon enfant aux stages vacances",
+  "Prendre part aux sorties & événements",
+  "Devenir bénévole",
+  "Soutenir l'association (adhésion de soutien)",
+];
 
 function computeAge(dateStr: string): number | null {
   if (!dateStr) return null;
@@ -40,16 +43,17 @@ export function AdhesionForm() {
           <Check className="h-7 w-7" strokeWidth={1.6} />
         </span>
         <h3 className="font-display text-xl text-craie">
-          Bienvenue au club{prenom ? `, ${prenom}` : ""} !
+          Bienvenue au CBAC{prenom ? `, ${prenom}` : ""} !
         </h3>
         <p className="max-w-md text-sm leading-relaxed text-craie-soft">
           Votre demande d&apos;adhésion est bien pré-enregistrée. On vous recontacte sous 48h
-          ouvrées pour caler votre <strong className="text-craie">séance d&apos;essai gratuite</strong> —
-          venez simplement en tenue de sport, les gants vous attendent au gymnase.
+          ouvrées pour vous inviter à la <strong className="text-craie">prochaine séance ou
+          rencontre près de chez vous</strong> — venez simplement en tenue de sport, on apporte
+          les gants.
         </p>
         <p className="max-w-md text-xs text-craie-muted">
-          Pensez à préparer le questionnaire de santé (ou le certificat médical pour les adultes)
-          pour finaliser la licence.
+          Pensez à préparer le questionnaire de santé si vous comptez mettre les gants (stages et
+          initiations).
         </p>
         <Button variant="outline" size="sm" onClick={() => setSent(false)}>
           Inscrire un autre adhérent
@@ -63,7 +67,7 @@ export function AdhesionForm() {
       onSubmit={(e) => {
         e.preventDefault();
         setSent(true);
-        // brancher l'enregistrement réel des adhésions (dossier + licence FFBoxe) ici
+        // brancher l'enregistrement réel des adhésions (bulletin + cotisation) ici
       }}
       className="flex flex-col gap-4 rounded-4xl border border-noir-line bg-noir-card p-6 shadow-soft sm:p-7"
     >
@@ -97,14 +101,14 @@ export function AdhesionForm() {
             autoComplete="bday"
           />
         </Field>
-        <Field label="Activité souhaitée" htmlFor="a-activite">
-          <Select id="a-activite" required defaultValue="">
+        <Field label="Ce qui vous intéresse" htmlFor="a-interet">
+          <Select id="a-interet" required defaultValue="">
             <option value="" disabled>
-              Choisir une activité…
+              Choisir…
             </option>
-            {activitesAdhesion.map((a) => (
-              <option key={a.slug} value={a.slug}>
-                {a.name} · {a.ages}
+            {interets.map((label) => (
+              <option key={label} value={label}>
+                {label}
               </option>
             ))}
           </Select>
@@ -139,8 +143,8 @@ export function AdhesionForm() {
             </Field>
           </div>
           <p className="text-xs text-craie-muted">
-            Le dossier d&apos;adhésion d&apos;un·e mineur·e devra être signé par le responsable légal au
-            gymnase.
+            Le bulletin d&apos;adhésion d&apos;un·e mineur·e devra être signé par le responsable légal
+            lors de la première séance.
           </p>
         </div>
       )}
@@ -148,7 +152,7 @@ export function AdhesionForm() {
       <Field
         label="Un mot sur vos attentes (facultatif)"
         htmlFor="a-msg"
-        hint="Niveau, objectifs, jours préférés… tout ce qui nous aide à bien vous accueillir."
+        hint="Niveau, envies, quartier… tout ce qui nous aide à bien vous accueillir."
       >
         <Textarea id="a-msg" placeholder="Première fois que je mets les gants…" className="min-h-20" />
       </Field>
@@ -161,7 +165,7 @@ export function AdhesionForm() {
           className="mt-0.5 h-4 w-4 shrink-0 accent-or"
         />
         <span>
-          J&apos;autorise le CBAC à utiliser les photos prises pendant les cours, galas et stages sur
+          J&apos;autorise le CBAC à utiliser les photos prises pendant les séances, galas et stages sur
           ses supports (site, réseaux sociaux). <span className="text-craie-muted">Révocable à tout moment, sans incidence sur l&apos;adhésion.</span>
         </span>
       </label>
@@ -171,8 +175,8 @@ export function AdhesionForm() {
         Envoyer ma demande d&apos;adhésion
       </Button>
       <p className="text-xs text-craie-muted">
-        Maquette de démonstration : aucune donnée n&apos;est réellement envoyée. La séance d&apos;essai
-        reste gratuite et sans engagement.
+        Maquette de démonstration : aucune donnée n&apos;est réellement envoyée. La première séance
+        d&apos;initiation reste gratuite et sans engagement.
       </p>
     </form>
   );

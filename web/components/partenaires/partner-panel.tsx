@@ -52,7 +52,7 @@ const interventions: {
     date: "Jeu. 23 juillet",
     heure: "10h — 12h",
     titre: "Atelier découverte parents-enfants",
-    lieu: "Gymnase Léo-Lagrange",
+    lieu: "Gymnase Anatole-France (mis à disposition par la Ville)",
     coach: "Soungui Gomis",
     statut: "Confirmée",
   },

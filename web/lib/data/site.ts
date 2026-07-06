@@ -5,12 +5,13 @@ export const association = {
   tagline: "La boxe anglaise comme école de vie",
   promise:
     "Ici, on apprend à encaisser, à respecter et à se dépasser — sur le ring comme dans la vie.",
+  /** Siège social — l'association n'a pas de salle à elle : elle intervient là où on l'accueille. */
   address: {
     street: "12 rue du Ring",
     zip: "92000",
     city: "Nanterre",
-    full: "Gymnase Léo-Lagrange, 12 rue du Ring, 92000 Nanterre",
-    venue: "Gymnase Léo-Lagrange",
+    full: "Maison des associations, 12 rue du Ring, 92000 Nanterre",
+    venue: "Maison des associations de Nanterre",
   },
   phone: "06 12 34 56 78",
   phoneHref: "tel:+33612345678",
@@ -30,18 +31,17 @@ export const association = {
 
 export const navigation: { label: string; href: string }[] = [
   { label: "Association", href: "/association" },
-  { label: "Activités", href: "/activites" },
+  { label: "Nos actions", href: "/actions" },
   { label: "Stages", href: "/stages" },
   { label: "Interventions", href: "/interventions" },
   { label: "Coachs", href: "/coachs" },
   { label: "Calendrier", href: "/calendrier" },
-  { label: "Tarifs", href: "/tarifs" },
   { label: "Actualités", href: "/actualites" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const announcement =
-  "Gala amical d'été le samedi 4 juillet à la salle des fêtes de Nanterre — entrée libre · Inscriptions rentrée 2026 ouvertes dès le 24 août";
+  "Gala amical d'été le samedi 4 juillet à la salle des fêtes de Nanterre — entrée libre · Stages d'été : dernières places disponibles";
 
 /** Valeurs défilantes du marquee (accueil). */
 export const valeurs = [
@@ -53,9 +53,8 @@ export const valeurs = [
   "Énergie",
 ] as const;
 
-/** Horaires d'accueil au gymnase (permanences, hors créneaux d'entraînement). */
+/** Permanences de l'équipe — l'association n'a pas de local d'accueil : on se joint par téléphone ou e-mail. */
 export const hours: { label: string; value: string }[] = [
-  { label: "Lundi → vendredi", value: "17h — 21h" },
-  { label: "Mercredi", value: "13h30 — 21h" },
-  { label: "Samedi", value: "9h30 — 13h" },
+  { label: "Permanence téléphonique", value: "lundi → vendredi, 9h30 — 18h" },
+  { label: "Réponse e-mail", value: "sous 48h ouvrées" },
 ];

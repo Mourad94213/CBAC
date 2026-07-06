@@ -36,14 +36,14 @@ export const cibles: Cible[] = [
   },
   {
     key: "centres-sociaux",
-    name: "Centres sociaux & structures jeunesse",
+    name: "Centres sociaux, foyers & structures jeunesse",
     anchor: "centres-sociaux",
     persona:
       "« Je cherche des activités qui captent l'attention des jeunes difficiles. J'ai besoin de voir rapidement : tarifs, disponibilités, et surtout des preuves que ça marche. » — Sophie, directrice de centre social",
     pitch:
       "La boxe capte l'attention là où beaucoup d'activités échouent. Nous co-construisons avec vos équipes des cycles d'initiation qui accrochent les jeunes dès la première séance, avec un cadre clair : ici on se respecte, on s'écoute, on se dépasse. Bilan écrit à chaque fin de cycle pour vos financeurs.",
     points: [
-      "Cycles de 5 à 12 séances, en vos murs ou au gymnase",
+      "Cycles de 5 à 12 séances, en vos murs ou dans un gymnase mis à disposition",
       "Objectifs éducatifs définis ensemble (assiduité, gestion des émotions, mixité)",
       "Bilan de cycle transmis pour vos dossiers CAF et Ville",
       "Tarifs associatifs, conventions annuelles possibles",
@@ -88,13 +88,13 @@ export const cibles: Cible[] = [
       "Projet pédagogique CBAC téléchargeable pour monter votre dossier",
       "Objectifs individualisés co-définis avec les éducateurs",
       "Points d'étape et bilan final écrits",
-      "Possibilité de passerelle vers l'adhésion au club (tarif solidaire)",
+      "Possibilité de passerelle vers l'adhésion à l'association (tarif solidaire)",
     ],
     image: "/images/insertion-1.svg",
     exemples: [
       "Cycle « Remise en jeu » — 12 séances avec une unité éducative PJJ, 8 jeunes suivis",
       "Module boxe & savoir-être — 6 séances avec une mission locale, en appui d'un parcours emploi",
-      "Accompagnement individuel — 2 jeunes intégrés au club après leur cycle, licence financée",
+      "Accompagnement individuel — 2 jeunes devenus adhérents de l'association après leur cycle, adhésion financée",
     ],
   },
 ];

@@ -1,29 +1,35 @@
 import Link from "next/link";
-import { ArrowUpRight, Clock } from "lucide-react";
-import type { Activite } from "@/lib/data/activites";
+import { ArrowUpRight, MapPin } from "lucide-react";
+import type { Action } from "@/lib/data/actions";
 import { FramedImage } from "@/components/site/framed-image";
 import { cn } from "@/lib/utils";
 
-/** Teinte du badge d'âge par activité — bleu CBAC, or, rouge, craie. */
+/** Teinte du badge par action — bleu CBAC, or, rouge, craie. */
 const chipTint: Record<string, string> = {
-  "boxe-educative": "bg-or-tint text-or",
-  "boxe-loisir": "bg-bleu-tint text-bleu-light",
-  "boxe-competition": "bg-rouge-tint text-rouge-light",
-  "boxe-sante-forme": "bg-craie/10 text-craie",
-  "initiation-decouverte": "bg-noir-deep/80 text-or-soft",
-  "stage-vacances": "bg-noir-deep/80 text-bleu-light",
+  "cours-initiation": "bg-or-tint text-or",
+  "stages-vacances": "bg-bleu-tint text-bleu-light",
+  "galas-amicaux": "bg-rouge-tint text-rouge-light",
+  "sorties-evenements": "bg-craie/10 text-craie",
 };
 
-export function ActiviteCard({
-  activite,
+/** Libellé court du badge par action. */
+const chipLabel: Record<string, string> = {
+  "cours-initiation": "Dès 6 ans",
+  "stages-vacances": "6-15 ans",
+  "galas-amicaux": "Entrée libre",
+  "sorties-evenements": "Sur invitation",
+};
+
+export function ActionCard({
+  action,
   className,
 }: {
-  activite: Activite;
+  action: Action;
   className?: string;
 }) {
   return (
     <Link
-      href={`/activites/${activite.slug}`}
+      href={`/actions#${action.slug}`}
       className={cn(
         "group relative flex h-full flex-col overflow-hidden rounded-4xl border border-noir-line bg-noir-card transition-all duration-300 ease-smooth hover:-translate-y-1 hover:shadow-card",
         className,
@@ -40,9 +46,9 @@ export function ActiviteCard({
       />
       <div className="relative overflow-hidden">
         <FramedImage
-          src={activite.image}
-          alt={`${activite.name} au CBAC — ${activite.ages}`}
-          fallbackLabel={activite.name}
+          src={action.image}
+          alt={`${action.name} — ${action.publics}`}
+          fallbackLabel={action.name}
           ratio="aspect-[3/4]"
           className="rounded-none"
           imgClassName="transition-transform duration-700 ease-smooth group-hover:scale-105"
@@ -51,10 +57,10 @@ export function ActiviteCard({
         <span
           className={cn(
             "pill absolute left-3 top-3 backdrop-blur",
-            chipTint[activite.slug] ?? "bg-noir-deep/80 text-craie",
+            chipTint[action.slug] ?? "bg-noir-deep/80 text-craie",
           )}
         >
-          {activite.ages}
+          {chipLabel[action.slug] ?? action.publics}
         </span>
         <span className="absolute right-3 top-3 grid h-9 w-9 translate-y-1 place-items-center rounded-full bg-craie/90 text-noir-deep opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
           <ArrowUpRight className="h-4 w-4" strokeWidth={2} />
@@ -62,15 +68,11 @@ export function ActiviteCard({
       </div>
 
       <div className="flex flex-1 flex-col gap-2 p-5">
-        <h3 className="font-display text-lg leading-tight text-craie">{activite.name}</h3>
-        <p className="text-sm leading-snug text-craie-soft">{activite.short}</p>
-        <div className="mt-auto flex flex-wrap items-center gap-2 pt-3 text-xs text-craie-muted">
-          <span className="flex items-center gap-1">
-            <Clock className="h-3.5 w-3.5" strokeWidth={1.75} />
-            {activite.duration}
-          </span>
-          <span aria-hidden>·</span>
-          <span>{activite.audience}</span>
+        <h3 className="font-display text-lg leading-tight text-craie">{action.name}</h3>
+        <p className="text-sm leading-snug text-craie-soft">{action.short}</p>
+        <div className="mt-auto flex items-start gap-1.5 pt-3 text-xs text-craie-muted">
+          <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0" strokeWidth={1.75} />
+          <span>{action.lieux}</span>
         </div>
       </div>
     </Link>

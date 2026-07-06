@@ -22,7 +22,7 @@ export function FacebookIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-/** Liens réseaux sociaux du club (Instagram + Facebook), prêts pour header/footer. */
+/** Liens réseaux sociaux de l'association (Instagram + Facebook), prêts pour header/footer. */
 export function SocialIcons({
   className,
   iconClassName,

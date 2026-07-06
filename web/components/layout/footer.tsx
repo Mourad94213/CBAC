@@ -2,17 +2,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { association, hours } from "@/lib/data/site";
-import { activites } from "@/lib/data/activites";
+import { actions } from "@/lib/data/actions";
 import { NewsletterForm } from "@/components/forms/newsletter-form";
 import { SocialIcons } from "@/components/site/social-icons";
 
-const clubNav: { label: string; href: string }[] = [
-  { label: "L'association", href: "/association" },
+const assoNav: { label: string; href: string }[] = [
+  { label: "Qui sommes-nous ?", href: "/association" },
   { label: "Nos coachs", href: "/coachs" },
   { label: "Interventions sur mesure", href: "/interventions" },
-  { label: "Calendrier & planning", href: "/calendrier" },
-  { label: "Tarifs & aides", href: "/tarifs" },
-  { label: "Adhésion", href: "/adhesion" },
+  { label: "Calendrier du mois", href: "/calendrier" },
+  { label: "Adhésion & soutien", href: "/adhesion" },
   { label: "Galerie", href: "/galerie" },
   { label: "Actualités", href: "/actualites" },
   { label: "Espace partenaires", href: "/espace-partenaires" },
@@ -51,7 +50,7 @@ export function Footer() {
               Les news du ring
             </h3>
             <p className="mt-3 max-w-xs text-sm text-craie-soft">
-              Stages, galas, nouveaux créneaux et coulisses du club — une fois par mois, jamais
+              Stages, galas, nouveaux lieux d&apos;intervention et coulisses de l&apos;association — une fois par mois, jamais
               plus.
             </p>
             <NewsletterForm className="mt-4 max-w-md" />
@@ -59,10 +58,10 @@ export function Footer() {
         </div>
 
         <div className="grid gap-10 sm:grid-cols-3">
-          <nav aria-label="Le club">
-            <h3 className="font-condensed text-sm font-bold uppercase tracking-brand text-or">Le club</h3>
+          <nav aria-label="L'association">
+            <h3 className="font-condensed text-sm font-bold uppercase tracking-brand text-or">L&apos;association</h3>
             <ul className="mt-4 flex flex-col gap-2.5">
-              {clubNav.map((item) => (
+              {assoNav.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="text-sm text-craie-soft transition-colors hover:text-or">
                     {item.label}
@@ -72,13 +71,13 @@ export function Footer() {
             </ul>
           </nav>
 
-          <nav aria-label="Les activités">
-            <h3 className="font-condensed text-sm font-bold uppercase tracking-brand text-or">Les activités</h3>
+          <nav aria-label="Nos actions">
+            <h3 className="font-condensed text-sm font-bold uppercase tracking-brand text-or">Nos actions</h3>
             <ul className="mt-4 flex flex-col gap-2.5">
-              {activites.map((a) => (
+              {actions.map((a) => (
                 <li key={a.slug}>
                   <Link
-                    href={`/activites/${a.slug}`}
+                    href={`/actions#${a.slug}`}
                     className="text-sm text-craie-soft transition-colors hover:text-or"
                   >
                     {a.name}
@@ -86,8 +85,13 @@ export function Footer() {
                 </li>
               ))}
               <li>
-                <Link href="/activites" className="text-sm font-semibold text-craie transition-colors hover:text-or">
-                  Toutes les activités
+                <Link href="/interventions" className="text-sm text-craie-soft transition-colors hover:text-or">
+                  Interventions sur mesure
+                </Link>
+              </li>
+              <li>
+                <Link href="/actions" className="text-sm font-semibold text-craie transition-colors hover:text-or">
+                  Toutes nos actions
                 </Link>
               </li>
             </ul>

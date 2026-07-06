@@ -21,68 +21,68 @@ import { AdhesionForm } from "@/components/forms/adhesion-form";
 import { association, hours } from "@/lib/data/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Adhésion · Rejoindre le club",
+  title: "Adhésion · Rejoindre l'association",
   description:
-    "Rejoindre le CBAC à Nanterre en trois étapes : séance d'essai gratuite, dossier d'adhésion, licence FFBoxe. Pré-inscription en ligne, documents à prévoir et permanences au gymnase Léo-Lagrange.",
+    "Rejoindre le CBAC : une première initiation offerte, un bulletin d'adhésion de dix minutes, et vous participez à la vie de l'association — initiations, stages, sorties, bénévolat.",
   path: "/adhesion",
 });
 
 const etapes = [
   {
     num: "01",
-    title: "L'essai gratuit",
-    text: "Vous venez en tenue de sport avec une gourde, on vous prête les gants. Une vraie séance complète, sans engagement — vous ne décidez qu'après.",
+    title: "On se rencontre",
+    text: "Venez à une initiation ou à un événement près de chez vous — le calendrier du mois indique où nous trouver. Tenue de sport, une gourde : on apporte les gants.",
   },
   {
     num: "02",
-    title: "Le dossier",
-    text: "Convaincu·e ? Vous remplissez la pré-inscription en ligne ci-dessous, puis vous déposez les documents au gymnase pendant une permanence. Dix minutes, pas plus.",
+    title: "Le bulletin d'adhésion",
+    text: "Convaincu·e ? Vous remplissez la pré-inscription en ligne ci-dessous et on finalise le bulletin ensemble, sur place, à la séance suivante. Dix minutes, pas plus.",
   },
   {
     num: "03",
-    title: "La licence",
-    text: "On enregistre votre licence FFBoxe — assurance incluse — et c'est parti pour la saison. Bienvenue entre les cordes, vous faites partie du club.",
+    title: "Vous faites partie de l'asso",
+    text: "Initiations, stages, sorties boxe, coups de main sur les galas : vous participez à la vie de l'association, à votre mesure. Bienvenue entre les cordes.",
   },
 ];
 
 const documents = [
   {
     icon: HeartPulse,
-    title: "Questionnaire de santé ou certificat médical",
-    text: "Le questionnaire suffit pour la plupart des mineurs ; certificat de non-contre-indication pour les adultes.",
+    title: "Questionnaire de santé",
+    text: "Suffisant pour participer aux initiations ; un certificat médical peut être demandé pour les stages adultes.",
   },
   {
     icon: Camera,
     title: "Une photo d'identité",
-    text: "Pour la licence FFBoxe. Une photo de téléphone bien cadrée fait parfaitement l'affaire.",
+    text: "Pour la carte d'adhérent. Une photo de téléphone bien cadrée fait parfaitement l'affaire.",
   },
   {
     icon: Wallet,
-    title: "Le règlement de l'adhésion",
-    text: "En 1 ou 3 fois sans frais — Pass'Sport et tarif solidaire déduits directement.",
+    title: "La cotisation annuelle",
+    text: "Montant libre à partir de 10 € — personne n'est refusé pour une question d'argent, c'est un principe d'éducation populaire.",
   },
   {
     icon: PenLine,
     title: "L'autorisation parentale (mineurs)",
-    text: "Signée au gymnase par le responsable légal lors du dépôt du dossier.",
+    text: "Signée par le responsable légal lors de la première séance.",
   },
 ];
 
 const reassurances = [
   {
     icon: Sparkles,
-    title: "Essai 100 % gratuit",
-    text: "Première séance offerte, sans engagement ni carte bleue.",
+    title: "Première initiation offerte",
+    text: "On ne s'engage pas sans avoir mis les gants au moins une fois.",
   },
   {
     icon: HandCoins,
-    title: "Aides & facilités",
-    text: "Pass'Sport, tarif solidaire selon quotient familial, paiement en 3 fois.",
+    title: "Cotisation accessible",
+    text: "Montant libre dès 10 €, aides possibles pour les stages (Pass'Sport, tarif solidaire).",
   },
   {
     icon: ShieldCheck,
     title: "Tout est fourni",
-    text: "Gants, casques et matériel prêtés — licence et assurance incluses.",
+    text: "Gants, casques et matériel apportés à chaque séance — assurance de l'association incluse.",
   },
 ];
 
@@ -101,18 +101,18 @@ export default function AdhesionPage() {
         <SectionTitle
           as="h1"
           eyebrow="Adhésion"
-          title="Rejoindre le club, en trois rounds"
-          intro="Pas de parcours du combattant pour devenir adhérent·e : un essai gratuit, un dossier de dix minutes, une licence — et le ring est à vous pour la saison."
+          title="Rejoindre l'association, en trois rounds"
+          intro="Pas de parcours du combattant pour devenir adhérent·e : une rencontre, un bulletin de dix minutes — et vous faites partie de l'aventure, comme participant·e ou comme bénévole."
         />
         <Reveal delay={0.15} className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
           <Button asChild size="lg">
             <Link href="#pre-inscription">
-              Réserver mon essai gratuit
+              Demander mon adhésion
               <ArrowRight className="h-4 w-4" strokeWidth={2} />
             </Link>
           </Button>
           <p className="max-w-sm text-sm leading-relaxed text-craie-muted">
-            Première séance offerte, toujours — enfant, ado ou adulte, on ne s&apos;engage pas
+            Première initiation offerte, toujours — enfant, ado ou adulte, on ne s&apos;engage pas
             sans avoir mis les gants au moins une fois.
           </p>
         </Reveal>
@@ -122,8 +122,8 @@ export default function AdhesionPage() {
       <section className="container-wide py-16 lg:py-20">
         <SectionTitle
           eyebrow="Round 01 · Le parcours"
-          title="De la première touche à la licence"
-          intro="Trois étapes, dans cet ordre — et à chaque étape, quelqu'un du club pour vous accompagner."
+          title="De la première touche à l'adhésion"
+          intro="Trois étapes, dans cet ordre — et à chaque étape, quelqu'un de l'association pour vous accompagner."
         />
         <Stagger className="mt-12 grid gap-x-10 gap-y-10 md:grid-cols-3">
           {etapes.map((etape) => (
@@ -165,8 +165,8 @@ export default function AdhesionPage() {
           <div className="flex flex-col gap-8">
             <SectionTitle
               eyebrow="Round 02 · Pré-inscription"
-              title="On prépare votre dossier ensemble"
-              intro="Remplissez le formulaire : on vous rappelle sous 48h ouvrées pour caler la séance d'essai. Le dossier complet se finalise ensuite au gymnase."
+              title="On prépare votre adhésion ensemble"
+              intro="Remplissez le formulaire : on vous rappelle sous 48h ouvrées pour vous inviter à la prochaine séance ou rencontre. Le bulletin se signe ensuite sur place."
             />
 
             <Reveal delay={0.1}>
@@ -192,12 +192,15 @@ export default function AdhesionPage() {
             <Reveal delay={0.15} className="rounded-4xl border border-noir-line bg-bleu-tint p-6 sm:p-7">
               <h3 className="flex items-center gap-2 font-display text-lg text-craie">
                 <Clock className="h-5 w-5 text-bleu-light" strokeWidth={1.75} />
-                Permanences au gymnase
+                Comment nous joindre
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-craie-soft">
-                Pour déposer un dossier, poser vos questions ou régler l'adhésion :{" "}
-                {association.address.venue}, {association.address.street},{" "}
-                {association.address.city}.
+                L&apos;association n&apos;a pas de local d&apos;accueil : tout se passe par téléphone,
+                par e-mail ou directement sur nos lieux d&apos;intervention (voir le{" "}
+                <Link href="/calendrier" className="link-underline font-semibold text-craie">
+                  calendrier du mois
+                </Link>
+                ). Siège social : {association.address.full}.
               </p>
               <ul className="mt-4 space-y-2 border-t border-noir-line pt-4">
                 {hours.map((h) => (
@@ -210,7 +213,7 @@ export default function AdhesionPage() {
                 ))}
               </ul>
               <p className="mt-4 border-t border-noir-line pt-4 text-sm leading-relaxed text-craie-soft">
-                Une hésitation avant de monter sur le ring ? Appelez le club au{" "}
+                Une hésitation avant de monter sur le ring ? Appelez l&apos;association au{" "}
                 <a href={association.phoneHref} className="link-underline font-semibold text-craie">
                   {association.phone}
                 </a>{" "}

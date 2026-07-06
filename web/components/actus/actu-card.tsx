@@ -19,7 +19,7 @@ const tagTone: Record<string, "or" | "bleu" | "rouge" | "craie"> = {
   "Sortie": "bleu",
   "Interventions": "bleu",
   "Pratique": "craie",
-  "Vie du club": "craie",
+  "Vie de l'asso": "craie",
 };
 
 export function ActuCard({ actu, className }: { actu: Actu; className?: string }) {

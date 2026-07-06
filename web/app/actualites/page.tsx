@@ -12,7 +12,7 @@ import { association } from "@/lib/data/site";
 export const metadata: Metadata = buildMetadata({
   title: "Actualités",
   description:
-    "Galas, résultats de nos compétiteurs, stages vacances, nouveaux créneaux et interventions sur le territoire : suivez toute la vie du CBAC, et recevez « Les news du ring » une fois par mois.",
+    "Galas amicaux, stages vacances, nouveaux lieux d'intervention et cycles avec les structures du territoire : suivez toute la vie du CBAC, et recevez « Les news du ring » une fois par mois.",
   path: "/actualites",
 });
 
@@ -31,9 +31,9 @@ export default function ActualitesPage() {
         <div className="container-wide pb-12 pt-12 lg:pt-16">
           <SectionTitle
             as="h1"
-            eyebrow="Le fil du club"
+            eyebrow="Le fil de l'asso"
             title="La vie du CBAC, round après round"
-            intro="Galas amicaux, exploits de nos compétiteurs, stages vacances et nouveaux créneaux : tout ce qui fait battre le cœur du club se raconte ici."
+            intro="Galas amicaux, stages vacances, nouveaux lieux d'intervention : tout ce qui fait battre le cœur de l'association se raconte ici."
           />
         </div>
       </section>
@@ -60,7 +60,7 @@ export default function ActualitesPage() {
                 <p className="eyebrow">Newsletter</p>
                 <h2 className="mt-3 text-3xl sm:text-4xl">Les news du ring</h2>
                 <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-craie-soft">
-                  Une fois par mois, l’essentiel du club dans votre boîte mail : dates des
+                  Une fois par mois, l’essentiel de l’association dans votre boîte mail : dates des
                   stages et des galas en avant-première, résultats de nos boxeurs — court,
                   utile, sans blabla.
                 </p>

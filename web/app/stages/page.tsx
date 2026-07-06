@@ -253,7 +253,7 @@ export default function StagesPage() {
             <Reveal delay={0.15} className="mt-8 space-y-6">
               <FramedImage
                 src="/images/activite-stage-vacances.svg"
-                alt="Jeunes boxeurs en stage vacances au gymnase Léo-Lagrange"
+                alt="Jeunes boxeurs en stage vacances dans un gymnase mis à disposition par la Ville"
                 ratio="aspect-[3/4]"
                 className="max-w-sm shadow-card"
                 sizes="(max-width: 1024px) 100vw, 35vw"
@@ -301,7 +301,7 @@ export default function StagesPage() {
                 Voir la FAQ sécurité complète
               </Link>
               <Link href="/adhesion" className="link-underline text-sm font-semibold text-craie">
-                Envie de continuer toute l&apos;année ? Adhérer au club
+                Envie de continuer toute l&apos;année ? Adhérer à l&apos;association
               </Link>
             </Reveal>
           </div>
@@ -325,12 +325,12 @@ export default function StagesPage() {
             <SectionTitle
               eyebrow="Round 04 · Groupes & structures"
               title="Vous venez avec votre groupe ?"
-              intro="Centres sociaux, accueils de loisirs, écoles, structures d'insertion : nous réservons des créneaux de stage dédiés à vos jeunes, pendant les vacances comme sur le temps scolaire."
+              intro="Centres sociaux, accueils de loisirs, écoles, structures d'insertion : nous organisons des stages dédiés à vos jeunes, pendant les vacances comme sur le temps scolaire."
             />
             <Reveal delay={0.1}>
               <ul className="mt-6 space-y-3">
                 {[
-                  "Créneaux réservés à votre structure, au gymnase ou dans vos locaux",
+                  "Sessions réservées à votre structure, dans vos locaux ou un gymnase mis à disposition",
                   "Contenu co-construit avec vos équipes autour de vos objectifs éducatifs",
                   "Encadrement diplômé, matériel complet et assurance fédérale compris",
                   "Tarifs associatifs et convention simple, adaptés aux budgets publics",

@@ -39,11 +39,11 @@ export const metadata: Metadata = {
     template: "%s · CBAC",
   },
   description:
-    "CBAC, association loi 1901 à Nanterre : boxe éducative dès 6 ans, boxe loisir, compétition, cardio-boxe, stages vacances et interventions sur mesure pour entreprises, écoles et structures sociales. La boxe anglaise comme école de vie.",
+    "CBAC, association loi 1901 à Nanterre : cours d'initiation, stages vacances, galas amicaux et interventions itinérantes dans les gymnases, foyers, centres sociaux, écoles et entreprises. La boxe anglaise comme école de vie.",
   applicationName: association.name,
   keywords: [
     "boxe anglaise Nanterre",
-    "club de boxe 92",
+    "association boxe 92",
     "boxe éducative enfant",
     "cardio-boxe",
     "team building boxe",

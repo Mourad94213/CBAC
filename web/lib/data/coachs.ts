@@ -12,9 +12,9 @@ export const coachs: Coach[] = [
   {
     slug: "soungui-gomis",
     name: "Soungui Gomis",
-    role: "Fondateur, président & entraîneur principal",
+    role: "Fondateur, président & intervenant principal",
     founder: true,
-    bio: "Ancien compétiteur amateur, Soungui fonde le CBAC il y a douze ans avec une conviction : la boxe anglaise est d'abord une école de vie. Grandi à Nanterre, il a fait du gymnase Léo-Lagrange un lieu où les jeunes du quartier apprennent à encaisser, à respecter et à se relever. Il pilote le projet associatif, entraîne le groupe loisir adultes et reste le premier au gymnase, le dernier à éteindre les projecteurs.",
+    bio: "Ancien compétiteur amateur, Soungui fonde le CBAC il y a douze ans avec une conviction : la boxe anglaise est d'abord une école de vie. Grandi à Nanterre, il sillonne depuis les gymnases, les écoles, les foyers et les centres sociaux du territoire — partout où un groupe a besoin d'un cadre, de gants et d'un peu de confiance. Il pilote le projet associatif et anime lui-même la plupart des initiations.",
     diplomes: [
       "BPJEPS activités pugilistiques, mention boxe anglaise",
       "Prévôt fédéral FFBoxe",
@@ -25,8 +25,8 @@ export const coachs: Coach[] = [
   {
     slug: "awa-diallo",
     name: "Awa Diallo",
-    role: "Coach boxe éducative",
-    bio: "Éducatrice sportive de formation, Awa encadre les groupes 6-11 ans et les interventions en milieu scolaire. Sa pédagogie transforme chaque séance en grand jeu : on touche, on esquive, on rit — et sans s'en rendre compte, on apprend la discipline et le respect de l'autre. Elle coordonne aussi les passages de « gants de couleur » de la Fédération.",
+    role: "Coach boxe éducative — écoles & enfance",
+    bio: "Éducatrice sportive de formation, Awa encadre les ateliers 6-11 ans : cycles en milieu scolaire, stages vacances et initiations en accueil de loisirs. Sa pédagogie transforme chaque séance en grand jeu : on touche, on esquive, on rit — et sans s'en rendre compte, on apprend la discipline et le respect de l'autre.",
     diplomes: [
       "BMF 2e degré — Brevet de moniteur fédéral FFBoxe",
       "BAFA, option activités physiques",
@@ -37,8 +37,8 @@ export const coachs: Coach[] = [
   {
     slug: "karim-benali",
     name: "Karim Benali",
-    role: "Coach compétition",
-    bio: "Trente combats amateurs au compteur et un titre régional : Karim connaît le ring de l'intérieur. Il prépare le groupe compétition aux championnats départementaux et régionaux, avec une exigence simple : on ne monte sur un ring que parfaitement préparé, physiquement et mentalement. Il accompagne chaque compétiteur aux pesées et dans les coins, saison après saison.",
+    role: "Coach interventions jeunesse & insertion",
+    bio: "Trente combats amateurs au compteur et un titre régional : Karim connaît le ring de l'intérieur, et ça s'entend quand il parle aux jeunes. Il encadre les cycles menés avec les foyers, les missions locales et les services PJJ, avec une exigence simple : ici on se respecte, on s'écoute, on se dépasse. Son parcours fait souvent plus que de longs discours.",
     diplomes: [
       "DEJEPS perfectionnement sportif, boxe anglaise",
       "Juge-arbitre régional FFBoxe",
@@ -49,8 +49,8 @@ export const coachs: Coach[] = [
   {
     slug: "lea-fontaine",
     name: "Léa Fontaine",
-    role: "Coach cardio-boxe & remise en forme",
-    bio: "Venue du fitness, Léa a trouvé dans la boxe l'énergie qui manquait à ses cours. Elle anime les créneaux boxe santé & forme — dont le créneau du midi plébiscité par les actifs — et conçoit les séances bien-être de nos interventions en entreprise. Son credo : tout l'engagement du boxeur, zéro coup reçu, et le sourire en fin de séance.",
+    role: "Coach cardio-boxe & bien-être en entreprise",
+    bio: "Venue du fitness, Léa a trouvé dans la boxe l'énergie qui manquait à ses cours. Elle conçoit et anime les ateliers cardio-boxe de nos team buildings et les séances bien-être proposées aux structures. Son credo : tout l'engagement du boxeur, zéro coup reçu, et le sourire en fin de séance.",
     diplomes: [
       "BPJEPS activités de la forme (AF)",
       "Certification cardio-boxing FFBoxe",

@@ -61,19 +61,19 @@ const jalons = [
     annee: "2014",
     titre: "Le premier gong",
     texte:
-      "Soungui Gomis fonde le CBAC au gymnase Léo-Lagrange avec deux sacs de frappe prêtés et une poignée de jeunes du quartier. L'association loi 1901 est née.",
+      "Soungui Gomis fonde le CBAC avec deux sacs de frappe prêtés, un coin de gymnase municipal et une poignée de jeunes du quartier. L'association loi 1901 est née — sans salle à elle, et fière de l'être.",
   },
   {
     annee: "2018",
-    titre: "Hors des murs",
+    titre: "Toujours plus loin",
     texte:
-      "Premières interventions dans les écoles et les centres sociaux de Nanterre : la boxe éducative sort du gymnase pour aller chercher les jeunes là où ils sont.",
+      "Écoles, centres sociaux, premiers foyers : la boxe éducative va chercher les jeunes là où ils sont. Le principe itinérant devient la marque de fabrique du CBAC.",
   },
   {
     annee: "2022",
     titre: "La relève sur le ring",
     texte:
-      "Ouverture du groupe compétition et premiers podiums départementaux. Les jeunes formés au club deviennent à leur tour des exemples pour les plus petits.",
+      "Premiers galas amicaux devant des salles pleines, premières conventions avec la Ville. Les jeunes accompagnés par l'association deviennent à leur tour bénévoles et exemples pour les plus petits.",
   },
   {
     annee: "2026",
@@ -102,8 +102,8 @@ const documents = [
 ];
 
 const garanties = [
-  { icon: Award, text: "100 % de coachs diplômés (BPJEPS, DEJEPS, brevets fédéraux), diplômes affichés au gymnase" },
-  { icon: ShieldCheck, text: "Licence FFBoxe et assurance incluses dans chaque adhésion" },
+  { icon: Award, text: "100 % de coachs diplômés (BPJEPS, DEJEPS, brevets fédéraux), diplômes présentés à chaque structure" },
+  { icon: ShieldCheck, text: "Assurance de l'association couvrant chaque participant, sur tous nos lieux d'intervention" },
   { icon: Sparkles, text: "Matériel fourni et désinfecté après chaque séance" },
 ];
 
@@ -126,15 +126,15 @@ export default function AssociationPage() {
           <SectionTitle
             as="h1"
             eyebrow="L'association"
-            title="Une salle de boxe, une école de vie"
-            intro={`${association.legalName}, association loi 1901 née il y a ${association.impact.annees} ans à Nanterre, fait de la boxe anglaise un outil d'éducation populaire. Au gymnase Léo-Lagrange, on apprend bien plus que le jab.`}
+            title="Pas de salle, une école de vie"
+            intro={`${association.legalName}, association loi 1901 née il y a ${association.impact.annees} ans à Nanterre, fait de la boxe anglaise un outil d'éducation populaire. Sans salle attitrée, elle installe son ring là où on l'accueille — et on y apprend bien plus que le jab.`}
           />
 
           <Reveal delay={0.12}>
             <div className="relative">
               <ParallaxImage
                 src="/images/hero-ring.svg"
-                alt="Le ring du gymnase Léo-Lagrange sous les projecteurs, silhouette d'un boxeur du CBAC"
+                alt="Un ring sous les projecteurs lors d'un gala du CBAC, silhouette d'un boxeur"
                 priority
                 amount={40}
                 className="aspect-[4/5] rounded-5xl border border-noir-line shadow-card sm:aspect-[5/6]"
@@ -165,7 +165,7 @@ export default function AssociationPage() {
                 « {association.promise} »
               </blockquote>
               <figcaption className="mt-3 font-condensed text-xs font-semibold uppercase tracking-brand text-or">
-                La promesse du club
+                La promesse de l&apos;association
               </figcaption>
             </figure>
           </Reveal>
@@ -254,17 +254,18 @@ export default function AssociationPage() {
               <p>
                 « J'ai grandi à Nanterre, à dix minutes du gymnase. À quinze ans, j'étais un gamin en
                 colère ; c'est un entraîneur bénévole qui m'a tendu mes premiers gants — et avec eux, un
-                cadre, une exigence, une fierté. Ce que ce club m'a donné, aucune médaille ne le vaut.
+                cadre, une exigence, une fierté. Ce que cette association m'a donné, aucune médaille ne le vaut.
               </p>
               <p>
-                Le CBAC, c'est cette dette que je rembourse chaque soir. Nous ne formons pas d'abord des
-                champions : nous accompagnons des enfants qui apprennent à canaliser leur énergie, des ados
-                qui reprennent confiance, des adultes qui se remettent en mouvement. Quand un ancien du
-                club revient aider les petits à lacer leurs gants, c'est notre plus belle victoire.
+                Le CBAC, c'est cette dette que je rembourse chaque semaine, d'un gymnase à un foyer,
+                d'une école à un centre social. Nous ne formons pas d'abord des champions : nous
+                accompagnons des enfants qui apprennent à canaliser leur énergie, des ados qui
+                reprennent confiance, des adultes qui se remettent en mouvement. Quand un ancien du
+                CBAC revient aider les petits à lacer leurs gants, c'est notre plus belle victoire.
               </p>
               <p>
-                Poussez la porte du gymnase un soir d'entraînement : vous verrez du sérieux, de la sueur
-                et beaucoup de sourires. Ici, tout le monde a sa place sur le ring. »
+                Venez nous voir sur l'une de nos séances, où qu'elle soit : vous verrez du sérieux,
+                de la sueur et beaucoup de sourires. Ici, tout le monde a sa place sur le ring. »
               </p>
             </div>
             <div className="flex items-center gap-4">
@@ -373,8 +374,8 @@ export default function AssociationPage() {
               Venez voir par vous-même
             </h2>
             <p className="text-pretty text-craie">
-              La meilleure façon de comprendre l'esprit CBAC, c'est de pousser la porte du gymnase
-              Léo-Lagrange. Première séance offerte, gants prêtés, sourire garanti.
+              La meilleure façon de comprendre l'esprit CBAC, c'est de venir à une initiation ou à
+              un gala près de chez vous. Première séance offerte, gants prêtés, sourire garanti.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg" variant="secondary" className="bg-craie text-rouge hover:bg-craie/90 hover:shadow-none">

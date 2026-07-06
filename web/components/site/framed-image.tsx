@@ -14,8 +14,8 @@ type FramedImageProps = {
 };
 
 /**
- * Visuel du club dans un cadre sombre bordé. Lorsque src est null (pas encore
- * de vraie image), affiche une tuile dégradée aux couleurs du club, libellée
+ * Visuel de l'association dans un cadre sombre bordé. Lorsque src est null (pas encore
+ * de vraie image), affiche une tuile dégradée aux couleurs de l'association, libellée
  * avec le sujet attendu — remplacer l'asset réel plus tard reste trivial.
  */
 export function FramedImage({

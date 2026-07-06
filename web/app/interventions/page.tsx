@@ -84,12 +84,12 @@ const etapes = [
   {
     num: "03",
     title: "On monte sur le ring",
-    text: "Dans vos locaux ou au gymnase Léo-Lagrange : matériel fourni et désinfecté, encadrement diplômé, cadre posé dès la première minute.",
+    text: "Dans vos locaux ou dans un gymnase mis à disposition : matériel fourni et désinfecté, encadrement diplômé, cadre posé dès la première minute.",
   },
   {
     num: "04",
     title: "Bilan écrit & suite",
-    text: "Chaque cycle se conclut par un bilan transmis pour vos financeurs — et une passerelle vers le club pour celles et ceux qui veulent continuer.",
+    text: "Chaque cycle se conclut par un bilan transmis pour vos financeurs — et une passerelle vers l'association pour celles et ceux qui veulent continuer.",
   },
 ];
 

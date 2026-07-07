@@ -16,7 +16,7 @@ import { buildMetadata } from "@/lib/seo";
 import { association } from "@/lib/data/site";
 import { actions } from "@/lib/data/actions";
 import { coachs, fondateur } from "@/lib/data/coachs";
-import { eventsMois } from "@/lib/data/schedule";
+import { listPublishedUpcoming, toEventMois } from "@/lib/events/store";
 import { instaPosts } from "@/lib/data/content";
 
 export const metadata = buildMetadata({
@@ -51,7 +51,8 @@ const portes = [
   },
 ];
 
-export default function HomePage() {
+export default async function HomePage() {
+  const eventsMois = (await listPublishedUpcoming()).map(toEventMois);
   return (
     <>
       {/* ── HERO — split asymétrique, entrée dramatique sous projecteur ── */}
@@ -83,11 +84,12 @@ export default function HomePage() {
           <Reveal delay={0.12} className="order-1 lg:order-2">
             <div className="relative">
               <ParallaxImage
-                src="/images/hero-ring.svg"
-                alt="Boxeur à l’entraînement sur un ring sous les projecteurs"
+                src="/images/hero-echange.png"
+                alt="Deux membres du CBAC en tenue de l’association, en pleine discussion"
                 priority
                 amount={40}
                 className="aspect-[4/5] rounded-5xl border border-noir-line shadow-card sm:aspect-[5/6]"
+                imgClassName="object-[center_35%]"
                 sizes="(max-width: 1024px) 100vw, 45vw"
               />
               <div className="absolute -bottom-6 -left-4 hidden w-44 overflow-hidden rounded-3xl border-4 border-noir shadow-lift sm:block">

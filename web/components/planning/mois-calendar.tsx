@@ -1,6 +1,6 @@
 import { MapPin } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { eventsMois, type EventMois } from "@/lib/data/schedule";
+import type { EventMois } from "@/lib/data/schedule";
 import { cn } from "@/lib/utils";
 
 const typeTone: Record<
@@ -15,16 +15,16 @@ const typeTone: Record<
 };
 
 /**
- * Calendrier du mois — liste stylée des événements (gala, stages, sorties…).
- * Par défaut, affiche tous les `eventsMois` ; passer `events` pour un teaser.
- * Sans événement communiqué par l'association, affiche un état d'attente
- * plutôt que des dates inventées.
+ * Calendrier du mois — liste stylée des événements (gala, stages, sorties…),
+ * saisis dans le backoffice (/admin) et publiés par l'association.
+ * Sans événement publié, affiche un état d'attente plutôt que des dates
+ * inventées.
  */
 export function CalendrierMois({
-  events = eventsMois,
+  events,
   className,
 }: {
-  events?: EventMois[];
+  events: EventMois[];
   className?: string;
 }) {
   if (events.length === 0) {

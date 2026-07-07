@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { DevisButton } from "@/components/devis/devis-button";
 import { CalendrierMois } from "@/components/planning/mois-calendar";
 import { association } from "@/lib/data/site";
+import { listPublishedUpcoming, toEventMois } from "@/lib/events/store";
 
 export const metadata: Metadata = buildMetadata({
   title: "Calendrier du mois — où nous trouver",
@@ -24,7 +25,8 @@ const reperes = [
   { valeur: `${association.impact.annees}`, label: "ans d'existence" },
 ];
 
-export default function CalendrierPage() {
+export default async function CalendrierPage() {
+  const eventsMois = (await listPublishedUpcoming()).map(toEventMois);
   return (
     <>
       <JsonLd
@@ -62,7 +64,7 @@ export default function CalendrierPage() {
       <section className="container-wide py-12 lg:py-16">
         <div className="grid gap-6 lg:grid-cols-[1.55fr_1fr] lg:items-start">
           <Reveal>
-            <CalendrierMois />
+            <CalendrierMois events={eventsMois} />
             <p className="mt-4 flex items-start gap-2.5 text-sm text-craie-muted">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-or" strokeWidth={1.75} />
               <span>
@@ -96,14 +98,14 @@ export default function CalendrierPage() {
                   apparaît automatiquement, lieu compris, mises à jour incluses.
                 </p>
                 <Button asChild variant="secondary" size="sm" className="mt-4">
-                  <a href="webcal://www.cbac-boxe.fr/calendrier/cbac.ics">
+                  <a href="/calendrier/cbac.ics">
                     S’abonner au flux iCal
                     <ArrowRight className="h-4 w-4" strokeWidth={2} />
                   </a>
                 </Button>
                 <p className="mt-3 text-xs text-craie-muted">
-                  Compatible Google Agenda, Apple Calendrier et Outlook. (Lien de démonstration —
-                  maquette.)
+                  Compatible Google Agenda, Apple Calendrier et Outlook. Le flux reprend
+                  automatiquement les évènements publiés sur cette page.
                 </p>
               </div>
             </Reveal>

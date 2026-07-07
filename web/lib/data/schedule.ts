@@ -1,10 +1,10 @@
 /**
- * Calendrier du mois — l'association n'a pas de gymnase attitré ni de planning
- * hebdomadaire : elle intervient ponctuellement, là où on l'accueille.
+ * Format d'affichage d'un évènement du calendrier public.
  *
- * Règle actée : aucun événement inventé. La liste reste vide tant que
- * l'association n'a pas communiqué ses vraies dates (voir A-VALIDER.md) ;
- * les pages affichent alors un état « programme en préparation ».
+ * Les évènements eux-mêmes sont saisis par l'association dans le backoffice
+ * (/admin) et persistés dans `data/events.json` — voir `lib/events/store.ts`.
+ * Règle actée : aucun événement inventé ; tant que rien n'est publié, les
+ * pages affichent un état « programme en préparation ».
  */
 export type EventMois = {
   date: string;
@@ -12,5 +12,3 @@ export type EventMois = {
   lieu: string;
   type: "gala" | "stage" | "sortie" | "initiation" | "reunion";
 };
-
-export const eventsMois: EventMois[] = [];

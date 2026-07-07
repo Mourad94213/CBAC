@@ -15,7 +15,12 @@
 |---|---|
 | Histoire de l'association | Document annoncé par l'association — section « en bref » factuelle en attendant (`/association`) |
 | Noms des 5 structures partenaires | Non affichés (seul le chiffre apparaît) |
-| Dates des stages et événements du mois | `eventsMois` vide → état « programme en préparation » (`lib/data/schedule.ts`) |
+| Dates des stages et événements du mois | À saisir par l'association dans le backoffice `/admin` (stockage : Upstash Redis en production, `data/events.json` en local) — vide → état « programme en préparation » |
+| Mot de passe du backoffice | Valeur de maquette `cbac2026` (`.env.local` → `ADMIN_PASSWORD`) — **à changer avant mise en ligne** |
+
+## Déploiement Vercel — prérequis du backoffice
+1. **Upstash Redis** : dashboard Vercel → Storage → Upstash (Redis) → créer la base (plan gratuit) et la **connecter au projet** — les variables `KV_REST_API_URL`/`KV_REST_API_TOKEN` (ou `UPSTASH_REDIS_REST_*`) sont injectées automatiquement. Sans elles, toute écriture depuis `/admin` échoue volontairement (voir `lib/events/store.ts`).
+2. **`ADMIN_PASSWORD`** : à définir dans Settings → Environment Variables (Production + Preview) avec un vrai mot de passe.
 | Témoignages réels | Section supprimée (les anciens étaient fictifs) |
 | Actualités | Page `/actualites` en état « premières actus arrivent » |
 | Montant de la cotisation | « précisé sur le bulletin » (`/adhesion`) |

@@ -58,7 +58,7 @@ const FORMATS: { id: string; name: string; desc: string; icon: IconType }[] = [
   { id: "stage", name: "Stage", desc: "Monté avec votre structure, notamment pendant les vacances.", icon: Sun },
   { id: "team-building", name: "Team building", desc: "Cohésion d'équipe autour des gants, dans vos locaux.", icon: Users },
   { id: "echange", name: "Temps d'échange", desc: "Rencontre avec un boxeur, sortie gala, soirée boxe.", icon: Trophy },
-  { id: "autre", name: "Autre projet", desc: "Une idée hors cadre ? On adore. Racontez-nous tout.", icon: Wand2 },
+  { id: "projet", name: "Définir un projet ensemble", desc: "Votre besoin ne rentre dans aucune case ? On invente le format avec vous.", icon: Wand2 },
 ];
 
 const OBJECTIFS = [
@@ -316,7 +316,7 @@ export function DevisWizard() {
                       })}
                     </div>
                     <p className="mt-1.5 text-xs text-craie-muted">
-                      Pas de gymnase attitré : l&apos;association se déplace là où on l&apos;accueille.
+                      En attendant nos locaux, l&apos;association se déplace chez ses structures partenaires.
                     </p>
                   </div>
 

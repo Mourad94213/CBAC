@@ -15,7 +15,7 @@ import { association } from "@/lib/data/site";
 export const metadata: Metadata = buildMetadata({
   title: "L'équipe",
   description:
-    "L'équipe du CBAC : Soungui Gomis, président fondateur, entouré de jeunes coachs issus de la boxe amateur. Une équipe de bénévoles motivés, présentée à chaque structure avant l'intervention.",
+    "L'équipe du CBAC : Soungui Gomis, président fondateur, entouré de boxeurs amateurs et de profils qui appuient la dimension éducative du projet — conseiller en développement, psychologue. Une équipe de bénévoles présentée à chaque structure avant l'intervention.",
   path: "/coachs",
 });
 
@@ -31,7 +31,7 @@ const engagements = [
   {
     icon: MessageCircle,
     title: "On boxe, et on discute",
-    text: "L'interaction et la discussion font partie de chaque séance : c'est par l'échange que passent le lien social et la transmission des valeurs.",
+    text: "L'échange fait partie de chaque séance — et il porte sur une thématique définie avec la structure, à partir d'une problématique identifiée chez son public. Jamais discuter pour discuter.",
   },
   {
     icon: HeartHandshake,
@@ -56,7 +56,7 @@ export default function CoachsPage() {
           as="h1"
           eyebrow="L'équipe du ring"
           title="L'équipe"
-          intro="Autour de son président fondateur, le CBAC s'appuie sur de jeunes coachs issus de la boxe amateur — une équipe de bénévoles motivés, avec une même conviction : la boxe anglaise se transmet avec exigence et bienveillance."
+          intro="Autour de son président fondateur, le CBAC réunit des boxeurs amateurs et des profils qui appuient la dimension éducative du projet — conseiller en développement, psychologue. Une équipe de bénévoles avec une même conviction : la boxe anglaise se transmet avec exigence et bienveillance."
         />
       </section>
 
@@ -102,11 +102,11 @@ export default function CoachsPage() {
       {/* Round 02 — les coachs */}
       <section className="container-wide">
         <SectionTitle
-          eyebrow="Round 02 · Les coachs"
-          title="Deux jeunes boxeurs aux côtés de Soungui"
-          intro="Issus de la boxe amateur, ils animent les temps forts de l'association — et connaissent le ring de l'intérieur."
+          eyebrow="Round 02 · L'équipe"
+          title="Celles et ceux qui entourent Soungui"
+          intro="Des boxeurs qui connaissent le ring de l'intérieur, et des profils qui apportent leur métier au projet — conseil et développement, psychologie. C'est cette complémentarité qui fait la valeur éducative de nos actions."
         />
-        <Stagger className="mt-10 grid gap-5 sm:grid-cols-2 lg:max-w-3xl">
+        <Stagger className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {equipe.map((coach) => (
             <StaggerItem key={coach.slug} className="h-full">
               <CoachCard coach={coach} />
@@ -121,7 +121,7 @@ export default function CoachsPage() {
           <SectionTitle
             eyebrow="Round 03 · Notre façon de faire"
             title="Un cadre exigeant, un vrai temps d'échange"
-            intro="La confiance des structures qui nous accueillent se gagne séance après séance. Voici comment l'équipe travaille."
+            intro="La confiance de nos structures partenaires se gagne séance après séance. Voici comment l'équipe travaille."
           />
 
           <Stagger className="mt-12 grid gap-x-12 gap-y-10 sm:grid-cols-3">

@@ -94,7 +94,7 @@ export default function StagesPage() {
             <SectionTitle
               eyebrow="Round 01 · Le principe"
               title="Comment naissent nos stages"
-              intro="Pas de programme figé : chaque stage se construit avec la structure qui l'accueille, autour de son public et de ses objectifs."
+              intro="Pas de programme figé : chaque stage se construit avec la structure partenaire, autour de son public et de ses objectifs."
             />
             <Reveal delay={0.15} className="mt-8">
               <FramedImage

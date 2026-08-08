@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     template: "%s · CBAC",
   },
   description:
-    "CBAC, association d'éducation populaire : initiations et cours de boxe anglaise, stages, temps d'échanges et sorties boxe — directement dans les structures qui nous accueillent : foyers, centres sociaux, écoles, entreprises. La boxe anglaise comme école de vie.",
+    "CBAC, association d'éducation populaire : initiations et cours de boxe anglaise, stages, temps d'échanges et sorties, galas amicaux et projets sur mesure — directement chez nos structures partenaires : foyers, centres sociaux, écoles, entreprises. La boxe anglaise comme école de vie.",
   applicationName: association.name,
   keywords: [
     "boxe anglaise",

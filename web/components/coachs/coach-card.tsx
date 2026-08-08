@@ -36,6 +36,11 @@ export function CoachCard({ coach, className }: { coach: Coach; className?: stri
         <p className="font-condensed text-xs font-semibold uppercase tracking-wide text-bleu-light">
           {coach.role}
         </p>
+        {coach.metier && (
+          <p className="font-condensed text-xs uppercase tracking-wide text-craie-muted">
+            {coach.metier}
+          </p>
+        )}
         <p className="mt-2 text-xs leading-snug text-craie-muted">{coach.bio}</p>
       </figcaption>
     </figure>

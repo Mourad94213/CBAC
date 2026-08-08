@@ -2,10 +2,27 @@
 
 **Règle actée (renforcée le 2026-07-06) : ne rien inventer. Si une information n'est pas connue, on ne met rien** (état « en préparation » plutôt que fausse donnée). Tout le contenu est centralisé dans `lib/data/`.
 
-## Informations réelles intégrées (fournies par l'association, 2026-07-06)
+## ⚠️ À faire remonter à l'association (retour vocal du 2026-08-08)
+Ces éléments ont été écrits avec les informations disponibles, mais doivent être **confirmés ou complétés** :
+
+| Point | Ce qui est en ligne | Ce qu'il manque |
+|---|---|---|
+| Fonction de Younes | « Conseiller en développement » + mention « Boxeur amateur & coach » | **Confirmer l'intitulé exact** et à qui il s'applique (déduit du vocal : la personne actuellement affichée comme « coach & boxeur amateur ») |
+| Douka | Ajoutée : « Psychologue », sœur de Zinedine | Nom de famille (ou confirmation prénom seul), intitulé exact, photo |
+| Hugo | Ajouté : « Membre de l'équipe » (libellé neutre faute d'info) | **Fonction réelle dans l'association**, nom de famille éventuel, photo |
+| Le frère de Zinedine | **Non ajouté** (prénom inaudible sur le vocal) | Prénom, nom, fonction |
+| L'exposition | Citée comme exemple dans l'action « Projets » (`lib/data/actions.ts`) | Nom du projet, structure partenaire, date — ou retrait si l'exemple ne doit pas être public |
+| Photos de l'équipe | Placeholders SVG (`coach-hugo.svg`, `coach-douka.svg`) | Vraies photos |
+| Fiche d'inscription | PDF maquette `public/docs/fiche-inscription-cbac.pdf` | **Le vrai document** de l'association |
+| Cotisation | « Le montant est précisé sur le bulletin » + mention que les structures partenaires prennent en charge leurs participants | Décision de l'association sur le modèle économique (cotisation annuelle particuliers, portes ouvertes une fois les locaux obtenus) |
+| Formulaires | Toujours en succès simulé (rien n'est envoyé) | Brancher un vrai envoi e-mail avant mise en ligne |
+
+## Informations réelles intégrées (fournies par l'association, 2026-07-06, complétées le 2026-08-09)
 - **Chiffres** : plus de 30 actions menées dans des structures · 5 structures partenaires · 2 ans d'existence (`lib/data/site.ts` → `impact`).
-- **Équipe** (`lib/data/coachs.ts`) : Soungui Gomis (président fondateur), Younes (jeune boxeur amateur et coach), Zinedine Meftah (jeune boxeur amateur, passif de coach). **Aucun diplôme ni parcours inventé.**
-- **Pas de gymnase attitré** : l'association intervient dans les structures qui l'accueillent.
+- **Équipe** (`lib/data/coachs.ts`) : Soungui Gomis (président fondateur), Younes (conseiller en développement), Douka (psychologue), Hugo (membre de l'équipe), Zinedine Meftah (boxeur). **Aucun diplôme ni parcours inventé.**
+- **Pas encore de locaux** : la formulation retenue est « en attendant nos locaux » (et non plus « pas de gymnase attitré ») ; l'association intervient **chez ses structures partenaires** (et non plus « les structures qui nous accueillent » — vocabulaire plus collaboratif, demandé le 2026-08-08).
+- **Une cinquième action, « Projets »** : projets inédits co-construits avec une structure partenaire à partir de son besoin (`lib/data/actions.ts` → slug `projets`).
+- **Positionnement des échanges** : on n'échange pas pour échanger — la thématique est définie en amont avec la structure, à partir d'une problématique ou d'un besoin identifiés chez son public.
 - **Positionnement** : l'action sociale, l'interaction et la discussion sont au cœur des initiations ; les actions en foyer sont mises en avant (première cible sur `/interventions`).
 - **Logo** : le vrai logo (`docs/logo cbac.jpeg` = `public/images/logo-cbac.jpg`) est utilisé dans le header (`components/site/brand-mark.tsx`) et le footer.
 - **Textes** : le « mot du président » et les descriptions d'actions reprennent le dossier de présentation (`docs/Dossier Soungui_merged (1) (1).pdf`). Les galas amicaux sont présentés comme une **ambition**, pas comme un acquis.
@@ -38,6 +55,6 @@
 | Espace partenaires | démo statique, données marquées « (démo) » | `components/partenaires/partner-panel.tsx` |
 | Promesses de service (rappel 24h, réponse 48h) | issues des fonctionnalités demandées dans la doc de cadrage — à confirmer | formulaires |
 
-**Historique.** Révision 2026-07-06 (matin) : repositionnement « association itinérante ». Révision 2026-07-06 (après-midi) : purge complète du contenu inventé après retour de l'association (faux coachs Awa/Karim/Léa supprimés, faux stages « Premiers gants »/« Ring d'été » supprimés, fausse chronologie 2014-2026 supprimée, faux témoignages/partenaires/actus supprimés, chiffres corrigés 450→30+/25→5/12→2, actions réalignées sur la brochure : initiations & cours, stages, temps d'échanges & sorties, galas amicaux en ambition).
+**Historique.** Révision 2026-08-09 (retour vocal du 2026-08-08) : « structures qui nous accueillent » → « structures partenaires » partout ; « pas de gymnase attitré » → « en attendant nos locaux » ; 5ᵉ action « Projets » ajoutée ; échanges recentrés sur une problématique identifiée avec la structure ; `/interventions` reformulée en « structure encadrante (foyer, centre social…) » et « initiation ou autre action » ; équipe élargie (Younes conseiller en développement, Douka psychologue, Hugo) ; quiz « programme » → « l'action qu'il vous faut » ; fiche d'inscription PDF ajoutée sur `/adhesion` ; cotisation précisée (prise en charge par les structures partenaires). Révision 2026-07-06 (matin) : repositionnement « association itinérante ». Révision 2026-07-06 (après-midi) : purge complète du contenu inventé après retour de l'association (faux coachs Awa/Karim/Léa supprimés, faux stages « Premiers gants »/« Ring d'été » supprimés, fausse chronologie 2014-2026 supprimée, faux témoignages/partenaires/actus supprimés, chiffres corrigés 450→30+/25→5/12→2, actions réalignées sur la brochure : initiations & cours, stages, temps d'échanges & sorties, galas amicaux en ambition).
 
 **Règle de travail actée : aucune fonctionnalité ni contenu hors doc ne sera ajouté sans demande explicite. Ne jamais inventer de faits, d'événements, de personnes ou de diplômes.**

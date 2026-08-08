@@ -28,7 +28,7 @@ import { association } from "@/lib/data/site";
 export const metadata: Metadata = buildMetadata({
   title: "Interventions sur mesure : foyers, structures, écoles & entreprises",
   description:
-    "Initiations, cycles de séances, stages et temps d'échanges : le CBAC construit votre intervention sur mesure, directement dans votre structure — foyer, centre social, école, dispositif d'insertion ou entreprise. Devis gratuit.",
+    "Initiations, cycles de séances, stages, temps d'échanges — ou projet inédit défini ensemble : le CBAC construit votre action à partir de la problématique identifiée dans votre structure encadrante — foyer, centre social, école, dispositif d'insertion — ou dans votre entreprise. Devis gratuit.",
   path: "/interventions",
   image: "/images/corporate-1.svg",
 });
@@ -76,8 +76,8 @@ const cibleBands = [
 
 const reassurances = [
   { icon: Clock, title: "Devis gratuit, sans engagement", text: "Vous décrivez votre projet, on vous répond — vous décidez ensuite, à votre rythme." },
-  { icon: ShieldCheck, title: "On vient à vous", text: "Pas de gymnase attitré : l'association intervient directement dans votre structure." },
-  { icon: Medal, title: "L'échange au cœur des séances", text: "On boxe, et on discute : l'interaction fait partie intégrante de chaque intervention." },
+  { icon: ShieldCheck, title: "On vient à vous", text: "En attendant nos propres locaux, l'association intervient directement dans votre structure." },
+  { icon: Medal, title: "Une thématique, pas du bavardage", text: "On boxe, et on échange sur la problématique identifiée avec vos équipes — jamais un thème générique." },
   { icon: HeartHandshake, title: "Une asso d'éducation populaire", text: "Plus de 30 actions menées dans des structures en deux ans — foyers en tête." },
 ];
 
@@ -85,22 +85,22 @@ const etapes = [
   {
     num: "01",
     title: "Vous nous dites tout",
-    text: "Configurateur en ligne en 4 étapes ou simple coup de fil : cible, objectifs, effectif, période. Deux minutes suffisent.",
+    text: "Configurateur en ligne en 4 étapes ou simple coup de fil : votre public, la problématique à travailler, l'effectif, la période. Deux minutes suffisent.",
   },
   {
     num: "02",
     title: "On construit ensemble",
-    text: "Devis gratuit et proposition adaptée à votre public. Vous ajustez avec nous jusqu'à ce que ce soit exactement votre projet.",
+    text: "Devis gratuit et proposition bâtie sur le besoin que vous avez identifié — action existante ou projet inédit. Vous ajustez avec nous jusqu'à ce que ce soit exactement votre projet.",
   },
   {
     num: "03",
     title: "On monte sur le ring",
-    text: "Directement dans votre structure : un cadre clair posé dès la première minute — et un temps d'échange à chaque séance.",
+    text: "Directement dans votre structure : un cadre clair posé dès la première minute — et, à chaque séance, un temps d'échange sur la thématique retenue.",
   },
   {
     num: "04",
     title: "On fait le point",
-    text: "À la fin de l'action, on débriefe ensemble et on imagine la suite : nouvelle séance, cycle, stage ou temps d'échange.",
+    text: "À la fin de l'action, on débriefe ensemble et on imagine la suite : nouvelle séance, cycle, stage, temps d'échange — ou un projet à monter à deux.",
   },
 ];
 
@@ -123,8 +123,9 @@ export default function InterventionsPage() {
               Faites entrer la boxe <span className="text-or">dans votre structure</span>
             </h1>
             <p className="max-w-lg text-pretty text-base leading-relaxed text-craie-soft">
-              Initiation en foyer ou en centre social, cycle à l’école, action insertion, team
-              building d’entreprise : en {association.impact.annees} ans, le CBAC a mené plus de{" "}
+              Initiation ou autre action en structure encadrante (foyer, centre social, école,
+              dispositif d’insertion…), team building d’entreprise, ou projet inédit défini
+              ensemble : en {association.impact.annees} ans, le CBAC a mené plus de{" "}
               {association.impact.actions} actions dans des structures — on boxe, on discute, on
               crée du lien.
             </p>

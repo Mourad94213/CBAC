@@ -47,7 +47,7 @@ export function localBusinessLd() {
     name: association.name,
     legalName: association.legalName,
     description:
-      "Association d'éducation populaire qui crée du lien social par la boxe anglaise : initiations et cours, stages, temps d'échanges et sorties boxe, directement dans les structures qui l'accueillent — foyers, centres sociaux, écoles, entreprises.",
+      "Association d'éducation populaire qui crée du lien social par la boxe anglaise : initiations et cours, stages, temps d'échanges et sorties boxe, projets sur mesure — directement chez ses structures partenaires : foyers, centres sociaux, écoles, entreprises.",
     url: SITE_URL,
     telephone: `+33${association.phone.replace(/\D/g, "").slice(1)}`,
     email: association.email,

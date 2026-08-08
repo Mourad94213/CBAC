@@ -68,7 +68,7 @@ const reperes = [
     chiffre: `${association.impact.actions}+`,
     titre: "Actions menées dans des structures",
     texte:
-      "Initiations, cours et temps d'échanges, menés directement dans les structures qui accueillent l'association — foyers en tête.",
+      "Initiations, cours, temps d'échanges et projets, menés directement chez les structures partenaires de l'association — foyers en tête.",
   },
   {
     chiffre: `${association.impact.structures}`,
@@ -122,8 +122,8 @@ export default function AssociationPage() {
           <SectionTitle
             as="h1"
             eyebrow="L'association"
-            title="Pas de salle, une école de vie"
-            intro={`${association.legalName}, association d'éducation populaire née il y a ${association.impact.annees} ans, fait de la boxe anglaise un outil de lien social. Sans gymnase attitré, elle intervient là où on l'accueille — et on y apprend bien plus que le jab.`}
+            title="En attendant nos locaux, une école de vie"
+            intro={`${association.legalName}, association d'éducation populaire née il y a ${association.impact.annees} ans, fait de la boxe anglaise un outil de lien social. En attendant ses propres locaux, elle intervient chez ses structures partenaires — et on y apprend bien plus que le jab.`}
           />
 
           <Reveal delay={0.12}>

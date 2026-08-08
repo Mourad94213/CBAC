@@ -26,18 +26,19 @@ export const cibles: Cible[] = [
     persona:
       "« Je cherche des activités qui captent l'attention des jeunes. J'ai besoin de voir rapidement que ça marche. » — persona des docs de cadrage",
     pitch:
-      "C'est le cœur de notre action : en deux ans, l'association a mené plus de trente actions dans des structures — foyers en tête. Une intervention chez vous, ce n'est pas qu'une séance de sport : on boxe, puis on discute. L'interaction et l'échange avec les résidents font partie intégrante de la séance — c'est par là que passent le lien social et la transmission des valeurs.",
+      "C'est le cœur de notre action : en deux ans, l'association a mené plus de trente actions dans des structures — foyers en tête. Une intervention chez vous, ce n'est pas qu'une séance de sport — et ce n'est pas non plus discuter pour discuter. On part d'une problématique ou d'un besoin identifiés avec vos équipes, et on construit la séance autour : on boxe, puis on aborde la thématique retenue. C'est par là que passent le lien social et la transmission des valeurs — et ce sont vos résidents qui y gagnent en premier.",
     points: [
+      "Une action bâtie sur une problématique identifiée avec vous",
+      "Un temps d'échange sur la thématique retenue, à chaque séance",
+      "Séance ponctuelle, cycle, ou projet défini ensemble",
       "Plus de 30 actions déjà menées dans des structures",
-      "Un temps d'échange et de discussion à chaque séance",
-      "Séance ponctuelle ou cycle, construit avec vos équipes",
-      "Ouvert à tous les résidents, débutants bienvenus",
     ],
     image: "/images/insertion-1.svg",
     exemples: [
       "Séance d'initiation découverte dans vos locaux",
       "Cycle de plusieurs séances dans la durée",
       "Temps d'échange : rencontre avec un boxeur, soirée boxe (retransmission de combats)",
+      "Ou définir un projet ensemble, à partir de votre besoin",
     ],
   },
   {
@@ -47,10 +48,10 @@ export const cibles: Cible[] = [
     persona:
       "« Je cherche des activités qui captent l'attention des jeunes difficiles, et des preuves que ça marche. » — Sophie, persona des docs de cadrage",
     pitch:
-      "La boxe capte l'attention là où beaucoup d'activités échouent. Nous construisons avec vos équipes des séances et des cycles qui accrochent les jeunes, avec un cadre clair : ici on se respecte, on s'écoute, on se dépasse — et on prend le temps de discuter à chaque séance.",
+      "La boxe capte l'attention là où beaucoup d'activités échouent. Nous partons de la problématique que vous avez identifiée chez vos jeunes, puis nous construisons avec vos équipes les séances et les cycles qui y répondent, avec un cadre clair : ici on se respecte, on s'écoute, on se dépasse — et on prend le temps d'aborder le sujet, à chaque séance.",
     points: [
       "Initiations ponctuelles ou cycles de plusieurs séances",
-      "Objectifs définis ensemble avec vos équipes",
+      "Objectifs et thématiques définis avec vos équipes",
       "La discussion et le lien social au cœur de la démarche",
       "Une association d'éducation populaire, à but non lucratif",
     ],
@@ -59,6 +60,7 @@ export const cibles: Cible[] = [
       "Séance découverte pour un groupe de jeunes",
       "Cycle d'initiation sur plusieurs semaines",
       "Stage pendant les vacances scolaires, monté ensemble",
+      "Ou définir un projet ensemble, à partir de votre besoin",
     ],
   },
   {
@@ -80,6 +82,7 @@ export const cibles: Cible[] = [
       "Cycle d'initiation sur le temps scolaire",
       "Atelier périscolaire",
       "Stage vacances organisé avec l'accueil de loisirs",
+      "Ou définir un projet ensemble, à partir de votre besoin",
     ],
   },
   {
@@ -89,10 +92,10 @@ export const cibles: Cible[] = [
     persona:
       "« Mes jeunes ont besoin de canaliser leur énergie. Mais je dois justifier le projet auprès de ma direction. » — Thomas, persona des docs de cadrage",
     pitch:
-      "Le ring est un des rares endroits où un jeune en rupture accepte un cadre. Nos interventions pour les structures d'insertion et d'encadrement s'appuient sur les valeurs du sport — respect, gestion des émotions, dépassement de soi — et sur des temps de discussion qui permettent à chacun de trouver sa place.",
+      "Le ring est un des rares endroits où un jeune en rupture accepte un cadre. Nos interventions pour les structures d'insertion et d'encadrement s'appuient sur les valeurs du sport — respect, gestion des émotions, dépassement de soi — et sur des temps d'échange calés sur la problématique que vous nous remontez : on aborde le sujet qui compte pour votre public, pas un thème générique.",
     points: [
       "Un cadre clair, accepté parce qu'il vient du sport",
-      "Des temps d'échange intégrés à chaque séance",
+      "Des temps d'échange calés sur votre problématique",
       "Objectifs co-définis avec les éducateurs",
       "Une démarche d'éducation populaire assumée",
     ],
@@ -101,6 +104,7 @@ export const cibles: Cible[] = [
       "Séance d'initiation avec un groupe suivi",
       "Cycle de séances en appui d'un parcours éducatif",
       "Temps d'échange autour de la boxe et de ses valeurs",
+      "Ou définir un projet ensemble, à partir de votre besoin",
     ],
   },
   {
@@ -122,6 +126,7 @@ export const cibles: Cible[] = [
       "Atelier découverte pour une équipe",
       "Séance cohésion dans le cadre d'un séminaire",
       "Temps d'échange avec un boxeur autour d'un thème (dépassement, gestion du stress…)",
+      "Ou définir un projet ensemble, à partir de votre besoin",
     ],
   },
 ];

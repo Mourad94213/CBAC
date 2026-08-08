@@ -22,7 +22,7 @@ import { instaPosts } from "@/lib/data/content";
 export const metadata = buildMetadata({
   title: "Boxe anglaise & éducation populaire",
   description:
-    "CBAC, association d'éducation populaire qui crée du lien social par la boxe anglaise : initiations et cours, stages, temps d'échanges et sorties boxe — directement dans les structures qui nous accueillent : foyers, centres sociaux, écoles, entreprises.",
+    "CBAC, association d'éducation populaire qui crée du lien social par la boxe anglaise : initiations et cours, stages, temps d'échanges et sorties, galas amicaux et projets sur mesure — directement chez nos structures partenaires : foyers, centres sociaux, écoles, entreprises.",
   path: "/",
 });
 
@@ -39,7 +39,7 @@ const portes = [
     name: "Foyers, structures & collectivités",
     href: "/interventions",
     img: "/images/centre-social-1.svg",
-    note: "Foyers, centres sociaux, écoles, insertion : on vient chez vous, on boxe et on discute.",
+    note: "Foyers, centres sociaux, écoles, insertion : on vient chez vous, on boxe — et on aborde la thématique qui compte pour votre public.",
     alt: "Séance découverte de boxe dans une structure d’accueil",
   },
   {
@@ -77,7 +77,7 @@ export default async function HomePage() {
             </div>
             <p className="flex items-center gap-2 text-sm text-craie-muted">
               <MapPin className="h-4 w-4 shrink-0 text-bleu-light" strokeWidth={1.75} />
-              Pas de gymnase attitré : on intervient là où on nous accueille
+              En attendant nos locaux, on intervient chez nos structures partenaires
             </p>
           </Reveal>
 
@@ -129,8 +129,8 @@ export default async function HomePage() {
         <div className="container-wide flex flex-wrap items-end justify-between gap-4">
           <SectionTitle
             eyebrow="Round 01 · Nos actions"
-            title="Pas de salle à nous : on vient à vous"
-            intro="Initiations et cours, stages, temps d'échanges et sorties boxe — dans les structures qui nous accueillent : foyers, centres sociaux, écoles, entreprises. Et à chaque séance, on prend le temps de discuter : c'est comme ça qu'on crée du lien."
+            title="En attendant nos locaux : on vient à vous"
+            intro="Initiations et cours, stages, temps d'échanges et sorties, galas amicaux — et des projets inédits créés avec nos structures partenaires : foyers, centres sociaux, écoles, entreprises. Et à chaque séance, on prend le temps d'aborder la thématique définie avec la structure : c'est comme ça qu'on crée du lien."
           />
           <Button asChild variant="outline" size="md" className="shrink-0">
             <Link href="/actions">Toutes nos actions</Link>
@@ -199,8 +199,8 @@ export default async function HomePage() {
       <section className="border-y border-noir-line bg-or-tint/40 py-20">
         <div className="container-wide">
           <SectionTitle
-            eyebrow="Round 03 · Quel programme ?"
-            title="Trouvez votre programme en quatre questions"
+            eyebrow="Round 03 · Par où commencer ?"
+            title="Trouvez l'action qu'il vous faut en quatre questions"
             intro="Enfant, ado, adulte, structure ou entreprise : répondez en trente secondes, on vous oriente vers la bonne action — sans détour."
             align="center"
             className="items-center text-center"
@@ -216,7 +216,7 @@ export default async function HomePage() {
         <SectionTitle
           eyebrow="Round 04 · L'équipe"
           title="Une équipe de bénévoles motivés"
-          intro="Autour de son président fondateur, l'association s'appuie sur de jeunes coachs issus de la boxe amateur. L'équipe est présentée à chaque structure avant l'intervention."
+          intro="Autour de son président fondateur, l'association réunit des boxeurs amateurs et des profils qui appuient la dimension éducative du projet — conseiller en développement, psychologue. L'équipe est présentée à chaque structure avant l'intervention."
         />
         <div className="mt-10 grid gap-6 lg:grid-cols-[1.2fr_2fr]">
           <Reveal className="group relative overflow-hidden rounded-4xl border border-noir-line">
@@ -233,7 +233,7 @@ export default async function HomePage() {
               <h3 className="mt-2 font-display text-2xl text-craie">{fondateur.name}</h3>
               <p className="mt-1 max-w-sm text-sm text-craie-soft">
                 Il porte le projet associatif du CBAC : créer du lien social à travers la boxe
-                anglaise, dans les structures qui accueillent l&apos;association.
+                anglaise, chez les structures partenaires de l&apos;association.
               </p>
             </div>
           </Reveal>

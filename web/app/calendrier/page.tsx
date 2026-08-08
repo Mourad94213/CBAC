@@ -15,7 +15,7 @@ import { listPublishedUpcoming, toEventMois } from "@/lib/events/store";
 export const metadata: Metadata = buildMetadata({
   title: "Calendrier du mois — où nous trouver",
   description:
-    "Les lieux et événements du CBAC sur le mois à venir : initiations, stages, temps d'échanges et sorties boxe, dans les structures qui accueillent l'association. Les rendez-vous sont annoncés dès qu'ils sont calés.",
+    "Les lieux et événements du CBAC sur le mois à venir : initiations, stages, temps d'échanges et sorties boxe, chez les structures partenaires de l'association. Les rendez-vous sont annoncés dès qu'ils sont calés.",
   path: "/calendrier",
 });
 
@@ -43,7 +43,7 @@ export default async function CalendrierPage() {
             as="h1"
             eyebrow="Le calendrier du mois"
             title="Où nous trouver"
-            intro="Pas de gymnase attitré, pas de planning hebdo : l'association publie ici les lieux et événements où la croiser, dès qu'ils sont calés avec les structures qui l'accueillent — foyers, centres sociaux, écoles, entreprises."
+            intro="En attendant nos locaux, pas de planning hebdo : l'association publie ici les lieux et événements où la croiser, dès qu'ils sont calés avec ses structures partenaires — foyers, centres sociaux, écoles, entreprises."
           />
 
           {/* Repères chiffrés — nus, typo + espace */}

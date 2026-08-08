@@ -4,6 +4,7 @@ import {
   ArrowRight,
   Camera,
   Clock,
+  Download,
   FileText,
   HandCoins,
   HeartPulse,
@@ -36,7 +37,7 @@ const etapes = [
   {
     num: "02",
     title: "Le bulletin d'adhésion",
-    text: "Convaincu·e ? Vous remplissez la pré-inscription en ligne ci-dessous et on finalise le bulletin ensemble, sur place, à la séance suivante. Dix minutes, pas plus.",
+    text: "Convaincu·e ? Vous remplissez la pré-inscription en ligne ci-dessous — ou vous téléchargez directement la fiche d'inscription — et on finalise le bulletin ensemble, sur place, à la séance suivante. Dix minutes, pas plus.",
   },
   {
     num: "03",
@@ -58,8 +59,8 @@ const documents = [
   },
   {
     icon: Wallet,
-    title: "La cotisation annuelle",
-    text: "Le montant est précisé sur le bulletin d'adhésion — renseignez-vous auprès de l'équipe lors de votre première rencontre.",
+    title: "La cotisation",
+    text: "Elle concerne les adhésions individuelles : le montant est précisé sur le bulletin — renseignez-vous auprès de l'équipe lors de votre première rencontre. Les actions menées avec une structure partenaire sont prises en charge par la structure : ses participants n'ont rien à régler.",
   },
   {
     icon: PenLine,
@@ -168,6 +169,28 @@ export default function AdhesionPage() {
               title="On prépare votre adhésion ensemble"
               intro="Remplissez le formulaire : on vous rappelle sous 48h ouvrées pour vous inviter à la prochaine séance ou rencontre. Le bulletin se signe ensuite sur place."
             />
+
+            {/* Alternative papier : la fiche d'inscription, pour ceux qui préfèrent le PDF. */}
+            <Reveal delay={0.08} className="rounded-4xl border border-noir-line bg-noir-card p-6 sm:p-7">
+              <h3 className="flex items-center gap-2 font-display text-lg text-craie">
+                <Download className="h-5 w-5 text-or" strokeWidth={1.75} />
+                Vous préférez le papier ?
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-craie-soft">
+                Téléchargez la fiche d&apos;inscription, remplissez-la, et remettez-la à
+                l&apos;équipe lors d&apos;une action — ou renvoyez-la par e-mail à{" "}
+                <a href={association.emailHref} className="link-underline font-semibold text-craie">
+                  {association.email}
+                </a>
+                .
+              </p>
+              <Button asChild variant="outline" size="md" className="mt-5">
+                <a href="/docs/fiche-inscription-cbac.pdf" download>
+                  <Download className="h-4 w-4" strokeWidth={1.75} />
+                  La fiche d&apos;inscription (PDF)
+                </a>
+              </Button>
+            </Reveal>
 
             <Reveal delay={0.1}>
               <h3 className="flex items-center gap-2 font-display text-lg text-craie">

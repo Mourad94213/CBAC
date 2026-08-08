@@ -178,8 +178,8 @@ export default function ContactPage() {
         <Reveal className="mt-16">
           <h2 className="font-display text-xl text-craie sm:text-2xl">Où nous croiser</h2>
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-craie-soft">
-            Pas de plan d&apos;accès à afficher : le CBAC n&apos;a pas de gymnase attitré. On pose
-            les gants dans les structures qui nous accueillent — foyers, centres sociaux, écoles,
+            Pas de plan d&apos;accès à afficher : en attendant nos propres locaux, on pose les
+            gants chez nos structures partenaires — foyers, centres sociaux, écoles,
             entreprises — et les rendez-vous sont annoncés au calendrier dès qu&apos;ils sont calés.
           </p>
           <div className="mt-6">

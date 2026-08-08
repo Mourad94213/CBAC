@@ -13,13 +13,13 @@ import { actions } from "@/lib/data/actions";
 export const metadata: Metadata = buildMetadata({
   title: "Nos actions — la boxe qui vient à vous",
   description:
-    "Les actions du CBAC : initiations et cours de boxe anglaise, stages avec les structures partenaires, temps d'échanges et sorties boxe, galas amicaux en projet. Sans gymnase attitré, l'association intervient dans les structures qui l'accueillent.",
+    "Les actions du CBAC : initiations et cours de boxe anglaise, stages avec les structures partenaires, temps d'échanges et sorties boxe, galas amicaux en projet, et projets inédits créés avec les structures. En attendant ses propres locaux, l'association intervient chez ses structures partenaires.",
   path: "/actions",
 });
 
 /** Où l'association intervient — c'est le principe : on se déplace. Foyers en tête. */
 const terrains = [
-  { name: "Foyers", detail: "c'est là que l'association mène l'essentiel de ses actions : on boxe, puis on discute" },
+  { name: "Foyers", detail: "c'est là que l'association mène l'essentiel de ses actions : on boxe, puis on aborde la thématique définie avec l'équipe" },
   { name: "Centres sociaux & structures jeunesse", detail: "séances découverte et cycles construits avec les équipes" },
   { name: "Écoles & accueils de loisirs", detail: "la boxe comme support pédagogique, sur le temps scolaire ou périscolaire" },
   { name: "Structures d'insertion & d'encadrement", detail: "un cadre accepté parce qu'il vient du sport" },
@@ -48,8 +48,8 @@ export default function ActionsPage() {
           <SectionTitle
             as="h1"
             eyebrow="Nos actions"
-            title="Pas de salle à nous — la boxe vient à vous"
-            intro="Le CBAC n'a ni gymnase attitré ni créneaux hebdomadaires : on charge les gants dans le coffre et on vient là où on a besoin de nous — un foyer, un centre social, une école, une entreprise. Et à chaque séance, on prend le temps de discuter. Quatre façons de nous croiser sur votre route."
+            title="En attendant nos locaux — la boxe vient à vous"
+            intro="Le CBAC propose diverses activités socio-sportives, chez ses structures partenaires : en attendant ses propres locaux, on charge les gants dans le coffre et on vient là où on a besoin de nous — un foyer, un centre social, une école, une entreprise. Et à chaque séance, on prend le temps d'échanger sur la thématique définie avec la structure. Cinq façons de nous croiser sur votre route — et si aucune ne colle à votre besoin, on en invente une ensemble."
           />
 
           <Stagger className="mt-8 flex flex-wrap gap-3">
@@ -124,6 +124,13 @@ export default function ActionsPage() {
                       <ArrowRight className="h-4 w-4" strokeWidth={2} />
                     </Link>
                   </Button>
+                ) : action.slug === "projets" ? (
+                  <Button asChild size="lg">
+                    <Link href="/contact">
+                      Nous parler de votre idée
+                      <ArrowRight className="h-4 w-4" strokeWidth={2} />
+                    </Link>
+                  </Button>
                 ) : (
                   <Button asChild size="lg">
                     <Link href="/calendrier">
@@ -157,7 +164,7 @@ export default function ActionsPage() {
       <section className="container-wide py-16 lg:py-20">
         <SectionTitle
           eyebrow="Nos terrains"
-          title="Là où on nous accueille, on installe le ring"
+          title="Chez nos partenaires, on installe le ring"
           intro="Chaque semaine, l'équipe et le matériel se déplacent. Voici les lieux où vous pouvez nous croiser — et si le vôtre n'y figure pas encore, il suffit de demander."
         />
         <Stagger className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

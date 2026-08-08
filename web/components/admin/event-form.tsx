@@ -60,7 +60,7 @@ export function EventForm({
         </Field>
       </div>
 
-      <Field label="Lieu" htmlFor="lieu" hint="La structure qui accueille l'évènement, ville comprise">
+      <Field label="Lieu" htmlFor="lieu" hint="La structure partenaire qui accueille l'évènement, ville comprise">
         <Input
           id="lieu"
           name="lieu"

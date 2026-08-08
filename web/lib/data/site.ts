@@ -5,7 +5,7 @@ export const association = {
   tagline: "La boxe anglaise comme école de vie",
   promise:
     "Ici, on apprend à encaisser, à respecter et à se dépasser — sur le ring comme dans la vie.",
-  /** Siège social (coordonnées de maquette, à remplacer) — l'association n'a pas de gymnase attitré : elle intervient là où on l'accueille. */
+  /** Siège social (coordonnées de maquette, à remplacer) — en attendant ses propres locaux, l'association intervient chez ses structures partenaires. */
   address: {
     street: "12 rue du Ring",
     zip: "92000",

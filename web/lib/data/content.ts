@@ -10,7 +10,7 @@
 export const faqSecurite: { q: string; a: string }[] = [
   {
     q: "Comment se déroule une initiation ?",
-    a: "Une initiation, ce n'est pas qu'une séance de sport : on met les gants, on apprend les bases de la boxe anglaise — et surtout on échange. L'interaction et la discussion font partie intégrante de la séance : c'est par là que passent le lien social et la transmission des valeurs (respect, gestion des émotions, dépassement de soi).",
+    a: "Une initiation, ce n'est pas qu'une séance de sport : on met les gants, on apprend les bases de la boxe anglaise — et surtout on échange. Et on n'échange pas pour échanger : la thématique abordée est définie en amont avec la structure, à partir d'une problématique ou d'un besoin identifiés chez son public. C'est par là que passent le lien social et la transmission des valeurs (respect, gestion des émotions, dépassement de soi).",
   },
   {
     q: "Faut-il avoir déjà boxé pour participer ?",
@@ -18,11 +18,11 @@ export const faqSecurite: { q: string; a: string }[] = [
   },
   {
     q: "Où se déroulent les séances ?",
-    a: "L'association n'a pas de gymnase attitré : elle intervient directement dans les structures qui l'accueillent — foyers, centres sociaux, structures jeunesse, établissements scolaires, structures d'insertion, entreprises. Le lieu est précisé pour chaque action.",
+    a: "En attendant ses propres locaux, l'association intervient directement chez ses structures partenaires — foyers, centres sociaux, structures jeunesse, établissements scolaires, structures d'insertion, entreprises. Le lieu est précisé pour chaque action.",
   },
   {
     q: "Qui encadre les séances ?",
-    a: "Les séances sont animées par l'équipe de bénévoles de l'association, autour de son président fondateur Soungui Gomis et de jeunes coachs issus de la boxe amateur. L'équipe est présentée à chaque structure avant l'intervention.",
+    a: "Les séances sont animées par l'équipe de bénévoles de l'association, autour de son président fondateur Soungui Gomis : des boxeurs issus de la boxe amateur, mais aussi des profils qui appuient la dimension éducative du projet — conseiller en développement, psychologue. L'équipe est présentée à chaque structure avant l'intervention.",
   },
   {
     q: "À qui s'adressent vos actions ?",
@@ -100,7 +100,7 @@ export const quizProfiles: Record<string, { title: string; text: string; href: s
   },
   structure: {
     title: "Intervention sur mesure",
-    text: "Initiation ponctuelle, cycle de séances, stage, temps d'échange : construisons ensemble l'action adaptée à votre structure — foyer, centre social, école ou dispositif d'insertion.",
+    text: "Initiation ponctuelle, cycle de séances, stage, temps d'échange — ou projet inédit monté avec vous : construisons ensemble l'action qui répond au besoin de votre structure — foyer, centre social, école ou dispositif d'insertion.",
     href: "/interventions",
     cta: "Créer mon intervention",
   },

@@ -1,7 +1,7 @@
 /**
  * Les actions du CBAC — reprises du dossier de présentation de l'association.
- * L'association n'a pas de gymnase attitré : elle intervient dans les
- * structures qui l'accueillent (foyers, centres sociaux, écoles, entreprises…).
+ * En attendant ses propres locaux, l'association intervient chez ses
+ * structures partenaires (foyers, centres sociaux, écoles, entreprises…).
  * Le slug sert d'ancre sur la page /actions.
  */
 export type Action = {
@@ -24,9 +24,9 @@ export const actions: Action[] = [
     name: "Initiations & cours de boxe",
     short: "Mettre les gants — et prendre le temps d'échanger.",
     description:
-      "C'est l'activité principale de l'association : des séances d'initiation et des cours de boxe anglaise, menés dans les structures qui nous accueillent. Au-delà du sport — qui est déjà un enjeu de santé publique —, chaque initiation est un temps d'interaction et de discussion : on échange avec les participants, on débat, on crée du lien. La séance est un outil de sociabilisation et de transmission de valeurs positives : respect, gestion des émotions, dépassement de soi.",
+      "C'est l'activité principale de l'association : des séances d'initiation et des cours de boxe anglaise, menés chez nos structures partenaires. Au-delà du sport — qui est déjà un enjeu de santé publique —, chaque initiation est un temps d'interaction et de discussion : on échange avec les participants, on débat, on crée du lien. La séance est un outil de sociabilisation et de transmission de valeurs positives : respect, gestion des émotions, dépassement de soi.",
     publics: "Tous publics, expérimentés en boxe comme débutants",
-    lieux: "Dans les structures qui nous accueillent",
+    lieux: "Chez nos structures partenaires",
     image: "/images/activite-initiation-decouverte.svg",
     points: [
       "L'interaction et la discussion au cœur de chaque séance",
@@ -97,6 +97,28 @@ export const actions: Action[] = [
       "Se challenger pour les volontaires, jamais d'obligation",
       "Participer à l'organisation, une façon de s'engager",
       "Un projet que l'association construit pas à pas",
+    ],
+  },
+  {
+    slug: "projets",
+    name: "Projets",
+    short: "Des projets inédits, créés avec la structure et selon ses besoins.",
+    description:
+      "Toutes nos actions ne rentrent pas dans une case. Quand une structure partenaire identifie un besoin ou une envie particulière, on ne se contente pas de dérouler un format existant : on monte le projet avec elle, de l'idée au jour J. C'est comme ça qu'est née l'exposition co-construite avec l'une de nos structures partenaires — un projet qui ne figurait dans aucun programme, et qui a vu le jour parce qu'il correspondait à un vrai besoin.",
+    publics: "Les structures partenaires et leur public",
+    lieux: "Défini avec la structure",
+    image: "/images/evenement-1.svg",
+    points: [
+      "Un projet co-construit à partir de votre besoin",
+      "Des formats inédits, hors de nos actions habituelles",
+      "De l'idée à la réalisation, on avance ensemble",
+      "Aucune idée n'est trop hors cadre : parlez-nous-en",
+    ],
+    faq: [
+      {
+        q: "Et si notre besoin ne correspond à aucune de vos actions ?",
+        a: "C'est précisément l'objet de cette rubrique. Si le besoin de votre structure ne rentre pas dans nos formats habituels, on définit un projet ensemble : on part de votre problématique, on imagine le format, et on le construit avec vos équipes.",
+      },
     ],
   },
 ];

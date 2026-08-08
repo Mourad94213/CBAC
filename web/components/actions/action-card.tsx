@@ -10,6 +10,7 @@ const chipTint: Record<string, string> = {
   "stages-vacances": "bg-bleu-tint text-bleu-light",
   "temps-echanges": "bg-craie/10 text-craie",
   "galas-amicaux": "bg-rouge-tint text-rouge-light",
+  projets: "bg-bleu-tint text-bleu-light",
 };
 
 /** Libellé court du badge par action. */
@@ -18,6 +19,7 @@ const chipLabel: Record<string, string> = {
   "stages-vacances": "Avec nos partenaires",
   "temps-echanges": "Temps conviviaux",
   "galas-amicaux": "En projet",
+  projets: "Sur mesure",
 };
 
 export function ActionCard({

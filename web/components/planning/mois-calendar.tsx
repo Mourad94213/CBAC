@@ -41,7 +41,7 @@ export function CalendrierMois({
         <h3 className="font-display text-lg text-craie">Le programme du mois est en préparation</h3>
         <p className="max-w-lg text-sm leading-relaxed text-craie-soft">
           Les prochains rendez-vous — initiations, stages, temps d&apos;échanges — sont annoncés ici
-          et sur nos réseaux dès qu&apos;ils sont calés avec les structures qui nous accueillent.
+          et sur nos réseaux dès qu&apos;ils sont calés avec nos structures partenaires.
           Une question ? Appelez-nous ou écrivez-nous.
         </p>
       </div>
